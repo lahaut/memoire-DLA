@@ -1,0 +1,23 @@
+\begin{thebibliography}{1}
+\expandafter\ifx\csname fonteauteurs\endcsname\relax
+\def\fonteauteurs{\scshape}\fi
+\makeatother
+
+\bibitem{ref}
+Amine \bgroup\fonteauteurs\bgroup Asselah\egroup\egroup{} et Alexandre
+  \bgroup\fonteauteurs\bgroup Gaudillière\egroup\egroup{} :
+\newblock {Sub-logarithmic fluctuations for internal DLA}.
+\newblock 2010.
+
+\bibitem{ref2}
+Amine \bgroup\fonteauteurs\bgroup Asselah\egroup\egroup{} et Alexandre
+  \bgroup\fonteauteurs\bgroup Gaudillière\egroup\egroup{} :
+\newblock {Lower bounds on fluctuations for internal DLA}.
+\newblock 2010.
+
+\bibitem{ref3}
+Lawler \bgroup\fonteauteurs\bgroup Gregory\egroup\egroup{} :
+\newblock {\em {Intersection of Random Walks}}.
+\newblock Birkhäuser Boston, 1991.
+
+\end{thebibliography}

@@ -1,0 +1,108 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage[a4paper]{geometry}
+
+\newtheorem{The}{Théorème}[section]
+\newtheorem{Lemme}[The]{Lemme}
+\newtheorem{Prop}[The]{Proposition}
+\newtheorem{Cor}[The]{Corollaire}
+\theoremstyle{definition}
+\newtheorem{Def}[The]{Définition}
+\newtheorem{Ex}[The]{Exemple}
+\theoremstyle{remark}
+\newtheorem{Rq}[The]{Remarque}
+
+\begin{document}
+\part{Lower bounds on fluctuations for internal DNA}
+\section{Introduction}
+
+\section{Notation et Prérequis}
+\begin{Lemme}
+\begin{proof}
+ Il faut montrer que les $X_i$ sont des variables de Poissons indépendantes de paramètre $\lambda\mathbb{P}(U_1\in E_i)$.
+
+ -Ce sont des variables de Poisson:
+\begin{align*}
+\mathbb{P}(X_i=k)&=\mathbb{P}(\sum_{n\leq X}{1_{U_n\in E_i}=k})
+\\&=\sum_{p=0}^{\infty}{\mathbb{P}(1_{X=p}\sum_{n\leqslant p}{1_{U_n \in E_i}=k}})
+\\&=\sum_{p=k}^{\infty}{\mathbb{P}(1_{X=p}\sum_{n\leqslant p}{1_{U_n \in E_i}=k}})
+\\&=\sum_{p=k}^{\infty}{\binom{p}{k}\mathbb{P}(X=p)\mathbb{P}(U_1\in E_i)...\mathbb{P}(U_k\in E_i)\mathbb{P}(U_{k+1}\notin E_i)...\mathbb{P}(U_{p}\notin E_i)}
+\\&=\frac{e^{-\lambda}}{k!}\mathbb{P}(U\in E_i)^k\sum_{p=k}^{\infty}{\frac{(1-\mathbb{P}(U\in E_i))^{p-k}\lambda^{p}}{(p-k)!}}
+\\&=\frac{(\lambda\mathbb{P}(U\in E_i))^k}{k!}e^{-\lambda\mathbb{P}(U\in E_i)}
+\end{align*}
+
+-Elles sont indépendantes:
+\begin{align*}
+\mathbb{P}(X_i=k\cap X_j=m)&=\mathbb{P}(\sum_{n\leq X}{1_{U_n\in E_i}}=k\cap\sum_{n\leq X}{1_{U_n\in E_j}=m})
+\\&=\sum_{p=k+m}^{\infty}{\binom{p}{k+m}\mathbb{P}(X=p)\mathbb{P}(U\in E_i)^k\mathbb{P}(U\in E_j)^m\mathbb{P}(U\notin E_i\cup E_j)^{p-k-m}}
+\\&=\mathbb{P}(X_i=k)\mathbb{P}(X_j=m)
+\end{align*}
+\end{proof}
+\end{Lemme}
+
+\begin{Cor}
+ \begin{proof}
+  L'indépendance et la première égalité sont des conséquences directes du lemme précédent. Pour la deuxième égalité, on a:
+  \begin{align*}
+   \mathbb{e} N_z(\eta,\Lambda,h)&=\lambda×\mathbb{P}_0\Big(S{\big(H(\Sigma(z))\big)\in \Lambda, H(z)<H\big(\mathbb{B}^c(0,\|z\|+h)\big)\Big)}
+   \\&=\lambda×\sum_{y \in \varLambda}{\sum_{n \in \mathbb{N}}{\mathbb{P}_0\Big(\big(H(\Sigma(z))=n\cap H(n)=y\big)\bigcap \big(H(z)<H\big(\mathbb{B}^c(0,\|z\|+h)\big)\big)\Big)}}
+   \\&=\lambda×\sum_{y \in \varLambda}{\sum_{n \in \mathbb{N}}{\mathbb{P}_0\Big(\big(H(\Sigma(z))=n\cap H(n)=y\big)\bigcap \big(H_y(z)<H_y\big(\mathbb{B}^c(0,\|z\|+h)\big)\big)\Big)}}
+  \end{align*}
+  où $H_y(A)$ est le premier instant où la marche aléatoire partant de y atteint A (on utilise ici le fait que H(z) $\geqslant H(\Sigma(z)))$
+ 
+ Par indépendance, on a alors:
+  \begin{align*}
+  \mathbb{e} N_z(\eta,\Lambda,h)&=\lambda×\sum_{y \in \varLambda}{\sum_{n \in \mathbb{N}}{\mathbb{P}_0\Big(H(\Sigma(z))=n\cap H(n)=y\Big) \mathbb{P}\big(H_y(z)<H_y\big(\mathbb{B}^c(0,\|z\|+h)\big)}}
+  \\&=\lambda×\sum_{y \in \varLambda}{\mathbb{P}_0\big(S(H(\Sigma(z)))=y\big) \mathbb{P}_y\big(H(z)<H\big(\mathbb{B}^c(0,\|z\|+h)\big)\big)}
+  \end{align*}
+ \end{proof}
+\end{Cor}
+
+
+\newpage
+\part{Divers}
+\setcounter{The}{0}
+\begin{Def}
+  On appelle $\mathbb{B}(y,R)$=\{$x \in \mathbb{Z}^d$, d(x,y)<R\} la boule de centre y et de rayon R. Le bord de cette boule est alors:
+\begin{equation}
+ \partial \mathbb{B}(y,R)=\{x \in \mathbb{Z}^d| \exists z \in \mathbb{B}(y,R), d(x,z)<1\ et\ x\notin \mathbb{B}(y,R)\}
+ \end{equation}
+\end{Def}
+\begin{Def}
+ On appelle explorateur une marche aléatoire symétrique de $\mathbb{Z}^d$ partant d'un point z, tel que tous les explorateurs sont indépendants.
+ Soit $\Lambda$ la région de $\mathbb{Z}^d$ préalablement explorée et $\xi^n=(\xi_1,...,\xi_n)$ les positions de départs des explorateurs qui suivent des marches aléatoires $(S_1,...S_n)$. 
+ On définit alors récursivement $A(\Lambda,\xi^n)$ la région explorée par les explorateurs de la manière suivante:
+ 
+ -$A(\Lambda,0)=\Lambda$
+ 
+ -$A(\Lambda,\xi^k)=A(\Lambda,\xi^{k-1})\cup\{S_k(\tau_k)\}$ 
+ où $\tau_k$=inf$\{t\geqslant0 | S_k(t)\notin A(\Lambda,\xi^k)\}$ est le premier temps pour lequel $S_k$ sort de la région explorée. On dit que l'explorateur s'installe à l'instant $\tau_k$.
+ \newline On notera par la suite $A(\xi^n)=A(\emptyset,\xi^n)$ et $A_R(\xi^n)=A(\xi^n)\cap\mathbb{B}(0,R)$.
+ \end{Def}
+ 
+ \begin{Def}
+  Les notations suivantes seront utiles:
+  
+  -b(n)=Card($\mathbb{B}(0,n)$) est le volume de la boule de rayon n.
+  
+  -$\rho(\gamma)$=sup$\{n\geqslant0, b(n)\leqslant \gamma\}$ est le rayon de la plus grande boule de volume inférieur à $\gamma$.
+  
+  -H(S;$\Lambda$) (ou H($\Lambda$) en absence d'ambiguïté sur S) est le premier instant pour lequel la marche aléatoire S atteint $\Lambda$.
+  
+  -Si $\eta:\mathbb{Z}^d\to\mathbb{N}$ est telle que $\eta(z)$ est le nombre d'explorateurs partis de z, la région explorée en partant de $\eta$ sera la région définie en faisant partir les explorateurs dans un ordre prédéfini sur $\mathbb{Z}^d$. Cette région explorée est indépendante en loi de l'ordre choisi d'après la propriété abélienne. 
+  
+  -$W_R(\Lambda;\eta$,z) est le nombre d'explorateurs, partant de la configuration $\eta$ et de la région explorée $\Lambda$, qui passent par z$\in\mathbb{B}(0,R)$ avant de sortir de $\mathbb{B}(0,R)$.
+ 
+  -$W_R(\Lambda;\eta$,z) est le nombre d'explorateurs, partant de la configuration $\eta$ et de la région explorée $\Lambda$, qui passent par z$\in\partial\mathbb{B}(0,R)$ au moment où ils sortent de $\mathbb{B}(0,R)$.
+  
+  -$M_R(\eta,z)=W_R(\mathbb{B}(0,R);\eta,z)$: si $\mathbb{B}(0,R)\subset\Lambda, M_R(\eta,z)=W_R(\Lambda;\eta,z)$.
+
+ \end{Def}
+
+\end{document}

@@ -1,0 +1,18 @@
+[1mdiff --git a/document_final.pdf b/document_final.pdf[m
+[1mindex bfffd28..d8a680e 100644[m
+Binary files a/document_final.pdf and b/document_final.pdf differ
+[1mdiff --git a/document_final.tex b/document_final.tex[m
+[1mindex 9d82ee3..2f25ab3 100644[m
+[1m--- a/document_final.tex[m
+[1m+++ b/document_final.tex[m
+[36m@@ -256,7 +256,9 @@[m [mOn remarque que la seule diff[m
+ \begin{equation*}[m
+  W_{n-L(n)}(A(\zeta_0^{b(n)});X_n1_0,z)=M_{n-L(n)}(X_n1_0,z)[m
+ \end{equation*}[m
+[31m-et donc $N'_z=N_z$ et $\mathrm{cov_2}(z) \subset \mathrm{cov}(z)$. Soit $U$ la variable aléatoire à valeur dans $\Sigma$ calculée en regardant en quel point une marche aléatoire symétrique atteint $\Sigma$. On alors :[m
+[32m+[m[32met donc $N'_z=N_z$ et $\mathrm{cov_2}(z) \subset \mathrm{cov}(z)$.[m[41m [m
+[32m+[m
+[32m+[m[32mSoit $U$ la variable aléatoire à valeur dans $\Sigma$ calculée en regardant en quel point une marche aléatoire symétrique atteint $\Sigma$. On alors :[m
+ \begin{equation*}[m
+  N'_z=\sum_{p\leqslant X_n}{1_{U_p=z}}[m
+ \end{equation*}[m
