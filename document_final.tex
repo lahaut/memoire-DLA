@@ -150,7 +150,7 @@ Autrement dit, si les trous ne sont pas trop grand, alors de longs tentacules ap
 \pagebreak[1]
 
 Le cas de l'erreur interne est quand à lui complètement déterminé en dimension supérieure à 3 grâce au résultat suivant, qui dit que presque sûrement de grands trous apparaissent une infinité de fois :
- \begin{The}
+ \begin{The} \label{int}
   En dimension $d \geqslant 3$, $\exists\alpha_d>0$ tel que
   \begin{equation}
    P(\limsup\limits_{n\to\infty}\{\delta_I(n)\geqslant h(n)\})=1
@@ -397,13 +397,51 @@ Autrement dit, pour une infinité de termes, l'erreur interne ou l'erreur externe
 
 \section{L'erreur interne}
 \label{interne}
+Pour établir le Théorème \ref{int}, nous allons procéder de façon similaire. Nous lançons cette fois-ci nous pas une vague d'explorateurs à partir de $A(b(n))$, mais un grand nombre $F(n)$ de vagues successives. Pour $k \leqslant F(n)$, la $k^{\mathrm{\grave{e}me}}$ vague consistera en un lancer de $X_k$ explorateurs depuis l'origine, où $X_k$ sera une varible de Poisson de paramètre $\lambda_k$ à déterminer plus tard.
+
+On note $R_k$ le rayon théorique après la $k^{\mathrm{\grave{e}me}}$ vague :
+\begin{equation}
+ R_k = \rho (b(n) + X_1 + \dots + X_k)
+\end{equation}
+
+Et $A_k$ l'évènement qui nous intéresse :
+\begin{equation}
+ A_k = \{ \delta_I (R_k) > \sqrt{\log (R_k) } \} 
+\end{equation}
+
+Le but sera de montrer que 
+\begin{equation}
+ \lim _{n \to \infty } P \left( \bigcup _{k \leqslant F(n)} A_k \right) = 1
+\end{equation}
+
+\begin{Def}
+ Pour $z \in \mathbb{Z}^d \setminus \{ 0 \}$ on note $\Sigma (z) = \partial \mathbb{B} (0, \| z \| )$. Remarquons que $z \in \Sigma (z)$.
+\end{Def}
+
+\begin{Rq}
+ Quel que soit $k \leqslant F(n)$, on a toujours :
+ \begin{equation} \label{nonvide}
+  A(b(n) + X_1 + \dots + X_k)^c \cap \left( \mathbb{B} (0, R_k) \cup \delta\mathbb{B} (0, R_k) \right) \neq \emptyset
+ \end{equation}
+ En effet, le cas échéant, on aurait plus de $b(R_k + 1)$ sites occupés, or on n'a lancé que $b(n) + X_1 + \dots + X_k$ explorateurs, ce qui est strictement moins. (POURQUOI ?)
+\end{Rq}
+  
 
 
-Pour $z \in \mathbb{Z}^d \setminus \{ 0 \}$ on note $\Sigma (z) = \partial \mathbb{B} (0, \| z \| )$. Remarquons que $z \in \Sigma (z)$. Pour $\Lambda \subset \Sigma (z)$ et $n$ un entier et $R > 0$, on définit aussi la variable aléatoire $N_z (n, \Lambda, R)$ comme le nombre de marches aléatoires parmi $n$ marches partant de $0$ qui atteignent $\Sigma (z)$ en $\Lambda$ puis visitent $z$ avant de sortir de $\mathbb{B} (0, \| z \| + R)$ :
+\begin{Def}
+Pour $\Lambda \subset \Sigma (z)$ et $n$ un entier et $R > 0$, on définit la variable aléatoire $N_z (n, \Lambda, R)$ comme le nombre de marches aléatoires parmi $n$ marches partant de $0$ qui atteignent $\Sigma (z)$ en $\Lambda$ puis visitent $z$ avant de sortir de $\mathbb{B} (0, \| z \| + R)$ :
 \begin{equation}
  N_z (n, \Lambda, R) = \mathrm{Card} \{ i \leqslant n \ \mid \ S_i (H(\Sigma (z))) \in \Lambda, \ H(z) < H( \mathbb{B}^c (O, \| z \| + h )) \}
 \end{equation}
+\end{Def}
 
+Supposons provisoirement que l'évènement $A^c_{k-1}$ est réalisé, pour $1 \leqslant k \leqslant F(n)-1$. Utilisons alors l'ensemble non vide donné par \ref{nonvide} au rang $k-1$ : il existe un $Z_k$ non encore visité, tel que $\|Z_k\| \leqslant R_{k-1} + 1$. Comme $A^c_{k-1}$ est réalisé, nécessairement, 
+\begin{equation}
+ R_{k-1} - h(R_{k-1}) \leqslant \|Z_k\| \leqslant R_{k-1} + 1
+\end{equation}
+
+
+\newpage
 \begin{Lemme}
  Soit $X$ une variable de Poisson de paramètre $\lambda$. Il existe $\kappa > 0$ tel que pour tout $z \in \mathbb{Z}^d \setminus \{ 0 \}$ et $R > 0$, 
  \begin{equation*}
