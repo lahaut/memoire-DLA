@@ -170,6 +170,8 @@ Introduisons dès à présent quelques définitions qui nous seront utiles par la su
   \item $W_R(\Lambda;\eta, z)$ est le nombre d'explorateurs, partant de la configuration $\eta$ et de la région explorée $\Lambda$, qui passent par $z\in\mathbb{B}(0,R)$ avant de sortir de $\mathbb{B}(0,R)$.
  
   \item $W_R(\Lambda;\eta, z)$ est le nombre d'explorateurs, partant de la configuration $\eta$ et de la région explorée $\Lambda$, qui passent par $z\in\partial\mathbb{B}(0,R)$ au moment où ils sortent de $\mathbb{B}(0,R)$.
+
+  \item Pour $z \in \mathbb{Z}^d \setminus \{ 0 \}$ on note $\Sigma (z) = \partial \mathbb{B} (0, \| z \| )$. Remarquons que $z \in \Sigma (z)$.
   
   \item $\zeta_z^N$ est le vecteur $(z,\dots,z)$ de taille $N$.
 \end{enumerate}
@@ -414,10 +416,6 @@ Le but sera de montrer que
  \lim _{n \to \infty } P \left( \bigcup _{k \leqslant F(n)} A_k \right) = 1
 \end{equation}
 
-\begin{Def}
- Pour $z \in \mathbb{Z}^d \setminus \{ 0 \}$ on note $\Sigma (z) = \partial \mathbb{B} (0, \| z \| )$. Remarquons que $z \in \Sigma (z)$.
-\end{Def}
-
 \begin{Rq}
  Quel que soit $k \leqslant F(n)$, on a toujours :
  \begin{equation} \label{nonvide}
@@ -425,27 +423,43 @@ Le but sera de montrer que
  \end{equation}
  En effet, le cas échéant, on aurait plus de $b(R_k + 1)$ sites occupés, or on n'a lancé que $b(n) + X_1 + \dots + X_k$ explorateurs, ce qui est strictement moins. (POURQUOI ?)
 \end{Rq}
-  
 
+Supposons provisoirement que l'évènement $A^c_{k-1}$ est réalisé, pour $1 \leqslant k \leqslant F(n)-1$. Utilisons alors l'ensemble non vide donné par \ref{nonvide} au rang $k-1$ : il existe un $Z_k$ non encore visité, tel que $\|Z_k\| \leqslant R_{k-1} + 1$. Comme $A^c_{k-1}$ est réalisé, nécessairement, 
+\begin{equation}
+ R_{k-1} - h(R_{k-1}) \leqslant \|Z_k\| \leqslant R_{k-1} + 1.
+\end{equation}
+On va s'appuyer sur ce $Z_k$ pour construire un évènement $I_k$ qui pourra s'interpréter par : soit $Z_k$ est un trou laissé à la prochaine vague $k$, soit un long tentacule apparaît à la vague $k$.
 
 \begin{Def}
+\begin{enumerate}[i)]
+ \item
 Pour $\Lambda \subset \Sigma (z)$ et $n$ un entier et $R > 0$, on définit la variable aléatoire $N_z (n, \Lambda, R)$ comme le nombre de marches aléatoires parmi $n$ marches partant de $0$ qui atteignent $\Sigma (z)$ en $\Lambda$ puis visitent $z$ avant de sortir de $\mathbb{B} (0, \| z \| + R)$ :
 \begin{equation}
  N_z (n, \Lambda, R) = \mathrm{Card} \{ i \leqslant n \ \mid \ S_i (H(\Sigma (z))) \in \Lambda, \ H(z) < H( \mathbb{B}^c (O, \| z \| + h )) \}
 \end{equation}
+ \item Soit $\Lambda_k = \mathbb{B}(Z_k, L(R_k)) \cap \Sigma (Z_k)$ et $\Lambda'_k = \Sigma (Z_k) \setminus \Lambda_k$ et :
+ \begin{equation}
+  I_k = \{ N_{Z_k} (X_k, \Lambda_k, \infty ) = 0, N_{Z_k} (X_k, \Lambda '_k, L(R_{k-1})) = 0 \}
+ \end{equation}
+\end{enumerate}
 \end{Def}
 
-Supposons provisoirement que l'évènement $A^c_{k-1}$ est réalisé, pour $1 \leqslant k \leqslant F(n)-1$. Utilisons alors l'ensemble non vide donné par \ref{nonvide} au rang $k-1$ : il existe un $Z_k$ non encore visité, tel que $\|Z_k\| \leqslant R_{k-1} + 1$. Comme $A^c_{k-1}$ est réalisé, nécessairement, 
-\begin{equation}
- R_{k-1} - h(R_{k-1}) \leqslant \|Z_k\| \leqslant R_{k-1} + 1
+Si $I_k$ est réalisé, on aimerait pouvoir dire que dans le cas où $Z_k$ n'est pas visité on a $\delta_I (R_k) \geq h(R_k)$ et que dans le cas contraire (un long tentacule apparaît) on a $\delta_O (R_k) \geq L(R_k)$. Cela sera assuré pour $X_k$ dans un bon intervalle, donné par le lemme suivant, qui induira du coup le choix des paramètres $\lambda_k$ :
+\begin{Lemme}
+Pour $k$ suffisamment grand, si $\mu_k = b(R_{k-1} + 2 h(R_{k-1})) - b(R_{k-1})$,
+\begin{equation} \frac{2}{3} \mu_k \leq X_k \leq 2 \mu_k \Rightarrow I_k \subset A_k \cup \{ \delta_O (R_k) \geq L(R_k) \}
 \end{equation}
+\end{Lemme}
+\begin{proof}
+plus tard...
+\end{proof}
 
+Enfin, on a besoin de s'assurer que la probabilité de $I_k$ est assez grande, ce qui est assuré par le lemme technique suivant :
 
-\newpage
 \begin{Lemme}
  Soit $X$ une variable de Poisson de paramètre $\lambda$. Il existe $\kappa > 0$ tel que pour tout $z \in \mathbb{Z}^d \setminus \{ 0 \}$ et $R > 0$, 
  \begin{equation*}
-  P(N_z (X, \Lambda, \infty ) = 0, N_z (X, \Lambda ', R) = 0) \leqslant \exp \left( - \kappa \frac{\lambda R}{\| z \| ^{d-1} } \right)
+  P(N_z (X, \Lambda, \infty ) = 0, N_z (X, \Lambda ', R) = 0) \geqslant \exp \left( - \kappa \frac{\lambda R}{\| z \| ^{d-1} } \right)
  \end{equation*}
  où $\Lambda = \mathbb{B} (z, R) \cap \Sigma (z)$ et $\Lambda ' = \Sigma (z) \setminus \Lambda$.
 \end{Lemme}
