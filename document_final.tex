@@ -416,6 +416,7 @@ Le but sera de montrer que
  \lim _{n \to \infty } P \left( \bigcup _{k \leqslant F(n)} A_k \right) = 1
 \end{equation}
 
+Une propriété simple nous sera utile par la suite :
 \begin{Rq}
  Quel que soit $k \leqslant F(n)$, on a toujours :
  \begin{equation} \label{nonvide}
@@ -424,7 +425,8 @@ Le but sera de montrer que
  En effet, le cas échéant, on aurait plus de $b(R_k + 1)$ sites occupés, or on n'a lancé que $b(n) + X_1 + \dots + X_k$ explorateurs, ce qui est strictement moins. (POURQUOI ?)
 \end{Rq}
 
-Supposons provisoirement que l'évènement $A^c_{k-1}$ est réalisé, pour $1 \leqslant k \leqslant F(n)-1$. Utilisons alors l'ensemble non vide donné par \ref{nonvide} au rang $k-1$ : il existe un $Z_k$ non encore visité, tel que $\|Z_k\| \leqslant R_{k-1} + 1$. Comme $A^c_{k-1}$ est réalisé, nécessairement, 
+\subsection{Lorsque $A^c_{k-1}$ est réalisé}
+On suppose dans cette partie que l'évènement $A^c_{k-1}$ est réalisé, pour $1 \leqslant k \leqslant F(n)-1$. Utilisons alors l'ensemble non vide donné par \ref{nonvide} au rang $k-1$ : il existe un $Z_k$ non encore visité, tel que $\|Z_k\| \leqslant R_{k-1} + 1$. Comme $A^c_{k-1}$ est réalisé, nécessairement, 
 \begin{equation}
  R_{k-1} - h(R_{k-1}) \leqslant \|Z_k\| \leqslant R_{k-1} + 1.
 \end{equation}
@@ -446,20 +448,21 @@ Pour $\Lambda \subset \Sigma (z)$ et $n$ un entier et $R > 0$, on définit la var
 
 Si $I_k$ est réalisé, on aimerait pouvoir dire que dans le cas où $Z_k$ n'est pas visité on a $\delta_I (R_k) \geq h(R_k)$ et que dans le cas contraire (un long tentacule apparaît) on a $\delta_O (R_k) \geq L(R_k)$. Cela sera assuré pour $X_k$ dans un bon intervalle, donné par le lemme suivant, qui induira du coup le choix des paramètres $\lambda_k$ :
 \begin{Lemme}
-Pour $k$ suffisamment grand, si $\mu_k = b(R_{k-1} + 2 h(R_{k-1})) - b(R_{k-1})$,
+Pour $k$ suffisamment grand, si $\mu_k = b(R_{k-1} + h(R_{k-1})) - b(R_{k-1})$,
 \begin{equation} \frac{2}{3} \mu_k \leq X_k \leq 2 \mu_k \Rightarrow I_k \subset A_k \cup \{ \delta_O (R_k) \geq L(R_k) \}
 \end{equation}
 \end{Lemme}
 \begin{proof}
 plus tard...
 \end{proof}
+On voit donc qu'il est judicieux de prendre $\lambda_k = \mu_k = b(R_{k-1} + h(R_{k-1})) - b(R_{k-1})$. Ainsi, lorsque la variable de Poisson $X_k$ est comprise entre $\frac{2}{3}$ et $2$ fois sa moyenne, on a bien $I_k \subset A_k \cup \{ \delta_O (R_k) \geq L(R_k) \}$.
 
-Enfin, on a besoin de s'assurer que la probabilité de $I_k$ est assez grande, ce qui est assuré par le lemme technique suivant :
+Enfin, on a besoin de s'assurer que la probabilité de $I_k$ est assez grande, ce qui est donné par le lemme technique suivant :
 
 \begin{Lemme}
- Soit $X$ une variable de Poisson de paramètre $\lambda$. Il existe $\kappa > 0$ tel que pour tout $z \in \mathbb{Z}^d \setminus \{ 0 \}$ et $R > 0$, 
+ Il existe une constante $C > 0$ telle que, si $X$ une variable de Poisson de paramètre $\lambda$, $z$ un point de $\in \mathbb{Z}^d \setminus \{ 0 \}$ et $R > 0$, 
  \begin{equation*}
-  P(N_z (X, \Lambda, \infty ) = 0, N_z (X, \Lambda ', R) = 0) \geqslant \exp \left( - \kappa \frac{\lambda R}{\| z \| ^{d-1} } \right)
+  P(N_z (X, \Lambda, \infty ) = 0, N_z (X, \Lambda ', R) = 0) \geqslant \exp \left( - C \frac{\lambda R}{\| z \| ^{d-1} } \right)
  \end{equation*}
  où $\Lambda = \mathbb{B} (z, R) \cap \Sigma (z)$ et $\Lambda ' = \Sigma (z) \setminus \Lambda$.
 \end{Lemme}
@@ -492,7 +495,16 @@ On va montrer que chacune de ces espérances est majorée par un terme du type $c 
  \end{eqnarray}
 \end{itemize}
 \end{proof}
+En appliquant ce lemme à $X_k$, $Z_k$ et $L(R_{k-1})$, on obtient :
+\begin{eqnarray}
+ P(I_k) & \geq & \exp \left( - C \frac{\lambda_k L(R_{k-1}) }{\| Z_k \| ^{d-1} } \right)
+ \nonumber\\& \geq & \exp \left( - C \frac{\lambda_k L(R_{k-1}) }{\| R_{k-1} - h(R_{k-1} \| ^{d-1} } \right)
+ \nonumber\\& \geq & \exp \left( - \kappa h(n) L(n) \right)
+\end{eqnarray}
 
+\subsection{Minorations}
+Résumons ce que l'on a fait jusqu'à présent : on a montré que lorsque $A^c_{k-1}$ est réalisé, il existe un évènement $I_k$ tel que $\frac{2}{3} \lambda_k \leq X_k \leq 2 \lambda_k \Rightarrow I_k \subset A_k \cup \{ \delta_O (R_k) \geq L(R_k) \}$ et $P(I_k) \geqslant \exp 
+\left( - \kappa h(n) L(n) \right)$. Notre but est de montrer que $\lim _{n \to \infty } P \left( \bigcup _{k \leqslant F(n)} A_k \right) = 1$.
 
 
  
