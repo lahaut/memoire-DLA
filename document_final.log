@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.7.27)  23 MAY 2013 16:09
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.7.27)  25 MAY 2013 16:12
 entering extended mode
  %&-line parsing enabled.
 **document_final.tex
@@ -338,39 +338,55 @@ File: cov.png Graphic file (type png)
  <use cov.png> [9 <./cov.png>] <cov2.png, id=62, 393.1488pt x 158.2713pt>
 File: cov2.png Graphic file (type png)
  <use cov2.png> [10 <./cov2.png>]
-[11] [12] [13] [14] [15] [16] [17] [18] (./document_final.bbl) [19]
-(./document_final.aux) ) 
+[11] [12] [13] [14] [15]
+Overfull \hbox (11.05121pt too wide) in paragraph at lines 509--511
+\OML/cmm/m/it/10.95 P\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 I[]\OT1/cmr/m/n/10
+.95 ) \U/msa/m/n/10.95 > [] []$\T1/cmr/m/n/10.95 . Notre but est de mon-trer qu
+e $[][] \OML/cmm/m/it/10.95 P [] \OT1/cmr/m/n/10.95 =
+ []
+
+[16] [17] [18]
+Overfull \hbox (2.44751pt too wide) in paragraph at lines 602--602
+[] 
+ []
+
+
+Overfull \hbox (2.44751pt too wide) in paragraph at lines 612--612
+[] 
+ []
+
+[19] (./document_final.bbl) [20] (./document_final.aux) ) 
 Here is how much of TeX's memory you used:
- 3394 strings out of 495061
- 42020 string characters out of 1182621
+ 3393 strings out of 495061
+ 42003 string characters out of 1182621
  108174 words of memory out of 3000000
- 6502 multiletter control sequences out of 15000+50000
+ 6501 multiletter control sequences out of 15000+50000
  17260 words of font info for 51 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  27i,15n,24p,962b,263s stack positions out of 5000i,500n,10000p,200000b,50000s
- </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecb
-x1200.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.600pk>
- </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/paul
-/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </home/paul/.texmf-var/
-fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/paul/.texmf-var/fonts/pk/ljf
-our/jknappen/ec/ecbx1440.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen
-/ec/ecrm1200.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728
-.600pk></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
-r/share/texmf-texlive/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share
-/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texl
-ive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/t
-ype1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/type1/public/
-amsfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
-cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr6.pfb></u
-sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texm
-f-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/f
-onts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-texlive/fonts/type1/p
-ublic/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfon
-ts/symbols/msam10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/sym
-bols/msbm10.pfb>
-Output written on document_final.pdf (19 pages, 602187 bytes).
+ </home/paul/.texmf-va
+r/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/paul/.texmf-var/fonts/pk/l
+jfour/jknappen/ec/eccc1095.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknapp
+en/ec/ecti1095.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx10
+95.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </
+home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/paul/.t
+exmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/paul/.texmf-var/fon
+ts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/texmf-texlive/fonts/type1/p
+ublic/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
+nts/cmextra/cmex8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
+cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/
+texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texliv
+e/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type
+1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsf
+onts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/
+share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-
+texlive/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-texliv
+e/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on document_final.pdf (20 pages, 609068 bytes).
 PDF statistics:
- 485 PDF objects out of 1000 (max. 8388607)
+ 492 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

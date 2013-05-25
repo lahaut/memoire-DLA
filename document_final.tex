@@ -58,17 +58,17 @@ on appelle $\mathbb{B}(y,R)=\{x \in \mathbb{Z}^d, \|x-y\| <R\}$ la boule dans $\
  \begin{equation*}
   \mathbb{B}(0,n(1-\epsilon )) \subset A(b(n)) \subset \mathbb{B}(0,n(1-\epsilon ))
  \end{equation*}
- pour tous $n$ assez grand.
+ pour tout $n$ assez grand.
 \end{The}
 
-Puis, le problème de l'ordre des fluctuations autour de la boule a été étudié par G. Lawler qui montre en 1995 \cite{ref6} que les fluctuations sont presque sûrment majorées par $n^{1/3} \log ^4 (n)$ en dimension $2$ ou plus. Toutefois, des simulations suggèrent que l'ordre des fluctuations est plutôt logarithmique. Aucune amélioration notable de ces résultats n'est publiée, jusqu'en 2010, lorsque A. Asselah et A. Gaudillière montrent dans \cite{ref} que l'erreur est presque sûrement inférieure à $\alpha\sqrt{\log(n)}$ en dimension 3 et $\alpha \log(n)$ en dimension 2. Ils publient un second article \cite{ref2} auquel nous nous intéressons ici, qui établit l'optimalité de ce résultat, du moins pour ce qui est de l'erreur interne.
+Puis, le problème de l'ordre des fluctuations autour de la boule a été étudié par G. Lawler qui montre en 1995 \cite{ref6} que les fluctuations sont presque sûrement majorées par $n^{1/3} \log ^4 (n)$ en dimension $2$ ou plus. Toutefois, des simulations suggèrent que l'ordre des fluctuations est plutôt logarithmique. Aucune amélioration notable de ces résultats n'est publiée, jusqu'en 2010, lorsque A. Asselah et A. Gaudillière montrent dans \cite{ref} que l'erreur est presque sûrement inférieure à $\alpha\sqrt{\log(n)}$ en dimension 3 et $\alpha \log(n)$ en dimension 2. Ils publient un second article \cite{ref2} auquel nous nous intéressons ici, qui établit l'optimalité de ce résultat, du moins pour ce qui est de l'erreur interne.
 
 \newpage
 \section{Premières Propriétés}
 On appelle $\mathbb{B}(y,R)=\{x \in \mathbb{Z}^d, \|x-y\| <R\}$ la boule dans $\mathbb{Z}^d$ de centre $y$ et de rayon $R$. Le bord de cette boule est alors :
-\begin{equation}
+\begin{equation*}
  \partial \mathbb{B}(y,R)=\{x \notin \mathbb{B}(y,R) \ | \ \exists z \in \mathbb{B}(y,R), \ \| x-z\| <1\}
-\end{equation}
+\end{equation*}
 
 Commençons par définir ce qu'est la région explorée par N explorateurs :
 \begin{Def}
@@ -277,7 +277,10 @@ On remarque que la seule différence entre $\mathrm{cov}(z)$ et $\mathrm{cov_2}(z
 \begin{equation*}
  W_{n-L(n)}(A(\zeta_0^{b(n)});X_n1_0,z)=M_{n-L(n)}(X_n1_0,z)
 \end{equation*}
-et donc $N'_z=N_z$ et $\mathrm{cov_2}(z) \subset \mathrm{cov}(z)$. Soit $U$ la variable aléatoire à valeur dans $\Sigma$ calculée en regardant en quel point une marche aléatoire symétrique atteint $\Sigma$. On alors :
+et donc $N'_z=N_z$ et $\mathrm{cov_2}(z) \subset \mathrm{cov}(z)$. 
+\pagebreak[1]
+
+Soit $U$ la variable aléatoire à valeur dans $\Sigma$ calculée en regardant en quel point une marche aléatoire symétrique atteint $\Sigma$. On alors :
 \begin{equation*}
  N'_z=\sum_{p\leqslant X_n}{1_{U_p=z}}
 \end{equation*}
@@ -348,7 +351,7 @@ Il ne reste donc plus qu'à minorer $P(N'_z\geqslant c(3h(n)+L(n)))$:
   \begin{equation*}
    \frac{c_2}{(n-L(n)+1)^{d-1}}\leqslant\frac{c_2}{\|z\|^{d-1}}\leqslant P(S(H(\Sigma))=z)\leqslant\frac{c_3}{\|z\|^{d-1}}\leqslant\frac{c_3}{(n-L(n))^{d-1}}
   \end{equation*}
- De plus $c_4h(n)n^{d-1}\leqslant\lambda_n\leqslant c_5h(n)n^{d-1}$, donc $c_6 h(n) \leqslant\mu\leqslant c_7 h(n)$. On a donc, en posant $a=\lfloor c_1 h(n) \rfloor +1$ :
+ De plus, d'après le lemme \ref{b(n)}, $c_4h(n)n^{d-1}\leqslant\lambda_n\leqslant c_5h(n)n^{d-1}$, donc $c_6 h(n) \leqslant\mu\leqslant c_7 h(n)$. On a donc, en posant $a=\lfloor c_1 h(n) \rfloor +1$ :
  \begin{align*}
   P(N'_z\geqslant c_1h(n))&\geqslant P(N'_z=a)=e^{-\mu}\frac{\mu^a}{a!}
   \\&\geqslant e^{-c_7h(n)}\frac{(c_6h(n))^{c_1h(n)}}{a!}
@@ -399,7 +402,7 @@ Autrement dit, pour une infinité de termes, l'erreur interne ou l'erreur externe
 
 \section{L'erreur interne}
 \label{interne}
-Pour établir le Théorème \ref{int}, nous allons procéder de façon similaire. Nous lançons cette fois-ci nous pas une vague d'explorateurs à partir de $A(b(n))$, mais un grand nombre $F(n)$ de vagues successives. Pour $k \leqslant F(n)$, la $k^{\mathrm{\grave{e}me}}$ vague consistera en un lancer de $X_k$ explorateurs depuis l'origine, où $X_k$ sera une varible de Poisson de paramètre $\lambda_k$ à déterminer plus tard.
+Pour établir le Théorème \ref{int}, nous allons procéder de façon similaire. Nous lançons cette fois-ci non pas une vague d'explorateurs à partir de $A(b(n))$, mais un grand nombre $F(n)$ de vagues successives. Pour $k \leqslant F(n)$, la $k^{\mathrm{\grave{e}me}}$ vague consistera en un lancer de $X_k$ explorateurs depuis l'origine, où $X_k$ sera une varible de Poisson de paramètre $\lambda_k$ à déterminer plus tard.
 
 On note $R_k$ le rayon théorique après la $k^{\mathrm{\grave{e}me}}$ vague :
 \begin{equation}
@@ -420,24 +423,24 @@ Une propriété simple nous sera utile par la suite :
 \begin{Rq}
  Quel que soit $k \leqslant F(n)$, on a toujours :
  \begin{equation} \label{nonvide}
-  A(b(n) + X_1 + \dots + X_k)^c \cap \left( \mathbb{B} (0, R_k) \cup \delta\mathbb{B} (0, R_k) \right) \neq \emptyset
+  A(b(R_k))^c \cap (\mathbb{B} (0, R_k)\cup\partial\mathbb{B} (0, R_k)) \neq \emptyset
  \end{equation}
- En effet, le cas échéant, on aurait plus de $b(R_k + 1)$ sites occupés, or on n'a lancé que $b(n) + X_1 + \dots + X_k$ explorateurs, ce qui est strictement moins. (POURQUOI ?)
+ En effet, le cas échéant, on aurait strictement plus de $b(R_k)$ sites occupés, ce qui est impossible.
 \end{Rq}
 
 \subsection{Lorsque $A^c_{k-1}$ est réalisé}
-On suppose dans cette partie que l'évènement $A^c_{k-1}$ est réalisé, pour $1 \leqslant k \leqslant F(n)-1$. Utilisons alors l'ensemble non vide donné par \ref{nonvide} au rang $k-1$ : il existe un $Z_k$ non encore visité, tel que $\|Z_k\| \leqslant R_{k-1} + 1$. Comme $A^c_{k-1}$ est réalisé, nécessairement, 
+On suppose dans cette partie que l'évènement $A^c_{k-1}$ est réalisé, pour $1 \leqslant k \leqslant F(n)-1$. Utilisons alors l'ensemble non vide donné par \ref{nonvide} au rang $k-1$ : il existe un $Z_k$ non encore visité, tel que $\|Z_k\| \leqslant R_{k-1}$. Comme $A^c_{k-1}$ est réalisé, nécessairement, 
 \begin{equation}
- R_{k-1} - h(R_{k-1}) \leqslant \|Z_k\| \leqslant R_{k-1} + 1.
+ R_{k-1} - h(R_{k-1}) \leqslant \|Z_k\| \leqslant R_{k-1}.
 \end{equation}
 On va s'appuyer sur ce $Z_k$ pour construire un évènement $I_k$ qui pourra s'interpréter par : soit $Z_k$ est un trou laissé à la prochaine vague $k$, soit un long tentacule apparaît à la vague $k$.
 
 \begin{Def}
 \begin{enumerate}[i)]
  \item
-Pour $\Lambda \subset \Sigma (z)$ et $n$ un entier et $R > 0$, on définit la variable aléatoire $N_z (n, \Lambda, R)$ comme le nombre de marches aléatoires parmi $n$ marches partant de $0$ qui atteignent $\Sigma (z)$ en $\Lambda$ puis visitent $z$ avant de sortir de $\mathbb{B} (0, \| z \| + R)$ :
+Pour $\Lambda \subset \Sigma (z)$, $n$ un entier et $R > 0$, on définit la variable aléatoire $N_z (n, \Lambda, R)$ comme le nombre de marches aléatoires parmi $n$ marches partant de $0$ qui atteignent $\Sigma (z)$ en $\Lambda$ puis visitent $z$ avant de sortir de $\mathbb{B} (0, \| z \| + R)$ :
 \begin{equation}
- N_z (n, \Lambda, R) = \mathrm{Card} \{ i \leqslant n \ \mid \ S_i (H(\Sigma (z))) \in \Lambda, \ H(z) < H( \mathbb{B}^c (O, \| z \| + h )) \}
+ N_z (n, \Lambda, R) = \mathrm{Card} \{ i \leqslant n \ \mid \ S_i (H(\Sigma (z))) \in \Lambda, \ H(z) < H( \mathbb{B}^c (O, \| z \| + R )) \}
 \end{equation}
  \item Soit $\Lambda_k = \mathbb{B}(Z_k, L(R_k)) \cap \Sigma (Z_k)$ et $\Lambda'_k = \Sigma (Z_k) \setminus \Lambda_k$ et :
  \begin{equation}
@@ -446,7 +449,7 @@ Pour $\Lambda \subset \Sigma (z)$ et $n$ un entier et $R > 0$, on définit la var
 \end{enumerate}
 \end{Def}
 
-Si $I_k$ est réalisé, on aimerait pouvoir dire que dans le cas où $Z_k$ n'est pas visité on a $\delta_I (R_k) \geq h(R_k)$ et que dans le cas contraire (un long tentacule apparaît) on a $\delta_O (R_k) \geq L(R_k)$. Cela sera assuré pour $X_k$ dans un bon intervalle, donné par le lemme suivant, qui induira du coup le choix des paramètres $\lambda_k$ :
+Si $I_k$ est réalisé, on aimerait pouvoir dire que dans le cas où $Z_k$ n'est pas visité (un trou apparaît) on a $\delta_I (R_k) \geq h(R_k)$ et que dans le cas contraire (un long tentacule apparaît) on a $\delta_O (R_k) \geq L(R_k)$. Cela sera assuré pour $X_k$ dans un bon intervalle, donné par le lemme suivant, qui induira du coup le choix des paramètres $\lambda_k$ :
 \begin{Lemme}
 Pour $k$ suffisamment grand, si $\mu_k = b(R_{k-1} + h(R_{k-1})) - b(R_{k-1})$,
 \begin{equation} \frac{2}{3} \mu_k \leq X_k \leq 2 \mu_k \Rightarrow I_k \subset A_k \cup \{ \delta_O (R_k) \geq L(R_k) \}
@@ -498,13 +501,13 @@ On va montrer que chacune de ces espérances est majorée par un terme du type $c 
 En appliquant ce lemme à $X_k$, $Z_k$ et $L(R_{k-1})$, on obtient :
 \begin{eqnarray}
  P(I_k) & \geq & \exp \left( - C \frac{\lambda_k L(R_{k-1}) }{\| Z_k \| ^{d-1} } \right)
- \nonumber\\& \geq & \exp \left( - C \frac{\lambda_k L(R_{k-1}) }{\| R_{k-1} - h(R_{k-1} \| ^{d-1} } \right)
- \nonumber\\& \geq & \exp \left( - \kappa h(n) L(n) \right)
+ \nonumber\\& \geq & \exp \left( - C \frac{\lambda_k L(R_{k-1}) }{(R_{k-1} - h(R_{k-1}))^{d-1} } \right)
+ \nonumber\\& \geq & \exp \left( - \kappa h(R_{k-1}) L(R_{k-1}) \right)
 \end{eqnarray}
-
+car $\lambda_k$ est de l'ordre de $R_{k-1}^{d-1}h(R_{k-1})$ d'après le lemme \ref{b(n)} et $R_{k-1} - h(R_{k-1})$ est de l'ordre de $R_{k-1}$
 \subsection{Minorations}
 Résumons ce que l'on a fait jusqu'à présent : on a montré que lorsque $A^c_{k-1}$ est réalisé, il existe un évènement $I_k$ tel que $\frac{2}{3} \lambda_k \leq X_k \leq 2 \lambda_k \Rightarrow I_k \subset A_k \cup \{ \delta_O (R_k) \geq L(R_k) \}$ et $P(I_k) \geqslant \exp 
-\left( - \kappa h(n) L(n) \right)$. Notre but est de montrer que $\lim _{n \to \infty } P \left( \bigcup _{k \leqslant F(n)} A_k \right) = 1$.
+\left( - \kappa h(R_{k-1}) L(R_{k-1} \right)$. Notre but est de montrer que $\lim_{n \to \infty } P \left( \bigcup _{k \leqslant F(n)} A_k \right) = 1$.
 
 
  
@@ -550,6 +553,69 @@ Posons $p=2 \lfloor \lambda \rfloor +1$ :
  \end{align*}
 \end{proof}
 
+\subsection{Estimation de b(n)}
+\begin{Lemme}
+\label{b(n)}
+i)Soit $\omega_d$ le volume de la boule unité de $\mathbb{Z}^d$, on a :
+ \begin{equation*}
+  b(n)\sim\omega_dn^d
+ \end{equation*}
+ii)Soit $a_n$ une suite telle que $a_n\to\infty$ et $a_n=o(n)$, on a :
+ \begin{equation*}
+   b(n+a_n)-b(n)\sim\omega_da_nn^{d-1}
+ \end{equation*}
+ \begin{proof}
+ i) Notons V(n)=$\omega_dn^d$ le volume de la boule de rayon n et $\alpha_d=\sqrt d$ le diamètre d'un cube unité. On peut paver $\mathbb{R}^d$ par des cubes unités dont les centres z appartiennent à $\mathbb{Z}^d$, notés $c_z$. On pose alors :
+ \begin{equation*}
+  A(n)=\bigcup_{z, c_z\cap B(0,n)\neq\emptyset}{c_z}
+ \end{equation*}
+On remarque que c(n):=$\lambda$(A(n))=Card($\{z, c_z\cap B(0,n)\neq\emptyset\}$)
+\begin{align*}
+ \normalfont{|}c(n)-V(n)\normalfont{|}=c(n)-V(n)&\leqslant\lambda(\bigcup_{z, c_z\cap B(0,n)\neq\emptyset,c_z\not\subset B(0,n)}{c_z})
+ \\&\leqslant\lambda(B(0,n+\alpha_d))-\lambda(B(0,n-\alpha_d))
+ \\&=((n+\alpha_d)^d-(n-\alpha_d)^d)\omega_d
+ \\&\sim2\alpha_dn^{d-1}\omega_d
+\end{align*}
+De même :
+\begin{align*}
+ \normalfont{|}c(n)-b(n)\normalfont{|}=c(n)-b(n)&\leqslant Card(\{z, c_z\cap B(0,n)\neq\emptyset,c_z\not\subset B(0,n)\})
+ \\&\sim2\alpha_dn^{d-1}\omega_d
+\end{align*}
+Et on a donc :
+\begin{equation*}
+ \normalfont{|}\frac{b(n)}{V(n)}-1\normalfont{|}\leqslant\frac{1}{V(n)}(\normalfont{|}c(n)-b(n)\normalfont{|}+\normalfont{|}c(n)-V(n)\normalfont{|})=O(\frac{1}{n})
+\end{equation*}
+
+ii) Posons :
+ \begin{equation*}
+  A'(n)=\bigcup_{z, c_z\subset B(0,n)}{c_z}
+ \end{equation*}
+ et c'(n)=$\lambda$(A'(n))
+ \begin{align*}
+  &b(n+a_n)-b(n)
+  \\&=(b(n+a_n)-c(n+a_n))+(c(n+a_n)-c'(n))+(c'(n)-b(n))
+  \\&\leqslant c(n+a_n)-c'(n)
+  \\&\leqslant (c(n+a_n)-V(n+a_n+\alpha_d))+(V(n+a_n+\alpha_d)-V(n-\alpha_d))+(V(n-\alpha_d)-c'(n))
+  \\&\leqslant V(n+a_n+\alpha_d)-V(n-\alpha_d)
+  \\&=\omega_d((n+a_n+\alpha_d)^d-(n-\alpha_d)^d)
+  \\&=\omega_da_nn^{d-1}+o(\omega_da_nn^{d-1})
+ \end{align*}
+De même :
+ \begin{align*}
+  &b(n+a_n)-b(n)
+  \\&=(b(n+a_n)-c'(n+a_n))+(c'(n+a_n)-c(n))+(c(n)-b(n))
+  \\&\geqslant c'(n+a_n)-c(n)
+  \\&\geqslant (c'(n+a_n)-V(n+a_n-\alpha_d))+(V(n+a_n-\alpha_d)-V(n+\alpha_d))+(V(n+\alpha_d)-c(n))
+  \\&\geqslant V(n+a_n-\alpha_d)-V(n+\alpha_d)
+  \\&=\omega_d((n+a_n-\alpha_d)^d-(n+\alpha_d)^d)
+  \\&=\omega_da_nn^{d-1}+o(\omega_da_nn^{d-1})
+ \end{align*}
+ D'où
+ \begin{equation*}
+   b(n+a_n)-b(n)\sim\omega_da_nn^{d-1}
+ \end{equation*}
+\end{proof}
+\end{Lemme}
 \newpage
 
 \bibliographystyle{unsrt-fr}
