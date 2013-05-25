@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.5.2)  13 MAY 2013 18:50
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.7.27)  23 MAY 2013 16:09
 entering extended mode
  %&-line parsing enabled.
 **document_final.tex
 (./document_final.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, french, basque, loaded.
+yphenation, loaded.
 (/usr/share/texmf-texlive/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texmf-texlive/tex/latex/base/size11.clo
@@ -42,6 +42,12 @@ File: babel.def 2008/07/06 v3.8l Babel common definitions
 \babel@savecnt=\count87
 \U@D=\dimen103
 )
+
+Package babel Warning: No hyphenation patterns were loaded for
+(babel)                the language `French'
+(babel)                I will use the patterns loaded for \language=0 instead.
+
+\l@french = a dialect from \language0
 Package babel Info: Making : an active character on input line 120.
 Package babel Info: Making ; an active character on input line 121.
 Package babel Info: Making ! an active character on input line 122.
@@ -50,7 +56,6 @@ Package babel Info: Making ? an active character on input line 123.
 \std@mcc=\count88
 \dec@mcc=\count89
 \parindentFFN=\dimen105
-
 *************************************
 * Local config file frenchb.cfg used
 *
@@ -306,65 +311,66 @@ _final.toc)
 \openout3 = `document_final.toc'.
 
 
-[2] <erreur_interne_et_externe.png, id=23, 149.5989pt x 158.994pt>
+[2] [3] <erreur_interne_et_externe.png, id=28, 149.5989pt x 158.994pt>
 File: erreur_interne_et_externe.png Graphic file (type png)
 
-<use erreur_interne_et_externe.png> [3]
-<erreurinterne.png, id=29, 196.5744pt x 160.4394pt>
+<use erreur_interne_et_externe.png> [4]
+<erreurinterne.png, id=33, 196.5744pt x 160.4394pt>
 File: erreurinterne.png Graphic file (type png)
  <use erreurinterne.png>
-Overfull \hbox (4.17442pt too wide) in paragraph at lines 105--106
+Overfull \hbox (4.17442pt too wide) in paragraph at lines 124--125
 [][] 
  []
 
-<erreurexterne.png, id=30, 196.5744pt x 160.4394pt>
+<erreurexterne.png, id=34, 196.5744pt x 160.4394pt>
 File: erreurexterne.png Graphic file (type png)
  <use erreurexterne.png>
-Overfull \hbox (4.17442pt too wide) in paragraph at lines 110--111
+Overfull \hbox (4.17442pt too wide) in paragraph at lines 129--130
 [][] 
  []
 
-[4 <./erreur_interne_et_externe.png> <./erreurinterne.png> <./erreurexterne.png
->] [5] <vague.jpg, id=43, 417.7206pt x 163.3302pt>
+[5 <./erreur_interne_et_externe.png> <./erreurinterne.png> <./erreurexterne.png
+>] [6] <vague.jpg, id=46, 417.7206pt x 163.3302pt>
 File: vague.jpg Graphic file (type jpg)
- <use vague.jpg> [6 <./vague.jpg>] [7] <cov.png, id=54, 388.0899pt x 160.4394pt
+ <use vague.jpg> [7 <./vague.jpg>] [8] <cov.png, id=57, 388.0899pt x 160.4394pt
 >
 File: cov.png Graphic file (type png)
- <use cov.png> [8 <./cov.png>] <cov2.png, id=59, 393.1488pt x 158.2713pt>
+ <use cov.png> [9 <./cov.png>] <cov2.png, id=62, 393.1488pt x 158.2713pt>
 File: cov2.png Graphic file (type png)
- <use cov2.png> [9 <./cov2.png>]
-[10] [11] [12] [13] [14] [15] (./document_final.bbl) [16] (./document_final.aux
-) ) 
+ <use cov2.png> [10 <./cov2.png>]
+[11] [12] [13] [14] [15] [16] [17] [18] (./document_final.bbl) [19]
+(./document_final.aux) ) 
 Here is how much of TeX's memory you used:
- 3378 strings out of 495028
- 41867 string characters out of 1181230
- 108190 words of memory out of 3000000
- 6495 multiletter control sequences out of 15000+50000
+ 3394 strings out of 495061
+ 42020 string characters out of 1182621
+ 108174 words of memory out of 3000000
+ 6502 multiletter control sequences out of 15000+50000
  17260 words of font info for 51 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 27i,15n,24p,962b,246s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf
--texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fo
-nts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-texlive/fonts/typ
-e1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/a
-msfonts/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
-mmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texm
-f-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fon
-ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/pu
-blic/amsfonts/cm/cmsy6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfont
-s/cm/cmsy8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/symbols/ms
-am10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/symbols/msbm10.p
-fb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf
-/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/
-cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1095.pf
-b></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/
-fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/c
-m-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb
->
-Output written on document_final.pdf (16 pages, 625969 bytes).
+ 27i,15n,24p,962b,263s stack positions out of 5000i,500n,10000p,200000b,50000s
+ </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecb
+x1200.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.600pk>
+ </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/paul
+/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </home/paul/.texmf-var/
+fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/paul/.texmf-var/fonts/pk/ljf
+our/jknappen/ec/ecbx1440.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen
+/ec/ecrm1200.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728
+.600pk></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
+r/share/texmf-texlive/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share
+/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texl
+ive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/t
+ype1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/type1/public/
+amsfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
+cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr6.pfb></u
+sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texm
+f-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/f
+onts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-texlive/fonts/type1/p
+ublic/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfon
+ts/symbols/msam10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/sym
+bols/msbm10.pfb>
+Output written on document_final.pdf (19 pages, 602187 bytes).
 PDF statistics:
- 153 PDF objects out of 1000 (max. 8388607)
+ 485 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

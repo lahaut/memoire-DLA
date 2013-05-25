@@ -2,47 +2,44 @@ This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: document_final.aux
 The style file: unsrt-fr.bst
 Database file #1: document_final.bib
-Warning--empty journal in ref
-Warning--empty journal in ref2
-You've used 3 entries,
+You've used 8 entries,
             1878 wiz_defined-function locations,
-            489 strings with 4315 characters,
-and the built_in function-call counts, 479 in all, are:
-= -- 34
-> -- 18
+            520 strings with 4927 characters,
+and the built_in function-call counts, 1583 in all, are:
+= -- 132
+> -- 56
 < -- 0
-+ -- 8
-- -- 5
-* -- 20
-:= -- 91
-add.period$ -- 6
-call.type$ -- 3
-change.case$ -- 2
++ -- 24
+- -- 16
+* -- 105
+:= -- 278
+add.period$ -- 16
+call.type$ -- 8
+change.case$ -- 7
 chr.to.int$ -- 0
-cite$ -- 5
-duplicate$ -- 26
-empty$ -- 51
-format.name$ -- 5
-if$ -- 105
+cite$ -- 8
+duplicate$ -- 70
+empty$ -- 167
+format.name$ -- 16
+if$ -- 360
 int.to.chr$ -- 0
-int.to.str$ -- 3
-missing$ -- 4
-newline$ -- 21
-num.names$ -- 3
-pop$ -- 17
+int.to.str$ -- 8
+missing$ -- 9
+newline$ -- 46
+num.names$ -- 8
+pop$ -- 20
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 8
+skip$ -- 23
 stack$ -- 0
-substring$ -- 0
-swap$ -- 1
+substring$ -- 87
+swap$ -- 8
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 2
-while$ -- 3
-width$ -- 4
-write$ -- 33
-(There were 2 warnings)
+warning$ -- 0
+while$ -- 12
+width$ -- 9
+write$ -- 89

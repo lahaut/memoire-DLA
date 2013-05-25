@@ -5,19 +5,52 @@
 
 \bibitem{ref}
 Amine \bgroup\fonteauteurs\bgroup Asselah\egroup\egroup{} et Alexandre
-  \bgroup\fonteauteurs\bgroup Gaudillière\egroup\egroup{} :
+  \bgroup\fonteauteurs\bgroup Gaudilli\`ere\egroup\egroup{} :
 \newblock {Sub-logarithmic fluctuations for internal DLA}.
-\newblock 2010.
+\newblock {\em Arxiv preprint}, 2010.
 
 \bibitem{ref2}
 Amine \bgroup\fonteauteurs\bgroup Asselah\egroup\egroup{} et Alexandre
-  \bgroup\fonteauteurs\bgroup Gaudillière\egroup\egroup{} :
+  \bgroup\fonteauteurs\bgroup Gaudilli\`ere\egroup\egroup{} :
 \newblock {Lower bounds on fluctuations for internal DLA}.
-\newblock 2010.
+\newblock {\em Arxiv preprint}, 2010.
+
+\bibitem{chimie}
+Paul \bgroup\fonteauteurs\bgroup Meakin\egroup\egroup{} et John~M.
+  \bgroup\fonteauteurs\bgroup Deutch\egroup\egroup{} :
+\newblock The formation of surfaces by diffusion limited annihilation.
+\newblock {\em J.Chem.Phys.}, 85(4)\string:\penalty500\relax 2320--2325, 1986.
+
+\bibitem{ref4}
+Persi \bgroup\fonteauteurs\bgroup Diaconis\egroup\egroup{} et William
+  \bgroup\fonteauteurs\bgroup Fulton\egroup\egroup{} :
+\newblock A growth model, a game, an algebra, lagrange inversion, and
+  characteristic classes.
+\newblock {\em Rend. Sem. Mat. Univ. Politec. Torino},
+  49(1)\string:\penalty500\relax 95--119, 1991.
+
+\bibitem{ref5}
+Gregory \bgroup\fonteauteurs\bgroup Lawler\egroup\egroup{}, Maury
+  \bgroup\fonteauteurs\bgroup Bramson\egroup\egroup{} et David
+  \bgroup\fonteauteurs\bgroup Griffeath\egroup\egroup{} :
+\newblock Internal diffusion limited aggregation.
+\newblock {\em Ann. Probab.}, 20(4)\string:\penalty500\relax 2117--2140, 1992.
+
+\bibitem{ref6}
+Gregory \bgroup\fonteauteurs\bgroup Lawler\egroup\egroup{} :
+\newblock Subdiffusive fluctuations for internal diffusion limited aggregation.
+\newblock {\em Ann. Probab.}, 23(1)\string:\penalty500\relax 71--86, 1995.
 
 \bibitem{ref3}
-Lawler \bgroup\fonteauteurs\bgroup Gregory\egroup\egroup{} :
+Gregory \bgroup\fonteauteurs\bgroup Lawler\egroup\egroup{} :
 \newblock {\em {Intersection of Random Walks}}.
-\newblock Birkhäuser Boston, 1991.
+\newblock Birkh\"auser Boston, 1991.
+
+\bibitem{ref7}
+David \bgroup\fonteauteurs\bgroup Jerison\egroup\egroup{}, Lionel
+  \bgroup\fonteauteurs\bgroup Levine\egroup\egroup{} et Scott
+  \bgroup\fonteauteurs\bgroup Sheffield\egroup\egroup{} :
+\newblock Internal dla in higher dimensions.
+\newblock {\em Arxiv preprint}, 2012.
 
 \end{thebibliography}
