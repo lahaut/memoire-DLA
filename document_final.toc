@@ -1,10 +1,14 @@
 \select@language {french}
-\contentsline {section}{\numberline {1}Premi\`eres Propri\'et\'es}{3}
-\contentsline {section}{\numberline {2}Propri\'et\'e ab\'elienne}{6}
-\contentsline {section}{\numberline {3}L'erreur externe}{7}
-\contentsline {subsection}{\numberline {3.1}En dimension sup\'erieure \`a 3}{7}
-\contentsline {subsection}{\numberline {3.2}En dimension 2}{13}
-\contentsline {section}{\numberline {4}L'erreur interne}{13}
-\contentsline {section}{\numberline {A}Preuves annexes}{14}
-\contentsline {subsection}{\numberline {A.1}Proposition \ref {ind\'e}}{14}
-\contentsline {subsection}{\numberline {A.2}Proposition \ref {deuxmoy}}{15}
+\contentsline {section}{\numberline {1}Historique}{3}
+\contentsline {section}{\numberline {2}Premi\`eres Propri\'et\'es}{4}
+\contentsline {section}{\numberline {3}Propri\'et\'e ab\'elienne}{7}
+\contentsline {section}{\numberline {4}L'erreur externe}{8}
+\contentsline {subsection}{\numberline {4.1}En dimension sup\'erieure \`a 3}{8}
+\contentsline {subsection}{\numberline {4.2}En dimension 2}{14}
+\contentsline {section}{\numberline {5}L'erreur interne}{14}
+\contentsline {subsection}{\numberline {5.1}Lorsque $A^c_{k-1}$ est r\'ealis\'e}{14}
+\contentsline {subsection}{\numberline {5.2}Minorations}{16}
+\contentsline {section}{\numberline {A}Preuves annexes}{17}
+\contentsline {subsection}{\numberline {A.1}Proposition \ref {ind\'e}}{17}
+\contentsline {subsection}{\numberline {A.2}Proposition \ref {deuxmoy}}{18}
+\contentsline {subsection}{\numberline {A.3}Estimation de b(n)}{18}
