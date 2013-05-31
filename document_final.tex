@@ -248,20 +248,7 @@ On constate que l'évènement $\delta_O(R_n)\geqslant h(R_n)$ est lié à $\{\mathrm
  \nonumber\\&\geqslant P(\bigcup_{z\in\Sigma}\mathrm{cov}(z))
 \end{align}
 
-Il nous faut désormais estimer $P(\bigcup_{z\in\Sigma}\mathrm{cov}(z))$. Pour cela, il serait intéressant d'avoir indépendance entre les $\mathrm{cov}(z)$ sous certaines hypothèses, ce qu'on va obtenir en prenant pour $X_n$ une variable de Poisson. En effet, les variables de Poisson ont la propriété suivante :
-
-\begin{Prop}
-\label{indé}
-Si $\{U_n,n\in\mathbb{N}\}$ est une suite i.i.d. de variables aléatoires de loi $U$ à valeur dans $E$, $X$ une variable de Poisson indépendante des $U_n$ de paramètre $\lambda$, $\{E_i,i\in\{1,\dots,n\}\}$ une partition de E, et si on pose 
-\begin{equation*}
- X_i=\sum_{n\leqslant X}{1_{U_n\in E_i}}
-\end{equation*}
-alors les $X_i$ sont des variables de Poisson indépendantes de paramètre $\lambda P(U \in E_i )$
-\end{Prop}
-
-\begin{proof}
-Voir Annexe \ref{demindé}.
-\end{proof}
+Il nous faut désormais estimer $P(\bigcup_{z\in\Sigma}\mathrm{cov}(z))$. Pour cela, il serait intéressant d'avoir indépendance entre les $\mathrm{cov}(z)$ sous certaines hypothèses, ce qu'on va obtenir en prenant pour $X_n$ une variable de Poisson. En effet, les variables de Poisson ont la propriété de découpage \ref{indé}, qui laisse penser que les $N_z$ seront indépendantes et de loi connue.
 
 Cette propriété ne permet pas pour autant d'affirmer que les $N_z$ sont des variables de Poisson pour $z \in \Sigma$, mais cela sera vrai lorsque $\delta_I(n) < L(n)$. On définit donc pour tout $z\in\Sigma$
 \begin{equation}
@@ -311,18 +298,10 @@ Pour $n$ suffisamment grand,
  \end{proof}
 \end{Lemme}
 
-On prend alors $\lambda_n=\frac{b(n+h(n))-b(n)}{2}$ pour pouvoir se placer dans le cas du lemme précédent sans difficulté, en effet, on aura souvent $X_n$ plus petit que $2\lambda_n$ :
-\begin{Prop}
- \label{deuxmoy}
- Soit $X_\lambda$ une variable de Poisson de paramètre $\lambda$. On a :
- \begin{equation*}
-  \lim_{\lambda\to\infty}P(X_\lambda>2\lambda)=0
- \end{equation*}
-\end{Prop}
-\begin{proof}
- Voir annexe \ref{demdeuxmoy}.
-\end{proof}
-
+On prend alors $\lambda_n=\frac{b(n+h(n))-b(n)}{2}$ pour pouvoir se placer dans le cas du lemme précédent sans difficulté, en effet, on aura souvent $X_n$ plus petit que $2\lambda_n$ : d'après la propriété annexe \ref{deuxmoy}, 
+\begin{equation}
+\lim_{n \to \infty} P(X_n) < 2\lambda_n = 1
+\end{equation}
 
 En utilisant le lemme \ref{pois}, on a donc :
 \begin{align}
@@ -515,11 +494,18 @@ Résumons ce que l'on a fait jusqu'à présent : on a montré que lorsque $A^c_{k-1}
 
 \appendix
 
-\section{Preuves annexes}
-\subsection{Proposition \ref{indé}}
+\section{Propriétés annexes}
+\subsection{Découpage d'une variable de Poisson}
+\begin{Prop}
+\label{indé}
+Si $\{U_n,n\in\mathbb{N}\}$ est une suite i.i.d. de variables aléatoires de loi $U$ à valeur dans $E$, $X$ une variable de Poisson indépendante des $U_n$ de paramètre $\lambda$, $\{E_i,i\in\{1,\dots,n\}\}$ une partition de E, et si on pose 
+\begin{equation*}
+ X_i=\sum_{n\leqslant X}{1_{U_n\in E_i}}
+\end{equation*}
+alors les $X_i$ sont des variables de Poisson indépendantes de paramètre $\lambda P(U \in E_i )$
+\end{Prop}
 \label{demindé}
 \begin{proof}\ 
-
 Ce sont des variables de Poisson :
 \begin{align*}
 \mathbb{P}(X_i=k)&=\mathbb{P}(\sum_{n\leq X}{1_{U_n\in E_i}=k})
@@ -539,8 +525,15 @@ Elles sont indépendantes :
 \end{align*}
 \end{proof}
 
-\subsection{Proposition \ref{deuxmoy}}
+\subsection{Estimations sur une variable de Poisson}
 \label{demdeuxmoy}
+\begin{Prop}
+ \label{deuxmoy}
+ Soit $X_\lambda$ une variable de Poisson de paramètre $\lambda$. On a :
+ \begin{equation*}
+  \lim_{\lambda\to\infty}P(X_\lambda>2\lambda)=0
+ \end{equation*}
+\end{Prop}
 \begin{proof}
 Posons $p=2 \lfloor \lambda \rfloor +1$ :
  \begin{align*}
@@ -553,32 +546,35 @@ Posons $p=2 \lfloor \lambda \rfloor +1$ :
  \end{align*}
 \end{proof}
 
-\subsection{Estimation de b(n)}
+\subsection{Estimation de $b(n)$}
 \begin{Lemme}
 \label{b(n)}
-i)Soit $\omega_d$ le volume de la boule unité de $\mathbb{Z}^d$, on a :
+\begin{enumerate}[i)]
+\item Soit $\omega_d$ le volume de la boule unité de $\mathbb{Z}^d$, on a :
  \begin{equation*}
   b(n)\sim\omega_dn^d
  \end{equation*}
-ii)Soit $a_n$ une suite telle que $a_n\to\infty$ et $a_n=o(n)$, on a :
+\item Soit $a_n$ une suite telle que $a_n\to\infty$ et $a_n=o(n)$, on a :
  \begin{equation*}
    b(n+a_n)-b(n)\sim\omega_da_nn^{d-1}
  \end{equation*}
+\end{enumerate}
  \begin{proof}
- i) Notons V(n)=$\omega_dn^d$ le volume de la boule de rayon n et $\alpha_d=\sqrt d$ le diamètre d'un cube unité. On peut paver $\mathbb{R}^d$ par des cubes unités dont les centres z appartiennent à $\mathbb{Z}^d$, notés $c_z$. On pose alors :
+ \begin{enumerate}[i)]
+ \item On note $\lambda$ la mesure de Lebesgue dans $\mathbb{R}^d$. Notons $V(n)=\omega_dn^d$ le volume de la boule de rayon $n$ et $\alpha_d=\sqrt d$ le diamètre d'un cube unité. On peut paver $\mathbb{R}^d$ par des cubes unités dont les centres appartiennent à $\mathbb{Z}^d$. On note $c_z$ un tel cube, avec $z$ son centre. On pose alors :
  \begin{equation*}
-  A(n)=\bigcup_{z, c_z\cap B(0,n)\neq\emptyset}{c_z}
+  A(n)=\bigcup_{c_z\cap B(0,n)\neq\emptyset}{c_z}
  \end{equation*}
-On remarque que c(n):=$\lambda$(A(n))=Card($\{z, c_z\cap B(0,n)\neq\emptyset\}$)
+On remarque que $c(n):=\lambda (A(n))= \mathrm{Card} \{z \ \mid \ c_z\cap B(0,n)\neq\emptyset\}$ vérifie :
 \begin{align*}
- \normalfont{|}c(n)-V(n)\normalfont{|}=c(n)-V(n)&\leqslant\lambda(\bigcup_{z, c_z\cap B(0,n)\neq\emptyset,c_z\not\subset B(0,n)}{c_z})
+ | c(n)-V(n) | = c(n)-V(n)&\leqslant\lambda(\bigcup_{z \ \mid \ c_z\cap B(0,n)\neq\emptyset,c_z\not\subset B(0,n)}{c_z})
  \\&\leqslant\lambda(B(0,n+\alpha_d))-\lambda(B(0,n-\alpha_d))
  \\&=((n+\alpha_d)^d-(n-\alpha_d)^d)\omega_d
  \\&\sim2\alpha_dn^{d-1}\omega_d
 \end{align*}
 De même :
 \begin{align*}
- \normalfont{|}c(n)-b(n)\normalfont{|}=c(n)-b(n)&\leqslant Card(\{z, c_z\cap B(0,n)\neq\emptyset,c_z\not\subset B(0,n)\})
+ | c(n)-b(n) |=c(n)-b(n)&\leqslant \mathrm{Card}(\{z \ \mid \ c_z\cap B(0,n)\neq\emptyset,c_z\not\subset B(0,n)\})
  \\&\sim2\alpha_dn^{d-1}\omega_d
 \end{align*}
 Et on a donc :
@@ -586,11 +582,11 @@ Et on a donc :
  \normalfont{|}\frac{b(n)}{V(n)}-1\normalfont{|}\leqslant\frac{1}{V(n)}(\normalfont{|}c(n)-b(n)\normalfont{|}+\normalfont{|}c(n)-V(n)\normalfont{|})=O(\frac{1}{n})
 \end{equation*}
 
-ii) Posons :
+\item Posons :
  \begin{equation*}
-  A'(n)=\bigcup_{z, c_z\subset B(0,n)}{c_z}
+  A'(n)=\bigcup_{c_z\subset B(0,n)}{c_z}
  \end{equation*}
- et c'(n)=$\lambda$(A'(n))
+ et $c'(n)=\lambda (A'(n))$
  \begin{align*}
   &b(n+a_n)-b(n)
   \\&=(b(n+a_n)-c(n+a_n))+(c(n+a_n)-c'(n))+(c'(n)-b(n))
@@ -614,6 +610,7 @@ De même :
  \begin{equation*}
    b(n+a_n)-b(n)\sim\omega_da_nn^{d-1}
  \end{equation*}
+ \end{enumerate}
 \end{proof}
 \end{Lemme}
 \newpage
