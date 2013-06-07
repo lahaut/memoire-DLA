@@ -390,7 +390,12 @@ On note $R_k$ le rayon théorique après la $k^{\mathrm{\grave{e}me}}$ vague :
 
 Et $A_k$ l'évènement qui nous intéresse :
 \begin{equation}
- A_k = \{ \delta_I (R_k) > \sqrt{\log (R_k) } \} 
+ A_k = \{ \delta_I (R_k) > h(R_k) \} 
+\end{equation}
+
+On note aussi $B_k$ son analogue pour l'erreur externe :
+\begin{equation}
+ B_k = \{ \delta_O (R_k) > L(R_k) \} 
 \end{equation}
 
 Le but sera de montrer que 
@@ -404,13 +409,13 @@ Une propriété simple nous sera utile par la suite :
  \begin{equation} \label{nonvide}
   A(b(R_k))^c \cap (\mathbb{B} (0, R_k)\cup\partial\mathbb{B} (0, R_k)) \neq \emptyset
  \end{equation}
- En effet, le cas échéant, on aurait strictement plus de $b(R_k)$ sites occupés, ce qui est impossible.
+ En effet, le cas échéant, on aurait $(\mathbb{B} (0, R_k)\cup\partial\mathbb{B} (0, R_k)) \subset A(b(R_k))$ et donc strictement plus de $b(R_k)$ sites seraient occupés, alors qu'on n'a lancé que $b(R_k)$ explorateurs.
 \end{Rq}
 
 \subsection{Lorsque $A^c_{k-1}$ est réalisé}
 On suppose dans cette partie que l'évènement $A^c_{k-1}$ est réalisé, pour $1 \leqslant k \leqslant F(n)-1$. Utilisons alors l'ensemble non vide donné par \ref{nonvide} au rang $k-1$ : il existe un $Z_k$ non encore visité, tel que $\|Z_k\| \leqslant R_{k-1}$. Comme $A^c_{k-1}$ est réalisé, nécessairement, 
-\begin{equation}
- R_{k-1} - h(R_{k-1}) \leqslant \|Z_k\| \leqslant R_{k-1}.
+\begin{equation} \label{zk}
+ R_{k-1} - h(R_{k-1}) \leqslant \|Z_k\| \leqslant R_{k-1} + 1.
 \end{equation}
 On va s'appuyer sur ce $Z_k$ pour construire un évènement $I_k$ qui pourra s'interpréter par : soit $Z_k$ est un trou laissé à la prochaine vague $k$, soit un long tentacule apparaît à la vague $k$.
 
@@ -423,21 +428,49 @@ Pour $\Lambda \subset \Sigma (z)$, $n$ un entier et $R > 0$, on définit la varia
 \end{equation}
  \item Soit $\Lambda_k = \mathbb{B}(Z_k, L(R_k)) \cap \Sigma (Z_k)$ et $\Lambda'_k = \Sigma (Z_k) \setminus \Lambda_k$ et :
  \begin{equation}
-  I_k = \{ N_{Z_k} (X_k, \Lambda_k, \infty ) = 0, N_{Z_k} (X_k, \Lambda '_k, L(R_{k-1})) = 0 \}
+  I_k = \{ N_{Z_k} (X_k, \Lambda_k, \infty ) = 0, N_{Z_k} (X_k, \Lambda '_k, 7 L(R_{k-1})) = 0 \}
  \end{equation}
 \end{enumerate}
 \end{Def}
 
-Si $I_k$ est réalisé, on aimerait pouvoir dire que dans le cas où $Z_k$ n'est pas visité (un trou apparaît) on a $\delta_I (R_k) \geq h(R_k)$ et que dans le cas contraire (un long tentacule apparaît) on a $\delta_O (R_k) \geq L(R_k)$. Cela sera assuré pour $X_k$ dans un bon intervalle, donné par le lemme suivant, qui induira du coup le choix des paramètres $\lambda_k$ :
+Si $I_k$ est réalisé, on aimerait pouvoir dire que dans le cas où $Z_k$ n'est pas visité (un trou apparaît) on a $\delta_I (R_k) \geqslant h(R_k)$ et que dans le cas contraire (un long tentacule apparaît) on a $\delta_O (R_k) \geqslant L(R_k)$. Pour cela, il faut montrer que sous certaines conditions sur $X_k$ on a $R_k - \| Z_k \| \geqslant h(R_k)$ et $\| Z_k \| - R_k + 7 L(R_{k-1}) \geqslant L(R_k)$.
+
+Cela sera assuré pour $X_k$ dans un bon intervalle, donné par le lemme suivant, qui induira du coup le choix des paramètres $\lambda_k$ :
 \begin{Lemme}
-Pour $k$ suffisamment grand, si $\mu_k = b(R_{k-1} + h(R_{k-1})) - b(R_{k-1})$,
-\begin{equation} \frac{2}{3} \mu_k \leq X_k \leq 2 \mu_k \Rightarrow I_k \subset A_k \cup \{ \delta_O (R_k) \geq L(R_k) \}
-\end{equation}
+Pour $k$ suffisamment grand, si $\mu_k = b(R_{k-1} + 2 h(R_{k-1})) - b(R_{k-1})$,
+\begin{eqnarray*} \frac{2}{3} \mu_k \leqslant X_k \leqslant 2 \mu_k & \Rightarrow & (i) \ R_k - \| Z_k \| \geqslant h(R_k)
+\\ &\mathrm{et}& (ii) \ \| Z_k \| - R_k + 7 L(R_{k-1}) \geqslant L(R_k)
+\end{eqnarray*}
 \end{Lemme}
 \begin{proof}
-plus tard...
-\end{proof}
-On voit donc qu'il est judicieux de prendre $\lambda_k = \mu_k = b(R_{k-1} + h(R_{k-1})) - b(R_{k-1})$. Ainsi, lorsque la variable de Poisson $X_k$ est comprise entre $\frac{2}{3}$ et $2$ fois sa moyenne, on a bien $I_k \subset A_k \cup \{ \delta_O (R_k) \geq L(R_k) \}$.
+ D'une part,
+  \begin{eqnarray}
+   X_k\leqslant 2(b(R_{k-1} + 2 h(R_{k-1})) - b(R_{k-1})) & \Rightarrow & X_k + b(R_{k-1}) \leqslant b(R_{k-1} + 4 h(R_{k-1})) - b(R_{k-1})
+   \nonumber\\&\Rightarrow & R_{k}\leqslant R_{k-1}+4h(R_{k-1}) \label{r1}
+  \end{eqnarray}
+ D'autre part,
+  \begin{eqnarray}
+   X_k\geqslant \frac23 (b(R_{k-1} + 2 h(R_{k-1})) - b(R_{k-1})) & \Rightarrow & X_k + b(R_{k-1}) \geqslant b(R_{k-1} + \frac43 h(R_{k-1})) + \frac13 b(R_{k-1})
+   \nonumber\\&\Rightarrow & R_{k}\geqslant R_{k-1}+\frac43 h(R_{k-1}) \label{r2}
+  \end{eqnarray}
+  
+  On en déduit que
+  \begin{eqnarray}
+   R_k - \| Z_k \| & \geqslant & R_k - R_{k-1} - 1 \ \ \mbox{par (\ref{zk})}
+   \nonumber\\ & \geqslant & \frac43 h(R_{k-1}) - 1 \ \ \mbox{par (\ref{r2})}
+   \nonumber\\ & \geqslant & h(R_{k}) \ \ \mbox{par (\ref{r1}), pour $k$ assez grand,}
+   \nonumber
+  \end{eqnarray}
+  ce qui prouve $(i)$.
+  
+  Pour le $(ii)$ on a :
+  \begin{eqnarray}
+   \| Z_k \| - R_k + 7 L(R_{k-1}) & \geqslant & R_{k-1} - R_{k} +7L(R_{k-1}) - h(R_{k-1}) \ \ \mbox{par (\ref{zk})}
+   \nonumber\\ & \geqslant & -5 h(R_{k-1}) + 7 L(R_{k-1}) \ \ \mbox{par (\ref{r2})}
+   \nonumber\\ & \geqslant & L(R_{k}) \ \ \mbox{par (\ref{r1}), pour $k$ assez grand.}
+   \nonumber
+  \end{eqnarray}
+\end{proof}On voit donc qu'il est judicieux de prendre $\lambda_k = \mu_k = b(R_{k-1} + 2 h(R_{k-1})) - b(R_{k-1})$. Ainsi, lorsque la variable de Poisson $X_k$ est comprise entre $\frac{2}{3}$ et $2$ fois sa moyenne, on a bien $I_k \subset A_k \cup B_k$.
 
 Enfin, on a besoin de s'assurer que la probabilité de $I_k$ est assez grande, ce qui est donné par le lemme technique suivant :
 
@@ -479,14 +512,16 @@ On va montrer que chacune de ces espérances est majorée par un terme du type $c 
 \end{proof}
 En appliquant ce lemme à $X_k$, $Z_k$ et $L(R_{k-1})$, on obtient :
 \begin{eqnarray}
- P(I_k) & \geq & \exp \left( - C \frac{\lambda_k L(R_{k-1}) }{\| Z_k \| ^{d-1} } \right)
- \nonumber\\& \geq & \exp \left( - C \frac{\lambda_k L(R_{k-1}) }{(R_{k-1} - h(R_{k-1}))^{d-1} } \right)
- \nonumber\\& \geq & \exp \left( - \kappa h(R_{k-1}) L(R_{k-1}) \right)
+ P(I_k) & \geqslant & \exp \left( - C' \frac{\lambda_k L(R_{k-1}) }{\| Z_k \| ^{d-1} } \right)
+ \nonumber\\& \geqslant & \exp \left( - C' \frac{\lambda_k L(R_{k-1}) }{(R_{k-1} - h(R_{k-1}))^{d-1} } \right)
+ \nonumber\\& \geqslant & \exp \left( - \kappa h(R_{k-1}) L(R_{k-1}) \right)
 \end{eqnarray}
-car $\lambda_k$ est de l'ordre de $R_{k-1}^{d-1}h(R_{k-1})$ d'après le lemme \ref{b(n)} et $R_{k-1} - h(R_{k-1})$ est de l'ordre de $R_{k-1}$
+car $\lambda_k$ est de l'ordre de $R_{k-1}^{d-1}h(R_{k-1})$ d'après le lemme \ref{b(n)} et $R_{k-1} - h(R_{k-1})$ est de l'ordre de $R_{k-1}$.
 \subsection{Minorations}
-Résumons ce que l'on a fait jusqu'à présent : on a montré que lorsque $A^c_{k-1}$ est réalisé, il existe un évènement $I_k$ tel que $\frac{2}{3} \lambda_k \leq X_k \leq 2 \lambda_k \Rightarrow I_k \subset A_k \cup \{ \delta_O (R_k) \geq L(R_k) \}$ et $P(I_k) \geqslant \exp 
-\left( - \kappa h(R_{k-1}) L(R_{k-1} \right)$. Notre but est de montrer que $\lim_{n \to \infty } P \left( \bigcup _{k \leqslant F(n)} A_k \right) = 1$.
+Résumons ce que l'on a fait jusqu'à présent : on a montré que lorsque $A^c_{k-1}$ est réalisé, il existe un évènement $I_k$ tel que $\frac{2}{3} \lambda_k \leqslant X_k \leqslant 2 \lambda_k \Rightarrow I_k \subset A_k \cup B_k$ et $P(I_k) \geqslant \exp 
+\left( - \kappa h(R_{k-1}) L(R_{k-1}) \right)$. Notre but est de montrer que $\lim_{n \to \infty } P \left( \bigcup _{k \leqslant F(n)} A_k \right) = 1$.
+
+
 
 
  
@@ -508,7 +543,7 @@ alors les $X_i$ sont des variables de Poisson indépendantes de paramètre $\lambd
 \begin{proof}\ 
 Ce sont des variables de Poisson :
 \begin{align*}
-\mathbb{P}(X_i=k)&=\mathbb{P}(\sum_{n\leq X}{1_{U_n\in E_i}=k})
+\mathbb{P}(X_i=k)&=\mathbb{P}(\sum_{n\leqslant X}{1_{U_n\in E_i}=k})
 \\&=\sum_{p=k}^{\infty}{\mathbb{P}(1_{X=p}\sum_{n\leqslant p}{1_{U_n \in E_i}=k}})
 \\&=\sum_{p=k}^{\infty}{\binom{p}{k}\mathbb{P}(X=p)\mathbb{P}(U_1\in E_i)...\mathbb{P}(U_k\in E_i)\mathbb{P}(U_{k+1}\notin E_i)...\mathbb{P}(U_{p}\notin E_i)}
 \\&=\frac{e^{-\lambda}}{k!}\mathbb{P}(U\in E_i)^k\sum_{p=k}^{\infty}{\frac{(1-\mathbb{P}(U\in E_i))^{p-k}\lambda^{p}}{(p-k)!}}
@@ -518,7 +553,7 @@ Ce sont des variables de Poisson :
 Elles sont indépendantes :
 \begin{align*}
 &\mathbb{P}(\bigcap_{i\in I}X_i=k_i)
-\\&=\mathbb{P}(\sum_{n\leq X}{\bigcap_{i\in I}1_{U_n\in E_i}}=k_i)
+\\&=\mathbb{P}(\sum_{n\leqslant X}{\bigcap_{i\in I}1_{U_n\in E_i}}=k_i)
 \\&=\sum_{p=\sum_{i\in I}k_i}^{\infty}{\prod_{i\in I}\binom{p-\sum_{j\in I,j<i}k_j}{k_i}\mathbb{P}(X=p)\big(\prod_{i\in I}\mathbb{P}(U\in E_i)^{k_i}\big)\mathbb{P}(U\notin\bigcup_{i\in I} E_i)^{p-\sum_{i\in I}k_i}}
 \\&=\frac{e^{-\lambda}}{\prod_{i\in I}(k_i!)}\big(\prod_{i\in I}\mathbb{P}(U\in E_i)^{k_i}\big)\sum_{p=\sum_{i\in I}k_i}^{\infty}{\frac{\lambda^p}{(p-\sum_{i\in I}k_i)!}\mathbb{P}(U\notin\bigcup_{i\in I} E_i)^{p-\sum_{i\in I}k_i}}
 \\&=\prod_{i\in I}\mathbb{P}(X_i=k_i)
@@ -526,24 +561,34 @@ Elles sont indépendantes :
 \end{proof}
 
 \subsection{Estimations sur une variable de Poisson}
-\label{demdeuxmoy}
 \begin{Prop}
  \label{deuxmoy}
  Soit $X_\lambda$ une variable de Poisson de paramètre $\lambda$. On a :
  \begin{equation*}
-  \lim_{\lambda\to\infty}P(X_\lambda>2\lambda)=0
+  P(X_\lambda>2\lambda)=O_{\lambda \to \infty}(\frac1\lambda)
  \end{equation*}
 \end{Prop}
 \begin{proof}
-Posons $p=2 \lfloor \lambda \rfloor +1$ :
- \begin{align*}
-  P(X_\lambda>2\lambda)=e^{-\lambda}\sum_{k=0}^{\infty}\frac{\lambda^{k+p}}{(k+p)!}
-  \leqslant e^{-\lambda}\sum_{k=0}^{\infty}\frac{\lambda^{k+2\lambda+2}}{(k+2\lambda)!}
-  &\leqslant e^{-\lambda}\sum_{k=0}^{\infty}\frac{\lambda^{k+2\lambda+2}}{(2\lambda)^{k-1}(2\lambda)!}
-  \\&=e^{-\lambda}\frac{\lambda^{2\lambda+3}}{(2\lambda)!}
-  \\&\sim e^{-\lambda}\lambda^{2\lambda+3}\Big(\frac{e}{2\lambda}\Big)^{2\lambda}\frac{1}{\sqrt{4\pi\lambda}}
-  \\&\sim \Big(\frac{e}{4}\Big)^\lambda\frac{\lambda^3}{\sqrt{4\pi\lambda}}
- \end{align*}
+ On a $E[X_\lambda] = \lambda$ et $V(X_\lambda) = \lambda$. Ainsi,
+ \begin{equation*}
+  P(X_\lambda< 2 \lambda) \leqslant P(|X_\lambda - E[X_\lambda] | \leqslant \lambda)
+ \end{equation*}
+ et on peut appliquer l'inégalité de Bienaymé-Tchebicheff :
+ \begin{eqnarray*}
+  P(X_\lambda<2 \lambda) &\leqslant& \frac1{\lambda ^2} V(X_\lambda)
+  \\ &\leqslant& \frac1\lambda
+ \end{eqnarray*}
+\end{proof}
+
+\begin{Prop}
+ \label{23moy}
+ Soit $X_\lambda$ une variable de Poisson de paramètre $\lambda$. On a :
+ \begin{equation*}
+  P(X_\lambda<\frac23 \lambda)=O_{\lambda \to \infty}(\frac1\lambda)
+ \end{equation*}
+\end{Prop}
+\begin{proof}
+ La preuve est la même que pour la proposition précédente.
 \end{proof}
 
 \subsection{Estimation de $b(n)$}
