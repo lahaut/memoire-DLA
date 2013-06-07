@@ -6,11 +6,13 @@
 \usepackage{amssymb}
 \usepackage{mathrsfs}
 \usepackage{amsmath}
+\usepackage{amsfonts,amssymb}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{dsfont}
 \usepackage{enumerate}
 \usepackage[a4paper]{geometry}
+
 
 \newtheorem{The}{Théorème}[section]
 \newtheorem{Lemme}[The]{Lemme}
@@ -33,7 +35,7 @@
 \begin{document}
 \maketitle
 \section*{Introduction}
-Nous allons étudier dans ce mémoire l'évolution du monde découvert par des explorateurs dans le cas discret. Le résultat principal est celui de \cite{ref} qui montre qu'asymptotiquement celui-ci est une boule. Le modèle est le suivant : on lance N explorateurs sur $\mathbb{Z}^d$ les uns après les autres. On définit la région explorée récursivement de la façon suivante: on lance le $k^{\mathrm{\grave{e}me}}$ explorateur qui effectue une marche aléatoire symétrique et s'arrête dès qu'il tombe sur une case non explorée (on dit qu'il s'installe). La région explorée à l'instant $k$ est alors la région explorée à l'instant $k-1$ plus la position du $k^{\mathrm{\grave{e}me}}$ explorateur installé. A. Asselah et A. Gaudillière ont montré dans \cite{ref} que la région explorée tendait vers une boule, avec une erreur presque sûrement inférieure à $\alpha\sqrt{\log(n)}$ en dimension 3 et $\alpha \log(n)$ en dimension 2.
+Nous allons étudier dans ce mémoire l'évolution du monde découvert par des explorateurs dans le cas discret. Le résultat principal est celui de \cite{ref} qui montre qu'asymptotiquement celui-ci est une boule. Le modèle est le suivant : on lance N explorateurs sur $\mathbb{Z}^d$ les uns après les autres. On définit la région explorée récursivement de la façon suivante: on lance le $k^{\mathrm{\grave{e}me}}$ explorateur qui effectue une marche aléatoire symétrique et s'arrête dès qu'il tombe sur une case non explorée (on dit qu'il s'installe). La région explorée à l'instant $k$ est alors la région explorée à l'instant $k-1$ plus la position du $k^{\mathrm{\grave{e}me}}$ explorateur installé. A. Asselah et A. Gaudillière ont montré dans \cite{ref} que la région explorée tendait vers une boule, avec une erreur presque sûrement inférieure à $\alpha\sqrt{\log(n)}$ en dimension 3 ou plus et $\alpha \log(n)$ en dimension 2.
 
 Nous allons travailler ici sur l'article \cite{ref2} d'A. Gaudillière et A. Asselah qui essaie d'établir l'optimalité des majorations précédentes. Il montre en particulier que $\sqrt{ \log (n)}$ est optimal en dimension supérieure à 3 pour l'erreur interne, mais ne conclut pas pour la dimension 2. En ce qui concerne l'erreur externe, ils prouvent un résultat qui permet de penser que $\sqrt{ \log (n)}$ est optimal en dimension supérieure à 3 sans tout à fait permettre de conclure.
 
@@ -61,7 +63,7 @@ on appelle $\mathbb{B}(y,R)=\{x \in \mathbb{Z}^d, \|x-y\| <R\}$ la boule dans $\
  pour tout $n$ assez grand.
 \end{The}
 
-Puis, le problème de l'ordre des fluctuations autour de la boule a été étudié par G. Lawler qui montre en 1995 \cite{ref6} que les fluctuations sont presque sûrement majorées par $n^{1/3} \log ^4 (n)$ en dimension $2$ ou plus. Toutefois, des simulations suggèrent que l'ordre des fluctuations est plutôt logarithmique. Aucune amélioration notable de ces résultats n'est publiée, jusqu'en 2010, lorsque A. Asselah et A. Gaudillière montrent dans \cite{ref} que l'erreur est presque sûrement inférieure à $\alpha\sqrt{\log(n)}$ en dimension 3 et $\alpha \log(n)$ en dimension 2. Ils publient un second article \cite{ref2} auquel nous nous intéressons ici, qui établit l'optimalité de ce résultat, du moins pour ce qui est de l'erreur interne.
+Puis, le problème de l'ordre des fluctuations autour de la boule a été étudié par G. Lawler qui montre en 1995 \cite{ref6} que les fluctuations sont presque sûrement majorées par $n^{1/3} \log ^4 (n)$ en dimension $2$ ou plus. Toutefois, des simulations suggèrent que l'ordre des fluctuations est plutôt logarithmique. Aucune amélioration notable de ces résultats n'est publiée, jusqu'en 2010, lorsque A. Asselah et A. Gaudillière montrent dans \cite{ref} que l'erreur est presque sûrement inférieure à $\alpha\sqrt{\log(n)}$ en dimension 3 ou plus et $\alpha \log(n)$ en dimension 2. Ils publient un second article \cite{ref2} auquel nous nous intéressons ici, qui établit l'optimalité de ce résultat, du moins pour ce qui est de l'erreur interne.
 
 \newpage
 \section{Premières Propriétés}
@@ -515,16 +517,87 @@ En appliquant ce lemme à $X_k$, $Z_k$ et $L(R_{k-1})$, on obtient :
  P(I_k) & \geqslant & \exp \left( - C' \frac{\lambda_k L(R_{k-1}) }{\| Z_k \| ^{d-1} } \right)
  \nonumber\\& \geqslant & \exp \left( - C' \frac{\lambda_k L(R_{k-1}) }{(R_{k-1} - h(R_{k-1}))^{d-1} } \right)
  \nonumber\\& \geqslant & \exp \left( - \kappa h(R_{k-1}) L(R_{k-1}) \right)
+ \nonumber\\& \geqslant & \exp \left( - \kappa h(R_{F(n)}) L(R_{F(n)}) \right)
+ \label{pik}
 \end{eqnarray}
 car $\lambda_k$ est de l'ordre de $R_{k-1}^{d-1}h(R_{k-1})$ d'après le lemme \ref{b(n)} et $R_{k-1} - h(R_{k-1})$ est de l'ordre de $R_{k-1}$.
+ 
+
 \subsection{Minorations}
 Résumons ce que l'on a fait jusqu'à présent : on a montré que lorsque $A^c_{k-1}$ est réalisé, il existe un évènement $I_k$ tel que $\frac{2}{3} \lambda_k \leqslant X_k \leqslant 2 \lambda_k \Rightarrow I_k \subset A_k \cup B_k$ et $P(I_k) \geqslant \exp 
-\left( - \kappa h(R_{k-1}) L(R_{k-1}) \right)$. Notre but est de montrer que $\lim_{n \to \infty } P \left( \bigcup _{k \leqslant F(n)} A_k \right) = 1$.
+\left( - \kappa h(R_{F(n)}) L(R_{F(n)}) \right)$. Notre but est de montrer que $\lim_{n \to \infty } P \left( \bigcup _{k \leqslant F(n)} A_k \right) = 1$. La fonction $F(n)$ est toujours à choisir.
 
+On note $C_k$ l'évènement $\{ \frac{2}{3} \lambda_k \leqslant X_k \leqslant 2 \lambda_k \}$. On note $\mathcal{G}_k$ la filtration associée à l'exploration par vagues.
+\begin{Lemme} \label{indic}
+ \[ 1_{A_{k-1}^c} P(A_k ^c  \cap C_k \mid \mathcal{G}_{k-1}) \leqslant P(B_k \mid \mathcal{G}_{k-1} ) + 1_{A_{k-1}^c} (1-P(I_k \mid \mathcal{G}_{k-1}) ) \]
+\end{Lemme}
+\begin{proof}
+La propriété essentielle $C_k \cap I_k \subset A_k \cup B_k $ donne :
+\begin{eqnarray}
+ P(I_k \cap C_k \mid \mathcal{G}_{k-1}) & \leqslant &  P((A_k \cap C_k) \cup B_k \mid \mathcal{G}_{k-1})
+ \nonumber\\& \leqslant & P(A_k \cap C_k \mid \mathcal{G}_{k-1}) + P(B_k \mid \mathcal{G}_{k-1})
+ \label{croustille}
+\end{eqnarray}
+D'où, en utilisant que $C_k$ est indépendant de $\mathcal{G}_{k-1}$ puis l'inégalité \ref{croustille} : 
+\begin{eqnarray}
+ 1_{A_{k-1}^c} P(A_k ^c  \cap C_k ) & = & 1_{A_{k-1}^c}(P(C_k) - P(A_k \cap C_k \mid \mathcal{G}_{k-1}))
+ \nonumber \\ & \leqslant & 1_{A_{k-1}^c} \left( P(C_k) - P(I_k \cap C_k \mid \mathcal{G}_{k-1}) + P(B_k \mid \mathcal{G}_{k-1}) \right)
+\end{eqnarray}
+Pour conclure, il suffit de montrer que $P(C_k) - P(I_k \cap C_k \mid \mathcal{G}_{k-1}) \leqslant 1 - P(I_k \mid \mathcal{G}_{k-1})$, ce qui est facile en remarquant que $C_k^c \cup (I_k \cap C_k) \supset I_k$.
+\end{proof}
 
+On montre maintenant par récurrence sur $N \in \mathbb{N}$ la propriété :
+\begin{equation} \label{rec}
+P\left( \bigcup_{k \leqslant N} A_k^c \cap C_k \right) \leqslant \sum _{k \leqslant N} P(B_k) - \left( 1 - \exp (\alpha (n) ) \right) ^N
+\end{equation}
+où $\alpha(n) = -\kappa h(R_{F(n)})L(R_{F(n)})$ obtenu dans \ref{pik}.
 
+Cette propriété est vraie en $N=0$, et si elle est vraie pour $N < F(n)$ alors :
+\begin{eqnarray}
+ P\left( \bigcup_{k \leqslant N+1} A_k^c \cap C_k \right) & \leqslant & E[1_{\bigcup_{k \leqslant N} A_k^c \cap C_k} P(A_N^c \cap C_N \mid \mathcal{G}_{N-1} ) ]
+ \nonumber \\ & \leqslant & E[1_{\bigcup_{k \leqslant N} A_k^c \cap C_k} \left(  P(B_N \mid \mathcal{G}_{N-1} ) + 1-P(I_N \mid \mathcal{G}_{N-1}) \right) ]
+ \nonumber
+\end{eqnarray}
+en utilisant le lemme \ref{indic}. On en déduit :
+\begin{eqnarray}
+ P\left( \bigcup_{k \leqslant N+1} A_k^c \cap C_k \right) & \leqslant & P(B_N) + (1-\exp (\alpha (n) ) ) P\left( \bigcup_{k \leqslant N} A_k^c \cap C_k \right)
+ \nonumber \\ & \leqslant & P(B_N) + (1-\exp (\alpha (n) ) ) \left( \sum _{k \leqslant N} P(B_k) - \left( 1 - \exp (\alpha (n) ) \right) ^N \right)
+ \nonumber \\ & \leqslant & \sum _{k \leqslant N+1} P(B_k) - \left( 1 - \exp (\alpha (n) ) \right) ^{N+1}
+ \nonumber
+\end{eqnarray}
+ce qui achève la preuve de \ref{rec}.
 
- 
+Remarquons maintenant que $\bigcap_{k \leqslant N} C_k \subset \bigcup_{k \leqslant N} A_k \cup \bigcup_{k \leqslant N} A_k^c \cap C_k$, ce qui donne :
+\begin{equation} \label{cups}
+ P\left( \bigcup_{k \leqslant N} A_k \right) \geqslant P\left(\bigcap_{k \leqslant N} C_k \right) - P\left( \bigcup_{k \leqslant N} A_k^c \cap C_k \right)
+\end{equation}
+et en appliquant \ref{cups} puis \ref{rec} avec $N=F(n)$, on trouve :
+\begin{equation} \label{fin}
+ P\left( \bigcup_{k \leqslant F(n)} A_k \right) \geqslant 1 - \sum_{k \geqslant F(n)} \left( P(B_k) + P(C_k^c) \right) - (1 - \exp ( - \kappa h(R_{F(n)}) L(R_{F(n)}) ) ) ^{F(n)}
+\end{equation}
+
+On va alors choisir $F(n) = \lfloor \frac{n}{h(n)} \rfloor$, en effet, pour ce choix on a :
+\begin{itemize}
+ \item $P(B_k)$ décroît plus vite que toute puissance de $n$ d'après un résultat de \cite{ref} donc $\sum_{k \geqslant F(n)} P(B_k) \to_{n \to \infty} 0$.
+ \item $P(C_k^c) \leqslant \frac{C}{\lambda_k}$ d'après les résultats annexes \ref{deuxmoy} et \ref{23moy}. Comme $\lambda_k \geqslant \lambda_n \sim h(n) n^{d-1}$ on a :
+ \begin{equation*}
+ \sum_{k \geqslant F(n)} P(C_k^c) \leqslant \frac{n}{h(n)} \frac{C}{h(n)n^{d-1}} \underset{n\to+\infty}{\longrightarrow} 0
+ \end{equation*}
+ \item $R_{F(n)}$ est d'ordre $n$ donc
+  \begin{equation*}
+  (1 - \exp ( - \kappa h(R_{F(n)}) L(R_{F(n)}) ) ) ^{F(n)} \leqslant \exp\left(-\frac{n}{h(n)} \exp (- \kappa ' h(n) L(n) ) \right)
+  \end{equation*}
+  Or, si $h(n) = L(n) = \sqrt{\alpha \log (n) }$,
+  \begin{equation*}
+  \frac{n}{h(n)} \exp (- \kappa ' h(n) L(n) ) = \frac{n^{1-\kappa ' \alpha}}{\sqrt{\alpha \log (n) }} \underset{n\to+\infty}{\longrightarrow} +\infty
+  \end{equation*}
+  pourvu qu'on ait pris $\alpha$ assez petit ($\alpha < 1 / \kappa'$).
+\end{itemize}
+
+Avec ce choix, \ref{fin} implique alors que 
+\begin{equation*} P\left( \bigcup_{k \leqslant F(n)} A_k \right) \underset{n\to+\infty}{\longrightarrow} 1
+\end{equation*}
+ce qui achève la preuve du théorème \ref{int}.
 \newpage
 
 \appendix

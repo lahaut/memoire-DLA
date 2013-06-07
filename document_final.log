@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.7.27)  25 MAY 2013 16:12
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.7.27)  8 JUN 2013 01:07
 entering extended mode
  %&-line parsing enabled.
 **document_final.tex
@@ -218,21 +218,21 @@ Package ifvtex Info: VTeX not detected.
 (./document_final.aux)
 \openout1 = `document_final.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Info: Redefining \degres on input line 33.
-LaTeX Info: Redefining \dots on input line 33.
-LaTeX Info: Redefining \up on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Info: Redefining \degres on input line 35.
+LaTeX Info: Redefining \dots on input line 35.
+LaTeX Info: Redefining \up on input line 35.
  (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count108
@@ -287,16 +287,16 @@ driver: pdftex
 
 (1in=72.27pt, 1cm=28.45pt)
 -----------------------
-LaTeX Font Info:    Try loading font information for U+msa on input line 34.
+LaTeX Font Info:    Try loading font information for U+msa on input line 36.
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 34.
+LaTeX Font Info:    Try loading font information for U+msb on input line 36.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 34.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 36.
 
 (/usr/share/texmf-texlive/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
@@ -318,14 +318,14 @@ File: erreur_interne_et_externe.png Graphic file (type png)
 <erreurinterne.png, id=33, 196.5744pt x 160.4394pt>
 File: erreurinterne.png Graphic file (type png)
  <use erreurinterne.png>
-Overfull \hbox (4.17442pt too wide) in paragraph at lines 124--125
+Overfull \hbox (4.17442pt too wide) in paragraph at lines 126--127
 [][] 
  []
 
 <erreurexterne.png, id=34, 196.5744pt x 160.4394pt>
 File: erreurexterne.png Graphic file (type png)
  <use erreurexterne.png>
-Overfull \hbox (4.17442pt too wide) in paragraph at lines 129--130
+Overfull \hbox (4.17442pt too wide) in paragraph at lines 131--132
 [][] 
  []
 
@@ -338,32 +338,40 @@ File: cov.png Graphic file (type png)
  <use cov.png> [9 <./cov.png>] <cov2.png, id=62, 393.1488pt x 158.2713pt>
 File: cov2.png Graphic file (type png)
  <use cov2.png> [10 <./cov2.png>]
-[11] [12] [13] [14] [15]
-Overfull \hbox (11.05121pt too wide) in paragraph at lines 509--511
-\OML/cmm/m/it/10.95 P\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 I[]\OT1/cmr/m/n/10
-.95 ) \U/msa/m/n/10.95 > [] []$\T1/cmr/m/n/10.95 . Notre but est de mon-trer qu
-e $[][] \OML/cmm/m/it/10.95 P [] \OT1/cmr/m/n/10.95 =
+[11] [12] [13]
+Overfull \hbox (28.10822pt too wide) in alignment at lines 449--452
+ [][][] []
  []
 
-[16] [17] [18]
-Overfull \hbox (2.44751pt too wide) in paragraph at lines 602--602
+
+Overfull \hbox (40.7832pt too wide) in alignment at lines 454--457
+ [][][] []
+ []
+
+[14] [15] [16]
+Overfull \hbox (0.88817pt too wide) in alignment at lines 562--567
+ [][][] []
+ []
+
+[17] [18] [19] [20]
+Overfull \hbox (2.44751pt too wide) in paragraph at lines 716--716
 [] 
  []
 
 
-Overfull \hbox (2.44751pt too wide) in paragraph at lines 612--612
+Overfull \hbox (2.44751pt too wide) in paragraph at lines 726--726
 [] 
  []
 
-[19] (./document_final.bbl) [20] (./document_final.aux) ) 
+[21] (./document_final.bbl) [22] (./document_final.aux) ) 
 Here is how much of TeX's memory you used:
- 3393 strings out of 495061
- 42003 string characters out of 1182621
- 108174 words of memory out of 3000000
- 6501 multiletter control sequences out of 15000+50000
+ 3402 strings out of 495061
+ 42050 string characters out of 1182621
+ 107174 words of memory out of 3000000
+ 6510 multiletter control sequences out of 15000+50000
  17260 words of font info for 51 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 27i,15n,24p,962b,263s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,15n,24p,970b,340s stack positions out of 5000i,500n,10000p,200000b,50000s
  </home/paul/.texmf-va
 r/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/paul/.texmf-var/fonts/pk/l
 jfour/jknappen/ec/eccc1095.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknapp
@@ -378,15 +386,17 @@ cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/
 texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texliv
 e/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type
-1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsf
-onts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy1
-0.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/
-share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-
-texlive/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-texliv
-e/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on document_final.pdf (20 pages, 609068 bytes).
+1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/ams
+fonts/cm/cmr6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8
+.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
+share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-
+texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive/font
+s/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-texlive/fonts/type
+1/public/amsfonts/symbols/msam7.pfb></usr/share/texmf-texlive/fonts/type1/publi
+c/amsfonts/symbols/msbm10.pfb>
+Output written on document_final.pdf (22 pages, 634771 bytes).
 PDF statistics:
- 492 PDF objects out of 1000 (max. 8388607)
+ 506 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
