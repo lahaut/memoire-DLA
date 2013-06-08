@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.7.27)  8 JUN 2013 01:07
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.5.2)  8 JUN 2013 16:46
 entering extended mode
  %&-line parsing enabled.
 **document_final.tex
 (./document_final.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, loaded.
+yphenation, french, basque, loaded.
 (/usr/share/texmf-texlive/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texmf-texlive/tex/latex/base/size11.clo
@@ -42,12 +42,6 @@ File: babel.def 2008/07/06 v3.8l Babel common definitions
 \babel@savecnt=\count87
 \U@D=\dimen103
 )
-
-Package babel Warning: No hyphenation patterns were loaded for
-(babel)                the language `French'
-(babel)                I will use the patterns loaded for \language=0 instead.
-
-\l@french = a dialect from \language0
 Package babel Info: Making : an active character on input line 120.
 Package babel Info: Making ; an active character on input line 121.
 Package babel Info: Making ! an active character on input line 122.
@@ -56,6 +50,7 @@ Package babel Info: Making ? an active character on input line 123.
 \std@mcc=\count88
 \dec@mcc=\count89
 \parindentFFN=\dimen105
+
 *************************************
 * Local config file frenchb.cfg used
 *
@@ -365,38 +360,38 @@ Overfull \hbox (2.44751pt too wide) in paragraph at lines 726--726
 
 [21] (./document_final.bbl) [22] (./document_final.aux) ) 
 Here is how much of TeX's memory you used:
- 3402 strings out of 495061
- 42050 string characters out of 1182621
- 107174 words of memory out of 3000000
- 6510 multiletter control sequences out of 15000+50000
+ 3399 strings out of 495028
+ 42016 string characters out of 1181230
+ 107190 words of memory out of 3000000
+ 6516 multiletter control sequences out of 15000+50000
  17260 words of font info for 51 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  27i,15n,24p,970b,340s stack positions out of 5000i,500n,10000p,200000b,50000s
- </home/paul/.texmf-va
-r/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/paul/.texmf-var/fonts/pk/l
-jfour/jknappen/ec/eccc1095.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknapp
-en/ec/ecti1095.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx10
-95.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </
-home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/paul/.t
-exmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/paul/.texmf-var/fon
-ts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/texmf-texlive/fonts/type1/p
-ublic/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
-nts/cmextra/cmex8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
-cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/
-texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texliv
-e/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type
-1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/ams
-fonts/cm/cmr6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8
-.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
-share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-
-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive/font
-s/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-texlive/fonts/type
-1/public/amsfonts/symbols/msam7.pfb></usr/share/texmf-texlive/fonts/type1/publi
-c/amsfonts/symbols/msbm10.pfb>
-Output written on document_final.pdf (22 pages, 634771 bytes).
+{/usr/share/texmf/font
+s/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-texlive/fonts/type1/publ
+ic/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts
+/cmextra/cmex8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmm
+i10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
+sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/tex
+mf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/f
+onts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/p
+ublic/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfon
+ts/cm/cmr6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pf
+b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
+re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-tex
+live/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive/fonts/t
+ype1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-texlive/fonts/type1/p
+ublic/amsfonts/symbols/msam7.pfb></usr/share/texmf-texlive/fonts/type1/public/a
+msfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx10
+95.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/t
+exmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/pub
+lic/cm-super/sfcc1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm109
+5.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/te
+xmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/publ
+ic/cm-super/sfti1095.pfb>
+Output written on document_final.pdf (22 pages, 698133 bytes).
 PDF statistics:
- 506 PDF objects out of 1000 (max. 8388607)
+ 184 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

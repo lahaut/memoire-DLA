@@ -302,7 +302,7 @@ Pour $n$ suffisamment grand,
 
 On prend alors $\lambda_n=\frac{b(n+h(n))-b(n)}{2}$ pour pouvoir se placer dans le cas du lemme précédent sans difficulté, en effet, on aura souvent $X_n$ plus petit que $2\lambda_n$ : d'après la propriété annexe \ref{deuxmoy}, 
 \begin{equation}
-\lim_{n \to \infty} P(X_n) < 2\lambda_n = 1
+\lim_{n \to \infty} P(X_n < 2\lambda_n) = 1
 \end{equation}
 
 En utilisant le lemme \ref{pois}, on a donc :
@@ -644,11 +644,11 @@ Elles sont indépendantes :
 \begin{proof}
  On a $E[X_\lambda] = \lambda$ et $V(X_\lambda) = \lambda$. Ainsi,
  \begin{equation*}
-  P(X_\lambda< 2 \lambda) \leqslant P(|X_\lambda - E[X_\lambda] | \leqslant \lambda)
+  P(X_\lambda> 2 \lambda) \leqslant P(|X_\lambda - E[X_\lambda] | > \lambda)
  \end{equation*}
  et on peut appliquer l'inégalité de Bienaymé-Tchebicheff :
  \begin{eqnarray*}
-  P(X_\lambda<2 \lambda) &\leqslant& \frac1{\lambda ^2} V(X_\lambda)
+  P(X_\lambda>2 \lambda) &\leqslant& \frac1{\lambda ^2} V(X_\lambda)
   \\ &\leqslant& \frac1\lambda
  \end{eqnarray*}
 \end{proof}
