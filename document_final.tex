@@ -424,13 +424,13 @@ On va s'appuyer sur ce $Z_k$ pour construire un évènement $I_k$ qui pourra s'int
 \begin{Def}
 \begin{enumerate}[i)]
  \item
-Pour $\Lambda \subset \Sigma (z)$, $n$ un entier et $R > 0$, on définit la variable aléatoire $N_z (n, \Lambda, R)$ comme le nombre de marches aléatoires parmi $n$ marches partant de $0$ qui atteignent $\Sigma (z)$ en $\Lambda$ puis visitent $z$ avant de sortir de $\mathbb{B} (0, \| z \| + R)$ :
+ Soit $n$ un entier et $R > 0$, on définit la variable aléatoire $N_z (n, R)$ comme le nombre de marches aléatoires parmi $n$ marches partant de $0$ visitent $z$ avant de sortir de $\mathbb{B} (0, \| z \| + R)$ :
 \begin{equation}
- N_z (n, \Lambda, R) = \mathrm{Card} \{ i \leqslant n \ \mid \ S_i (H(\Sigma (z))) \in \Lambda, \ H(z) < H( \mathbb{B}^c (O, \| z \| + R )) \}
+ N_z (n, R) = \mathrm{Card} \{ i \leqslant n \ \mid \ H(z) < H( \mathbb{B}^c (O, \| z \| + R )) \}
 \end{equation}
  \item Soit $\Lambda_k = \mathbb{B}(Z_k, L(R_k)) \cap \Sigma (Z_k)$ et $\Lambda'_k = \Sigma (Z_k) \setminus \Lambda_k$ et :
  \begin{equation}
-  I_k = \{ N_{Z_k} (X_k, \Lambda_k, \infty ) = 0, N_{Z_k} (X_k, \Lambda '_k, 7 L(R_{k-1})) = 0 \}
+  I_k = \{ N_{Z_k} (X_k, 7 L(R_{k-1})) = 0 \}
  \end{equation}
 \end{enumerate}
 \end{Def}
@@ -479,37 +479,43 @@ Enfin, on a besoin de s'assurer que la probabilité de $I_k$ est assez grande, ce
 \begin{Lemme}
  Il existe une constante $C > 0$ telle que, si $X$ une variable de Poisson de paramètre $\lambda$, $z$ un point de $\in \mathbb{Z}^d \setminus \{ 0 \}$ et $R > 0$, 
  \begin{equation*}
-  P(N_z (X, \Lambda, \infty ) = 0, N_z (X, \Lambda ', R) = 0) \geqslant \exp \left( - C \frac{\lambda R}{\| z \| ^{d-1} } \right)
+  P(N_z (X, R) = 0) \geqslant \exp \left( - C \frac{\lambda R}{\| z \| ^{d-1} } \right)
  \end{equation*}
- où $\Lambda = \mathbb{B} (z, R) \cap \Sigma (z)$ et $\Lambda ' = \Sigma (z) \setminus \Lambda$.
 \end{Lemme}
 \begin{proof}
+ Notons $\Lambda = \mathbb{B} (z, R) \cap \Sigma (z)$ et $\Lambda ' = \Sigma (z) \setminus \Lambda$. Notons aussi :
+ \[ N_z (n, \Lambda, R) = \mathrm{Card} \{ i \leqslant n \ \mid \ S_i (H(\Sigma (z))) \in \Lambda, \ H(z) < H( \mathbb{B}^c (O, \| z \| + R )) \} \]
+ c'est-à-dire le nombre de marches parmi les $N_z (n, R)$ qui entrent en $\Sigma (z)$ par $\Lambda$.
+ 
  D'après la proposition \ref{indé}, $N_z (X, \Lambda, \infty )$ et $N_z (X, \Lambda ', R)$ sont des variables de Poisson indépendantes. Ainsi :
-\begin{equation*} P(N_z (X, \Lambda, \infty ) = 0, N_z (X, \Lambda ', R) = 0) = \exp \left( - E[N_z (X, \Lambda, \infty )] - E[N_z (X, \Lambda ', R)] \right)
-\end{equation*}
+\begin{eqnarray*} P(N_z(X,R) = 0) & \leqslant & P(N_z (X, \Lambda, \infty ) = 0, N_z (X, \Lambda ', R) = 0) 
+\\ & = & \exp \left( - E[N_z (X, \Lambda, \infty )] - E[N_z (X, \Lambda ', R)] \right)
+\end{eqnarray*}
 
 On va montrer que chacune de ces espérances est majorée par un terme du type $c \frac{\lambda R}{\| z \| ^{d-1} }$.
 \begin{itemize}
  \item Pour la première, on se sert du fait que $P_0 (S(H(\Sigma (z))) = y) \leqslant \frac{c_1} {\| z \| ^ {d-1}} $ (Lemme 1.7.4 de \cite{ref3}) et $P_y (H(z) < \infty ) \leqslant \frac{c_2}{1+\| y-z \| ^{d-2}}$ (Théorème 1.5.4 de \cite{ref3}) pour écrire :
  \begin{eqnarray}
  E[N_z (X, \Lambda, \infty )] & = & \lambda \ P_0 (S(H(\Sigma (z))) \in \Lambda, \ H(z) < \infty)
- \nonumber\\& = & \lambda \sum _{y \in \Lambda} P_0 (S(H(\Sigma (z))) = y) \ P_y (H(z) < \infty )
- \nonumber\\& \leqslant & \lambda \sum _{y \in \Lambda} \frac{c_1} {\| z \| ^ {d-1}} \ \frac{c_2}{1+\| y-z \| ^{d-2}}
+ \nonumber\\& = & \lambda \ P_0 (S(H(\Sigma (z))) = z)
+ \nonumber\\ & & + \lambda \sum _{y \in \Lambda \setminus \{z\} } P_0 (S(H(\Sigma (z))) = y) \ P_y (H(z) < \infty )
+ \nonumber\\& \leqslant & \lambda \frac{c_1} {\| z \| ^ {d-1}} \left( 1 + \sum _{y \in \Lambda \setminus \{z\} } \frac{c_2}{1+\| y-z \| ^{d-2}} \right) \nonumber
  \end{eqnarray}
  En arrangeant plutôt la somme selon $k = \lfloor \| y-z \| \rfloor$, et en observant que pour un $k$ fixé on a moins de $c_3 k^{d-2}$ positions de $y$ correspondants, on obtient :
  \begin{eqnarray}
  E[N_z (X, \Lambda, \infty )] & \leqslant & c_4 \frac{\lambda} {\| z \| ^ {d-1}} \left( 1 + \sum _{k=1} ^{R} \frac{k^{d-2}}{1+k^{d-2}} \right)
- \nonumber\\& \leqslant & c_5 \frac{\lambda R} {\| z \| ^ {d-1}}
+ \nonumber\\& \leqslant & c_5 \frac{\lambda R} {\| z \| ^ {d-1}} \nonumber
  \end{eqnarray}
  
- \item Pour la seconde espérance, on utilise le résultat du Lemme 5(b) de \cite{ref7} qui assure que $P_y ( H(z) < H( \mathbb{B}^c (O, \| z \| + h )) ) \leqslant \frac{c_6 R^2}{\| z-y \| ^d}$, et on utilise la même transformation sur la somme :
+ \item Pour la seconde espérance, on utilise le résultat du Lemme 5(b) de \cite{ref7} qui assure que $P_y ( H(z) < H( \mathbb{B}^c (0, \| z \| + h )) ) \leqslant \frac{c_6 R^2}{\| z-y \| ^d}$, et on utilise la même transformation sur la somme :
  \begin{eqnarray}
- E[N_z (X, \Lambda ', R)] & = & \lambda \ P_0 (S(H(\Sigma (z))) \in \Lambda ', \ H(z) < H( \mathbb{B}^c (O, \| z \| + h )) )
- \nonumber\\& = & \lambda \sum _{y \in \Lambda '} P_0 (S(H(\Sigma (z))) = y) \ P_y (H(z) < H( \mathbb{B}^c (O, \| z \| + h )) )
+ E[N_z (X, \Lambda ', R)] & = & \lambda \ P_0 (S(H(\Sigma (z))) \in \Lambda ', \ H(z) < H( \mathbb{B}^c (0, \| z \| + h )) )
+ \nonumber\\& = & \lambda \sum _{y \in \Lambda '} P_0 (S(H(\Sigma (z))) = y) \ P_y (H(z) < H( \mathbb{B}^c (0, \| z \| + h )) )
  \nonumber\\& \leqslant & \lambda \sum _{y \in \Lambda '} \frac{c_1} {\| z \| ^ {d-1}} \ \frac{c_6 R^2}{\| z-y \| ^d}
  \nonumber\\& \leqslant & c_7 \frac{\lambda R^2} {\| z \| ^ {d-1}} \sum _{k=R} ^{2\|z\|+2} \frac{k^{d-2}}{k^{d}}
- \nonumber\\& \leqslant & c_8 \frac{\lambda R} {\| z \| ^ {d-1}}
+ \nonumber\\& \leqslant & c_8 \frac{\lambda R} {\| z \| ^ {d-1}} \nonumber
  \end{eqnarray}
+ où la dernière inégalité provient d'une comparaison série-intégrale sur la somme.
 \end{itemize}
 \end{proof}
 En appliquant ce lemme à $X_k$, $Z_k$ et $L(R_{k-1})$, on obtient :
@@ -524,54 +530,45 @@ car $\lambda_k$ est de l'ordre de $R_{k-1}^{d-1}h(R_{k-1})$ d'après le lemme \re
  
 
 \subsection{Minorations}
-Résumons ce que l'on a fait jusqu'à présent : on a montré que lorsque $A^c_{k-1}$ est réalisé, il existe un évènement $I_k$ tel que $\frac{2}{3} \lambda_k \leqslant X_k \leqslant 2 \lambda_k \Rightarrow I_k \subset A_k \cup B_k$ et $P(I_k) \geqslant \exp 
+Résumons ce que l'on a fait jusqu'à présent : on a montré qu'il existait un évènement $I_k$ tel que $\frac{2}{3} \lambda_k \leqslant X_k \leqslant 2 \lambda_k \Rightarrow A_{k-1}^c \cap I_k \subset A_k \cup B_k$ et $P(I_k) \geqslant \exp 
 \left( - \kappa h(R_{F(n)}) L(R_{F(n)}) \right)$. Notre but est de montrer que $\lim_{n \to \infty } P \left( \bigcup _{k \leqslant F(n)} A_k \right) = 1$. La fonction $F(n)$ est toujours à choisir.
 
-On note $C_k$ l'évènement $\{ \frac{2}{3} \lambda_k \leqslant X_k \leqslant 2 \lambda_k \}$. On note $\mathcal{G}_k$ la filtration associée à l'exploration par vagues.
-\begin{Lemme} \label{indic}
- \[ 1_{A_{k-1}^c} P(A_k ^c  \cap C_k \mid \mathcal{G}_{k-1}) \leqslant P(B_k \mid \mathcal{G}_{k-1} ) + 1_{A_{k-1}^c} (1-P(I_k \mid \mathcal{G}_{k-1}) ) \]
-\end{Lemme}
-\begin{proof}
-La propriété essentielle $C_k \cap I_k \subset A_k \cup B_k $ donne :
-\begin{eqnarray}
- P(I_k \cap C_k \mid \mathcal{G}_{k-1}) & \leqslant &  P((A_k \cap C_k) \cup B_k \mid \mathcal{G}_{k-1})
- \nonumber\\& \leqslant & P(A_k \cap C_k \mid \mathcal{G}_{k-1}) + P(B_k \mid \mathcal{G}_{k-1})
- \label{croustille}
-\end{eqnarray}
-D'où, en utilisant que $C_k$ est indépendant de $\mathcal{G}_{k-1}$ puis l'inégalité \ref{croustille} : 
-\begin{eqnarray}
- 1_{A_{k-1}^c} P(A_k ^c  \cap C_k ) & = & 1_{A_{k-1}^c}(P(C_k) - P(A_k \cap C_k \mid \mathcal{G}_{k-1}))
- \nonumber \\ & \leqslant & 1_{A_{k-1}^c} \left( P(C_k) - P(I_k \cap C_k \mid \mathcal{G}_{k-1}) + P(B_k \mid \mathcal{G}_{k-1}) \right)
-\end{eqnarray}
-Pour conclure, il suffit de montrer que $P(C_k) - P(I_k \cap C_k \mid \mathcal{G}_{k-1}) \leqslant 1 - P(I_k \mid \mathcal{G}_{k-1})$, ce qui est facile en remarquant que $C_k^c \cup (I_k \cap C_k) \supset I_k$.
-\end{proof}
-
-On montre maintenant par récurrence sur $N \in \mathbb{N}$ la propriété :
-\begin{equation} \label{rec}
-P\left( \bigcup_{k \leqslant N} A_k^c \cap C_k \right) \leqslant \sum _{k \leqslant N} P(B_k) - \left( 1 - \exp (\alpha (n) ) \right) ^N
+On note $\mathcal{G}_k$ la filtration associée à l'exploration par vagues. On note $C_k$ l'évènement $\{ \frac{2}{3} \lambda_k \leqslant X_k \leqslant 2 \lambda_k \}$. On a donc :
+\begin{equation} \label{incl}
+C_k \cap A_{k-1}^c \cap I_k \subset A_k \cup B_k
 \end{equation}
-où $\alpha(n) = -\kappa h(R_{F(n)})L(R_{F(n)})$ obtenu dans \ref{pik}.
-
-Cette propriété est vraie en $N=0$, et si elle est vraie pour $N < F(n)$ alors :
-\begin{eqnarray}
- P\left( \bigcup_{k \leqslant N+1} A_k^c \cap C_k \right) & \leqslant & E[1_{\bigcup_{k \leqslant N} A_k^c \cap C_k} P(A_N^c \cap C_N \mid \mathcal{G}_{N-1} ) ]
- \nonumber \\ & \leqslant & E[1_{\bigcup_{k \leqslant N} A_k^c \cap C_k} \left(  P(B_N \mid \mathcal{G}_{N-1} ) + 1-P(I_N \mid \mathcal{G}_{N-1}) \right) ]
- \nonumber
-\end{eqnarray}
-en utilisant le lemme \ref{indic}. On en déduit :
-\begin{eqnarray}
- P\left( \bigcup_{k \leqslant N+1} A_k^c \cap C_k \right) & \leqslant & P(B_N) + (1-\exp (\alpha (n) ) ) P\left( \bigcup_{k \leqslant N} A_k^c \cap C_k \right)
- \nonumber \\ & \leqslant & P(B_N) + (1-\exp (\alpha (n) ) ) \left( \sum _{k \leqslant N} P(B_k) - \left( 1 - \exp (\alpha (n) ) \right) ^N \right)
- \nonumber \\ & \leqslant & \sum _{k \leqslant N+1} P(B_k) - \left( 1 - \exp (\alpha (n) ) \right) ^{N+1}
- \nonumber
-\end{eqnarray}
-ce qui achève la preuve de \ref{rec}.
 
 Remarquons maintenant que $\bigcap_{k \leqslant N} C_k \subset \bigcup_{k \leqslant N} A_k \cup \bigcup_{k \leqslant N} A_k^c \cap C_k$, ce qui donne :
 \begin{equation} \label{cups}
  P\left( \bigcup_{k \leqslant N} A_k \right) \geqslant P\left(\bigcap_{k \leqslant N} C_k \right) - P\left( \bigcup_{k \leqslant N} A_k^c \cap C_k \right)
 \end{equation}
-et en appliquant \ref{cups} puis \ref{rec} avec $N=F(n)$, on trouve :
+
+\begin{Lemme} \label{ref}
+Pour tout $N \in \mathbb{N}$, on a
+\begin{equation*} \label{rec}
+P\left( \bigcup_{k \leqslant N} A_k^c \cap C_k \right) \leqslant \sum _{k \leqslant N} P(B_k) - \left( 1 - \exp (\alpha (n) ) \right) ^N
+\end{equation*}
+où $\alpha(n) = -\kappa h(R_{F(n)})L(R_{F(n)})$ obtenu dans \ref{pik}.
+\end{Lemme}
+\begin{proof}
+On procède par récurrence sur $N \in \mathbb{N}$ :
+la propriété est vraie en $N=0$, et si elle est vraie pour $N < F(n)$ alors :
+\begin{eqnarray}
+ P\left( \bigcup_{k \leqslant N+1} A_k^c \cap C_k \right) & \leqslant & E[1_{\bigcup_{k \leqslant N} A_k^c \cap C_k} P(A_N^c \cap A_{N+1}^c \cap C_{N+1} \mid \mathcal{G}_{N} ) ]
+ \nonumber \\ & \leqslant & E[1_{\bigcup_{k \leqslant N} A_k^c \cap C_k} \left(  P(B_{N+1} \mid \mathcal{G}_{N} ) + 1-P(I_{N+1} \mid \mathcal{G}_{N}) \right) ]
+ \nonumber
+\end{eqnarray}
+où on a utilisé l'inclusion $A_{N}^c \cap A_{N+1}^c \cap C_{N+1} \subset I_{N+1}^c \cup B_{N+1}$, qui découle de l'inclusion fondamentale \ref{incl} au rang $N+1$.
+\begin{eqnarray}
+ P\left( \bigcup_{k \leqslant N+1} A_k^c \cap C_k \right) & \leqslant & P(B_{N+1}) + (1-\exp (\alpha (n) ) ) P\left( \bigcup_{k \leqslant N} A_k^c \cap C_k \right)
+ \nonumber \\ & \leqslant & P(B_{N+1}) + (1-\exp (\alpha (n) ) ) \left( \sum _{k \leqslant N} P(B_k) - \left( 1 - \exp (\alpha (n) ) \right) ^N \right)
+ \nonumber \\ & \leqslant & \sum _{k \leqslant N+1} P(B_k) - \left( 1 - \exp (\alpha (n) ) \right) ^{N+1}
+ \nonumber
+\end{eqnarray}
+ce qui achève la preuve.
+\end{proof}
+
+En appliquant le lemme \ref{rec} à \ref{cups}, avec $N=F(n)$, on trouve :
 \begin{equation} \label{fin}
  P\left( \bigcup_{k \leqslant F(n)} A_k \right) \geqslant 1 - \sum_{k \geqslant F(n)} \left( P(B_k) + P(C_k^c) \right) - (1 - \exp ( - \kappa h(R_{F(n)}) L(R_{F(n)}) ) ) ^{F(n)}
 \end{equation}
