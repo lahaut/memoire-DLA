@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.7.27)  9 JUN 2013 20:43
-=======
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.5.2)  10 JUN 2013 17:11
->>>>>>> 6dbcfc753b734ebd55f2a06e5bb1350fef60bdd5
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.7.27)  10 JUN 2013 18:27
 entering extended mode
  %&-line parsing enabled.
 **document_final.tex
@@ -334,126 +330,67 @@ Overfull \hbox (4.17442pt too wide) in paragraph at lines 126--127
  []
 
 [5 <./erreurinterne.png> <./erreurexterne.png>] [6]
-<vague.jpg, id=46, 417.7206pt x 163.3302pt>
+Overfull \hbox (29.54579pt too wide) detected at line 202
+\OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x; \OT1/cmr/m/n/10
+.95 ^^C\OML/cmm/m/it/10.95 ; w\OT1/cmr/m/n/10.95 )(\OML/cmm/m/it/10.95 p\OT1/cm
+r/m/n/10.95 (\OML/cmm/m/it/10.95 y; \OT1/cmr/m/n/10.95 ^^C\OML/cmm/m/it/10.95 ;
+ z\OT1/cmr/m/n/10.95 ) + \OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 (\OML/cmm/m/it
+/10.95 y; \OT1/cmr/m/n/10.95 ^^C\OML/cmm/m/it/10.95 ; w\OT1/cmr/m/n/10.95 )\OML
+/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 w; \OT1/cmr/m/n/10.95 
+^^C \OMS/cmsy/m/n/10.95 [ f\OML/cmm/m/it/10.95 w\OMS/cmsy/m/n/10.95 g\OML/cmm/m
+/it/10.95 ; z\OT1/cmr/m/n/10.95 )) + \OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 (\
+OML/cmm/m/it/10.95 x; \OT1/cmr/m/n/10.95 ^^C\OML/cmm/m/it/10.95 ; z\OT1/cmr/m/n
+/10.95 )(\OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 y; \OT1/c
+mr/m/n/10.95 ^^C\OML/cmm/m/it/10.95 ; w\OT1/cmr/m/n/10.95 ) + \OML/cmm/m/it/10.
+95 p\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 y; \OT1/cmr/m/n/10.95 ^^C\OML/cmm/m
+/it/10.95 ; z\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 (\OML/
+cmm/m/it/10.95 z; \OT1/cmr/m/n/10.95 ^^C \OMS/cmsy/m/n/10.95 [ f\OML/cmm/m/it/1
+0.95 z\OMS/cmsy/m/n/10.95 g\OML/cmm/m/it/10.95 ; w\OT1/cmr/m/n/10.95 ))
+ []
+
+[7] <vague.jpg, id=50, 417.7206pt x 163.3302pt>
 File: vague.jpg Graphic file (type jpg)
- <use vague.jpg> [7 <./vague.jpg>]
-[8] <cov.png, id=57, 388.0899pt x 160.4394pt>
+ <use vague.jpg> [8 <./vague.jpg>] [9] <cov.png, id=60, 388.0899pt x 160.4394pt
+>
 File: cov.png Graphic file (type png)
- <use cov.png> [9 <./cov.png>]
-<cov2.png, id=62, 393.1488pt x 158.2713pt>
+ <use cov.png> [10 <./cov.png>] <cov2.png, id=65, 393.1488pt x 158.2713pt>
 File: cov2.png Graphic file (type png)
- <use cov2.png> [10 <./cov2.png>]
-<<<<<<< HEAD
-[11] [12] [13]
-Overfull \hbox (28.10822pt too wide) in alignment at lines 449--452
- [][][] []
- []
-
-
-Overfull \hbox (40.7832pt too wide) in alignment at lines 454--457
- [][][] []
- []
-
-[14] [15] [16]
-Overfull \hbox (0.54193pt too wide) in paragraph at lines 533--535
-\OML/cmm/m/it/10.95 I[]$ \T1/cmr/m/n/10.95 tel que $[]\OML/cmm/m/it/10.95 ^^U[]
- \U/msa/m/n/10.95 6 \OML/cmm/m/it/10.95 X[] \U/msa/m/n/10.95 6 \OT1/cmr/m/n/10.
-95 2\OML/cmm/m/it/10.95 ^^U[] \OMS/cmsy/m/n/10.95 ) \OML/cmm/m/it/10.95 A[] \OM
-S/cmsy/m/n/10.95 \ \OML/cmm/m/it/10.95 I[] \OMS/cmsy/m/n/10.95 ^^Z \OML/cmm/m/i
-t/10.95 A[] \OMS/cmsy/m/n/10.95 [ \OML/cmm/m/it/10.95 B[]$ \T1/cmr/m/n/10.95 et
- $\OML/cmm/m/it/10.95 P\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 I[]\OT1/cmr/m/n/
-10.95 ) \U/msa/m/n/10.95 > [] []$\T1/cmr/m/n/10.95 .
- []
-
-
-Overfull \hbox (11.74944pt too wide) in alignment at lines 562--567
- [][][] []
- []
-
-[17] [18] [19] [20]
-Overfull \hbox (2.44751pt too wide) in paragraph at lines 713--713
-[] 
- []
-
-
-Overfull \hbox (2.44751pt too wide) in paragraph at lines 723--723
-[] 
- []
-
-[21] (./document_final.bbl) [22] (./document_final.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+ <use cov2.png> [11 <./cov2.png>]
+[12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22] [23]
+(./document_final.bbl) [24] (./document_final.aux) ) 
 Here is how much of TeX's memory you used:
- 3402 strings out of 495061
- 42042 string characters out of 1182621
- 107174 words of memory out of 3000000
- 6510 multiletter control sequences out of 15000+50000
+ 3404 strings out of 495061
+ 42053 string characters out of 1182621
+ 108174 words of memory out of 3000000
+ 6512 multiletter control sequences out of 15000+50000
  17260 words of font info for 51 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  27i,15n,24p,970b,340s stack positions out of 5000i,500n,10000p,200000b,50000s
- </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/pa
-ul/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.600pk> </home/paul/.texmf-va
-r/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/paul/.texmf-var/fonts/pk/l
-jfour/jknappen/ec/ecbx1095.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknapp
-en/ec/ecrm1095.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx14
-40.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </
-home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/tex
-mf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/
-fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-texlive/fonts/t
-ype1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public
-/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/c
-m/cmmi6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/
-texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texliv
-e/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-texlive/fonts/type1
-/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy
-6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/
-share/texmf-texlive/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/
-texmf-texlive/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/share/texmf-t
-exlive/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on document_final.pdf (22 pages, 635532 bytes).
+ </home/paul/.texmf-var/fon
+ts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/paul/.texmf-var/fonts/pk/ljfour
+/jknappen/ec/eccc1095.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec
+/ecti1095.600pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.60
+0pk> </home/paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/
+paul/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/paul/.texmf-
+var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/paul/.texmf-var/fonts/pk
+/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/texmf-texlive/fonts/type1/public
+/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/c
+mextra/cmex8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi1
+0.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr
+/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf
+-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/pub
+lic/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts
+/cm/cmr6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share
+/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-texli
+ve/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive/fonts/typ
+e1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-texlive/fonts/type1/pub
+lic/amsfonts/symbols/msam7.pfb></usr/share/texmf-texlive/fonts/type1/public/ams
+fonts/symbols/msbm10.pfb>
+Output written on document_final.pdf (24 pages, 645760 bytes).
 PDF statistics:
- 508 PDF objects out of 1000 (max. 8388607)
-=======
-[11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22]
-(./document_final.bbl) [23] (./document_final.aux) ) 
-Here is how much of TeX's memory you used:
- 3401 strings out of 495028
- 42019 string characters out of 1181230
- 108190 words of memory out of 3000000
- 6518 multiletter control sequences out of 15000+50000
- 17260 words of font info for 51 fonts, out of 3000000 for 9000
- 28 hyphenation exceptions out of 8191
- 27i,15n,24p,970b,340s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf/fonts/enc
-/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-texlive/fonts/type1/public/am
-sfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cmex
-tra/cmex8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.p
-fb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/sh
-are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-te
-xlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/
-type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public
-/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm
-/cmr6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
-sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/te
-xmf-texlive/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-texlive/
-fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive/fonts/type1/
-public/amsfonts/symbols/msam10.pfb></usr/share/texmf-texlive/fonts/type1/public
-/amsfonts/symbols/msam7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfon
-ts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1095.pf
-b></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/
-fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/c
-m-super/sfcc1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb
-></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/f
-onts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm
--super/sfti1095.pfb>
-Output written on document_final.pdf (23 pages, 703603 bytes).
-PDF statistics:
- 187 PDF objects out of 1000 (max. 8388607)
->>>>>>> 6dbcfc753b734ebd55f2a06e5bb1350fef60bdd5
+ 516 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
