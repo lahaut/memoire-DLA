@@ -184,6 +184,28 @@ Introduisons dès à présent quelques définitions qui nous seront utiles par la su
  \newpage
  \section{Propriété abélienne}
  \label{abel}
+ \begin{Lemme}
+ Soit $\Lambda$ une partie finie de $\mathbb{Z}^d$, correspondant à la région déjà explorée, et soient $x,y \in \Lambda$. Soit $\Lambda_{x,y}$ la région obtenue en ayant lancé un explorateur depuis $x$, puis un explorateur depuis $y$.
+ 
+ Alors $\Lambda_{x,y}$ a même loi que $\Lambda_{y,x}$.
+ \end{Lemme}
+ \begin{proof}
+ Après avoir lancé deux explorateurs depuis $\Lambda$, on obtient une région de la forme $\Lambda \cup \{w,z \}$ où $w,z \notin \Lambda$. On va montrer que quels que soient $w,z \notin \Lambda$, la probabilité d'obtenir $\Lambda \cup \{w,z \}$ est la même que l'on lance les deux explorateurs depuis $x$ puis $y$ ou depuis $y$ puis $x$.
+ 
+ On utilise la notation suivante : si $x \in \Lambda$ et $w \notin \Lambda$, $p(x,\Lambda,w)$ désigne la probabilité qu'une marche aléatoire lancée depuis $x$ quitte $\Lambda$ exactement en $w$.
+ 
+ Si on commence par lancer depuis $x$, on obtient l'ensemble $\Lambda \cup \{w\}$ avec probabilité $p(x,\Lambda,w)$ et l'ensemble $\Lambda \cup \{w\}$ avec probabilité $p(x,\Lambda,z)$. On lance ensuite le second explorateur depuis $y$, et on obtient l'ensemble $\Lambda \cup \{w,z \}$ avec probabilité
+ \[ p(x,\Lambda,w) p(y,\Lambda\cup \{w\},z) + p(x,\Lambda,z) p(y,\Lambda\cup \{z\},w) \]
+ En distinguant le fait que la marche partant de $y$ passe ou non par $w$, on remarque que
+ \[p(y,\Lambda\cup \{w\},z) = p(y,\Lambda,z) + p(y,\Lambda,w)p(w,\Lambda\cup \{w\},z) \]
+ Donc la probabilité d'obtenir $\Lambda \cup \{w,z \}$ est
+ \[ p(x,\Lambda,w) (p(y,\Lambda,z) + p(y,\Lambda,w)p(w,\Lambda\cup \{w\},z)) + p(x,\Lambda,z) (p(y,\Lambda,w) + p(y,\Lambda,z)p(z,\Lambda\cup \{z\},w)) \]
+ qui est symétrique en $x$ et $y$, donc est indépendante de l'ordre des deux marches.
+ 
+ Ceci étant vrai pour tous $w$ et $z$ hors de $\Lambda$, on en déduit que $\Lambda_{x,y}$ et  $\Lambda_{y,x}$ ont même loi.
+ \end{proof}
+ 
+ En itérant cette propriété, on obtient le théorème suivant :
 \begin{The}{Propriété abélienne}
 Soit n un entier naturel, $\Lambda$ une partie de $\mathbb{Z}^d$, $\xi=(\xi_1,\dots,\xi_n)$ et $\zeta=(\zeta_1,\dots,\zeta_n)$ deux vecteurs de $\left(\mathbb{Z}^d\right)^n$ égaux à permutation des coordonnées près. On a alors l'égalité en loi : 
 \begin{equation*}

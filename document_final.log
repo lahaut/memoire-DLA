@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.5.2)  10 JUN 2013 17:18
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.5.2)  11 JUN 2013 01:28
 entering extended mode
  %&-line parsing enabled.
 **document_final.tex
@@ -325,17 +325,34 @@ Overfull \hbox (4.17442pt too wide) in paragraph at lines 126--127
  []
 
 [5 <./erreurinterne.png> <./erreurexterne.png>] [6]
-<vague.jpg, id=46, 417.7206pt x 163.3302pt>
+Overfull \hbox (29.54579pt too wide) detected at line 202
+\OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x; \OT1/cmr/m/n/10
+.95 ^^C\OML/cmm/m/it/10.95 ; w\OT1/cmr/m/n/10.95 )(\OML/cmm/m/it/10.95 p\OT1/cm
+r/m/n/10.95 (\OML/cmm/m/it/10.95 y; \OT1/cmr/m/n/10.95 ^^C\OML/cmm/m/it/10.95 ;
+ z\OT1/cmr/m/n/10.95 ) + \OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 (\OML/cmm/m/it
+/10.95 y; \OT1/cmr/m/n/10.95 ^^C\OML/cmm/m/it/10.95 ; w\OT1/cmr/m/n/10.95 )\OML
+/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 w; \OT1/cmr/m/n/10.95 
+^^C \OMS/cmsy/m/n/10.95 [ f\OML/cmm/m/it/10.95 w\OMS/cmsy/m/n/10.95 g\OML/cmm/m
+/it/10.95 ; z\OT1/cmr/m/n/10.95 )) + \OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 (\
+OML/cmm/m/it/10.95 x; \OT1/cmr/m/n/10.95 ^^C\OML/cmm/m/it/10.95 ; z\OT1/cmr/m/n
+/10.95 )(\OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 y; \OT1/c
+mr/m/n/10.95 ^^C\OML/cmm/m/it/10.95 ; w\OT1/cmr/m/n/10.95 ) + \OML/cmm/m/it/10.
+95 p\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 y; \OT1/cmr/m/n/10.95 ^^C\OML/cmm/m
+/it/10.95 ; z\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 (\OML/
+cmm/m/it/10.95 z; \OT1/cmr/m/n/10.95 ^^C \OMS/cmsy/m/n/10.95 [ f\OML/cmm/m/it/1
+0.95 z\OMS/cmsy/m/n/10.95 g\OML/cmm/m/it/10.95 ; w\OT1/cmr/m/n/10.95 ))
+ []
+
+[7] <vague.jpg, id=50, 417.7206pt x 163.3302pt>
 File: vague.jpg Graphic file (type jpg)
- <use vague.jpg> [7 <./vague.jpg>]
-[8] <cov.png, id=57, 388.0899pt x 160.4394pt>
+ <use vague.jpg> [8 <./vague.jpg>] [9] <cov.png, id=60, 388.0899pt x 160.4394pt
+>
 File: cov.png Graphic file (type png)
- <use cov.png> [9 <./cov.png>]
-<cov2.png, id=62, 393.1488pt x 158.2713pt>
+ <use cov.png> [10 <./cov.png>] <cov2.png, id=65, 393.1488pt x 158.2713pt>
 File: cov2.png Graphic file (type png)
- <use cov2.png> [10 <./cov2.png>]
-[11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22]
-(./document_final.bbl) [23] (./document_final.aux) ) 
+ <use cov2.png> [11 <./cov2.png>]
+[12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22] [23]
+(./document_final.bbl) [24] (./document_final.aux) ) 
 Here is how much of TeX's memory you used:
  3401 strings out of 495028
  42019 string characters out of 1181230
@@ -366,9 +383,9 @@ m-super/sfcc1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb
 ></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/f
 onts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm
 -super/sfti1095.pfb>
-Output written on document_final.pdf (23 pages, 703605 bytes).
+Output written on document_final.pdf (24 pages, 703873 bytes).
 PDF statistics:
- 187 PDF objects out of 1000 (max. 8388607)
+ 190 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
