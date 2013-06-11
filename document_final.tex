@@ -166,7 +166,7 @@ Introduisons dès à présent quelques définitions qui nous seront utiles par la su
   
   \item $H(S;\Lambda)=\inf\{n\geqslant0,\ S(n)\in\Lambda\}$ (ou $H(\Lambda)$ en l'absence d'ambiguïté sur $S$) est le premier instant pour lequel la marche aléatoire $S$ atteint $\Lambda$.
   
-  \item Si $\eta:\mathbb{Z}^d\to\mathbb{N}$ est telle que $\eta(z)$ est le nombre d'explorateurs partis de $z$, la région explorée en partant de $\eta$ sera la région définie en faisant partir les explorateurs dans un ordre prédéfini sur $\mathbb{Z}^d$. 
+  \item \label{iii}Si $\eta:\mathbb{Z}^d\to\mathbb{N}$ est telle que $\eta(z)$ est le nombre d'explorateurs partis de $z$, la région explorée en partant de $\eta$ sera la région définie en faisant partir les explorateurs dans un ordre prédéfini sur $\mathbb{Z}^d$. 
   
   \item $W_R(\Lambda;\eta, z)$ est le nombre d'explorateurs, partant de la configuration $\eta$ et de la région explorée $\Lambda$, qui passent par $z\in\mathbb{B}(0,R)$ avant de sortir de $\mathbb{B}(0,R)$.
  
@@ -185,7 +185,8 @@ Introduisons dès à présent quelques définitions qui nous seront utiles par la su
  \section{Propriété abélienne}
  On va prouver que le choix de l'ordre dans \ref{
  \label{abel}
- 
+
+ On va prouver ici que le choix d'un ordre prédéfini en \ref{iii} sur $\mathbb{Z}^d$ ne change rien à la suite de la démonstration. Le lemme suivant est issu de \cite{ref4} :
  \begin{Lemme}
  Soit $\Lambda$ une partie finie de $\mathbb{Z}^d$, correspondant à la région déjà explorée, et soient $x,y \in \Lambda$. Soit $\Lambda_{x,y}$ la région obtenue en ayant lancé un explorateur depuis $x$, puis un explorateur depuis $y$.
  
@@ -201,14 +202,17 @@ Introduisons dès à présent quelques définitions qui nous seront utiles par la su
  En distinguant le fait que la marche partant de $y$ passe ou non par $w$, on remarque que
  \[p(y,\Lambda\cup \{w\},z) = p(y,\Lambda,z) + p(y,\Lambda,w)p(w,\Lambda\cup \{w\},z) \]
  Donc la probabilité d'obtenir $\Lambda \cup \{w,z \}$ est
- \[ p(x,\Lambda,w) (p(y,\Lambda,z) + p(y,\Lambda,w)p(w,\Lambda\cup \{w\},z)) + p(x,\Lambda,z) (p(y,\Lambda,w) + p(y,\Lambda,z)p(z,\Lambda\cup \{z\},w)) \]
+ \begin{align*}
+  &p(x,\Lambda,w) (p(y,\Lambda,z) + p(y,\Lambda,w)p(w,\Lambda\cup \{w\},z)) \\+& p(x,\Lambda,z) (p(y,\Lambda,w) + p(y,\Lambda,z)p(z,\Lambda\cup \{z\},w))
+  \\=&p(x,\Lambda,w)p(y,\Lambda,z)(2+p(w,\Lambda\cup \{w\},z)+p(z,\Lambda\cup \{z\},w))
+ \end{align*}
  qui est symétrique en $x$ et $y$, donc est indépendante de l'ordre des deux marches.
  
  Ceci étant vrai pour tous $w$ et $z$ hors de $\Lambda$, on en déduit que $\Lambda_{x,y}$ et  $\Lambda_{y,x}$ ont même loi.
  \end{proof}
  
- En itérant cette propriété, on obtient le théorème suivant :
-\begin{The}{Propriété abélienne}
+ En itérant cette propriété, on obtient le théorème suivant, qu'on appelle propriété abélienne :
+\begin{The}
 Soit n un entier naturel, $\Lambda$ une partie de $\mathbb{Z}^d$, $\xi=(\xi_1,\dots,\xi_n)$ et $\zeta=(\zeta_1,\dots,\zeta_n)$ deux vecteurs de $\left(\mathbb{Z}^d\right)^n$ égaux à permutation des coordonnées près. On a alors l'égalité en loi : 
 \begin{equation*}
  A(\Lambda,\xi)=A(\Lambda,\zeta)
@@ -220,7 +224,7 @@ Illustrons ce théorème avec l'exemple de l'exploration par vague qui nous servir
 Pour la deuxième vague, on fait partir m explorateurs de l'origine avec pour région préalablement explorée $A_1$ et on les arrête sur $\mathbb{B}(0,R)$ (en vert sur \ref{vague}). On note $A_2$ la région explorée après les deux vagues et $\Delta_R$ la configuration des explorateurs de la deuxième vague arrêtés sur $\partial\mathbb{B}(0,R)$ :
 \begin{equation*}
  A_2=A_1\cup A_R(A_1,\zeta_0^N) 
- \qquad\Delta_R=\{\zeta_z^{W_R(A_1;\zeta_0^m,z)},z\in\partial\mathbb{B}(0,R))\}
+ \qquad\Delta_R=\{\zeta_z^{W_R(A_1;\zeta_0^m,z)},z\in\partial\mathbb{B}(0,R)\}
 \end{equation*}
 
 Pour la troisième vague on relance les explorateurs arrêtés $\Delta_R$ avec pour région préalablement explorée $A_2$ (en noir sur la figure \ref{vague}) et on pose $A_3=A_2\cup A(A_2;\Delta_R)$. La propriété abélienne nous donne alors l'égalité en loi :
