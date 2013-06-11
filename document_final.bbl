@@ -8,12 +8,14 @@ Amine \bgroup\fonteauteurs\bgroup Asselah\egroup\egroup{} et Alexandre
   \bgroup\fonteauteurs\bgroup Gaudilli\`ere\egroup\egroup{} :
 \newblock {Sub-logarithmic fluctuations for internal DLA}.
 \newblock {\em Arxiv preprint}, 2010.
+\newblock \url{http://arxiv.org/abs/1011.4592}.
 
 \bibitem{ref2}
 Amine \bgroup\fonteauteurs\bgroup Asselah\egroup\egroup{} et Alexandre
   \bgroup\fonteauteurs\bgroup Gaudilli\`ere\egroup\egroup{} :
 \newblock {Lower bounds on fluctuations for internal DLA}.
 \newblock {\em Arxiv preprint}, 2010.
+\newblock \url{http://arxiv.org/abs/1111.4233}.
 
 \bibitem{chimie}
 Paul \bgroup\fonteauteurs\bgroup Meakin\egroup\egroup{} et John~M.
@@ -35,16 +37,25 @@ Gregory \bgroup\fonteauteurs\bgroup Lawler\egroup\egroup{}, Maury
   \bgroup\fonteauteurs\bgroup Griffeath\egroup\egroup{} :
 \newblock Internal diffusion limited aggregation.
 \newblock {\em Ann. Probab.}, 20(4)\string:\penalty500\relax 2117--2140, 1992.
+\newblock
+  \url{http://projecteuclid.org/DPubS?service=UI&version=1.0&verb=Display&hand%
+le=euclid.aop/1176989542}.
 
 \bibitem{ref6}
 Gregory \bgroup\fonteauteurs\bgroup Lawler\egroup\egroup{} :
 \newblock Subdiffusive fluctuations for internal diffusion limited aggregation.
 \newblock {\em Ann. Probab.}, 23(1)\string:\penalty500\relax 71--86, 1995.
+\newblock
+  \url{http://projecteuclid.org/DPubS?service=UI&version=1.0&verb=Display&hand%
+le=euclid.aop/1176988377}.
 
-\bibitem{ref3}
-Gregory \bgroup\fonteauteurs\bgroup Lawler\egroup\egroup{} :
-\newblock {\em {Intersection of Random Walks}}.
-\newblock Birkh\"auser Boston, 1991.
+\bibitem{ref8}
+David \bgroup\fonteauteurs\bgroup Jerison\egroup\egroup{}, Lionel
+  \bgroup\fonteauteurs\bgroup Levine\egroup\egroup{} et Scott
+  \bgroup\fonteauteurs\bgroup Sheffield\egroup\egroup{} :
+\newblock Logarithmic fluctuations for internal dla.
+\newblock {\em Arxiv preprint}, 2012.
+\newblock \url{http://arxiv.org/abs/1010.2483}.
 
 \bibitem{ref7}
 David \bgroup\fonteauteurs\bgroup Jerison\egroup\egroup{}, Lionel
@@ -52,5 +63,11 @@ David \bgroup\fonteauteurs\bgroup Jerison\egroup\egroup{}, Lionel
   \bgroup\fonteauteurs\bgroup Sheffield\egroup\egroup{} :
 \newblock Internal dla in higher dimensions.
 \newblock {\em Arxiv preprint}, 2012.
+\newblock \url{http://de.arxiv.org/abs/1012.3453}.
+
+\bibitem{ref3}
+Gregory \bgroup\fonteauteurs\bgroup Lawler\egroup\egroup{} :
+\newblock {\em {Intersection of Random Walks}}.
+\newblock Birkh\"auser Boston, 1991.
 
 \end{thebibliography}

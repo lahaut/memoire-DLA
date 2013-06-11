@@ -1,4 +1,5 @@
 \documentclass[a4paper,11pt]{article}
+\usepackage[colorlinks=true,linkcolor=black,filecolor=black,urlcolor=black,citecolor=black]{hyperref}
 \usepackage[latin1]{inputenc}
 \usepackage[frenchb]{babel}
 \usepackage[T1]{fontenc}
@@ -12,6 +13,7 @@
 \usepackage{dsfont}
 \usepackage{enumerate}
 \usepackage[a4paper]{geometry}
+\usepackage{url}
 
 
 \newtheorem{The}{Théorème}[section]
@@ -35,7 +37,7 @@
 \begin{document}
 \maketitle
 \section*{Introduction}
-Nous allons étudier dans ce mémoire l'évolution du monde découvert par des explorateurs dans le cas discret. Le résultat principal est celui de \cite{ref} qui montre qu'asymptotiquement celui-ci est une boule. Le modèle est le suivant : on lance N explorateurs sur $\mathbb{Z}^d$ les uns après les autres. On définit la région explorée récursivement de la façon suivante: on lance le $k^{\mathrm{\grave{e}me}}$ explorateur qui effectue une marche aléatoire symétrique et s'arrête dès qu'il tombe sur une case non explorée (on dit qu'il s'installe). La région explorée à l'instant $k$ est alors la région explorée à l'instant $k-1$ plus la position du $k^{\mathrm{\grave{e}me}}$ explorateur installé. A. Asselah et A. Gaudillière ont montré dans \cite{ref} que la région explorée tendait vers une boule, avec une erreur presque sûrement inférieure à $\alpha\sqrt{\log(n)}$ en dimension 3 ou plus et $\alpha \log(n)$ en dimension 2.
+Nous allons étudier dans ce mémoire l'évolution du monde découvert par des explorateurs dans le cas discret. Le résultat principal est celui de \cite{ref} qui montre qu'asymptotiquement celui-ci est une boule. Le modèle est le suivant : on lance N explorateurs sur $\mathbb{Z}^d$ les uns après les autres. On définit la région explorée récursivement de la façon suivante: on lance le $k^{\mathrm{\grave{e}me}}$ explorateur qui effectue une marche aléatoire symétrique et s'arrête dès qu'il tombe sur une case non explorée (on dit qu'il s'installe). La région explorée à l'instant $k$ est alors la région explorée à l'instant $k-1$ plus la position du $k^{\mathrm{\grave{e}me}}$ explorateur installé. A. Asselah et A. Gaudillière ont montré dans \cite{ref} que la région explorée tendait vers une boule, avec une erreur inférieure à $\alpha\sqrt{\log(n)}$ en dimension 3 ou plus et $\alpha \log(n)$ en dimension 2.
 
 Nous allons travailler ici sur l'article \cite{ref2} d'A. Gaudillière et A. Asselah qui essaie d'établir l'optimalité des majorations précédentes. Il montre en particulier que $\sqrt{ \log (n)}$ est optimal en dimension supérieure à 3 pour l'erreur interne, mais ne conclut pas pour la dimension 2. En ce qui concerne l'erreur externe, ils prouvent un résultat qui permet de penser que $\sqrt{ \log (n)}$ est optimal en dimension supérieure à 3 sans tout à fait permettre de conclure.
 
@@ -49,9 +51,9 @@ Nous allons travailler ici sur l'article \cite{ref2} d'A. Gaudillière et A. Asse
 \newpage
 
 \section{Historique}
-Le modèle qui nous intéresse est un exemple de modèle de croissance aléatoire couramment nommé IDLA (Internal Diffusion Limited Aggregation). Il a été introduit en 1986 par P. Meakin et J.M. Deutch \cite{chimie} dans le cadre de la chimie théorique pour décrire des processus comme l'électro-polissage. Dès l'introduction du modèle, il a semblé important de connaître la forme asymptotique du cluster obtenu, mais aussi l'ordre des variation par rapport à cette forme limite puisqu'il s'agissait de polir des matériaux.
+Le modèle qui nous intéresse est un exemple de modèle de croissance aléatoire couramment nommé IDLA (Internal Diffusion Limited Aggregation). Il a été introduit en 1986 par P. Meakin et J.M. Deutch \cite{chimie} dans le cadre de la chimie théorique pour décrire des processus comme l'électro-polissage. Dès l'introduction du modèle, il a semblé important de connaître la forme asymptotique de la région explorée obtenue, mais aussi l'ordre des variation par rapport à cette forme limite puisqu'il s'agissait de polir des matériaux.
 
-P. Diaconis et W. Fulton ont formalisé mathématiquement le processus en 1991 \cite{ref4} et démontré certaines de ces propriétés, en particulier une propriété très utile de commutativité dont on fait usage dans la partie \ref{abel}. Le modèle de croissance qu'ils proposent est alors original car il s'agit du premier modèle qui semble donner des clusters de forme sphérique.
+P. Diaconis et W. Fulton ont formalisé mathématiquement le processus en 1991 \cite{ref4} et démontré certaines de ces propriétés, en particulier une propriété très utile de commutativité dont on fait usage dans la partie \ref{abel}. Le modèle de croissance qu'ils proposent est alors original car il s'agit du premier modèle qui semble donner des régions explorées de forme sphérique.
 
 G. Lawler, M. Bramson, M. et D. Griffeath ont pour la première fois montré en 1992 dans \cite{ref5} que la forme asymptotique de la région explorée était une boule, dans le sens suivant :
 on appelle $\mathbb{B}(y,R)=\{x \in \mathbb{Z}^d, \|x-y\| <R\}$ la boule dans $\mathbb{Z}^d$ de centre $y$ et de rayon $R$, et $b(n)=\mathrm{Card}(\mathbb{B}(0,n))$. On note $A(k)$ la région explorée après avoir lancé $k$ explorateurs. Alors :
@@ -63,7 +65,7 @@ on appelle $\mathbb{B}(y,R)=\{x \in \mathbb{Z}^d, \|x-y\| <R\}$ la boule dans $\
  pour tout $n$ assez grand.
 \end{The}
 
-Puis, le problème de l'ordre des fluctuations autour de la boule a été étudié par G. Lawler qui montre en 1995 \cite{ref6} que les fluctuations sont presque sûrement majorées par $n^{1/3} \log ^4 (n)$ en dimension $2$ ou plus. Toutefois, des simulations suggèrent que l'ordre des fluctuations est plutôt logarithmique. Aucune amélioration notable de ces résultats n'est publiée, jusqu'en 2010, lorsque A. Asselah et A. Gaudillière montrent dans \cite{ref} que l'erreur est presque sûrement inférieure à $\alpha\sqrt{\log(n)}$ en dimension 3 ou plus et $\alpha \log(n)$ en dimension 2. Ils publient un second article \cite{ref2} auquel nous nous intéressons ici, qui établit l'optimalité de ce résultat, du moins pour ce qui est de l'erreur interne.
+Puis, le problème de l'ordre des fluctuations autour de la boule a été étudié par G. Lawler qui montre en 1995 \cite{ref6} que les fluctuations sont presque sûrement majorées par $n^{1/3} \log ^4 (n)$ en dimension $2$ ou plus. Toutefois, des simulations suggèrent que l'ordre des fluctuations est plutôt logarithmique. Aucune amélioration notable de ces résultats n'est publiée, jusqu'en 2010, lorsque A. Asselah et A. Gaudillière montrent dans \cite{ref} que l'erreur est presque sûrement inférieure à $\alpha\sqrt{\log(n)}$ en dimension 3 ou plus et $\alpha \log(n)$ en dimension 2. En parallèle, D.Jerison, L. Levine et S.Sheffield prouvent ce résultat dans \cite{ref8} et \cite{ref7}. Ils publient un second article \cite{ref2} auquel nous nous intéressons ici, qui établit l'optimalité de ce résultat, du moins pour ce qui est de l'erreur interne.
 
 \newpage
 \section{Premières Propriétés}
@@ -128,7 +130,7 @@ L'erreur interne, notée $\delta_I$, est la différence entre le rayon du cercle l
  \end{minipage}
  \end{figure}
 
- On peut naturellement s'interroger sur l'optimalité de cet ordre de fluctuations en $\sqrt{\log(n)}$ pour $d\geqslant3$, $\log(n)$ pour $d=2$. On va prouver ici deux théorèmes dont la démonstation initiale est dans \cite{ref2} pour étudier cette question.
+ On peut naturellement s'interroger sur l'optimalité de cet ordre de fluctuations en $\sqrt{\log(n)}$ pour $d\geqslant3$ et $\log(n)$ pour $d=2$. On va prouver ici deux théorèmes dont la démonstation initiale est dans \cite{ref2} pour étudier cette question.
  \begin{The}
  \label{ext}
   En dimension $d \geqslant 3$, $\exists\alpha_d$>0 tel que
@@ -158,7 +160,7 @@ Le cas de l'erreur interne est quand à lui complètement déterminé en dimension s
  \end{The}
  
 Introduisons dès à présent quelques définitions qui nous seront utiles par la suite.
-\begin{Def}Soit $\Lambda$ une partie de $\mathbb{Z}^d$, S une marche aléatoire discrète, y un point de $\mathbb{Z}^d$ et $\gamma$ et $R$ des entiers positifs.
+\begin{Def}Soit $\Lambda$ une partie de $\mathbb{Z}^d$, S une marche aléatoire discrète, y un point de $\mathbb{Z}^d$ et $\gamma$ et $R$ des réels positifs.
 \begin{enumerate}[i)]
   \item  $\partial \mathbb{B}(y,R)=\{x \notin \mathbb{B}(y,R) \ | \ \exists z \in \mathbb{B}(y,R), \ \| x-z\| <1\}$ est le bord de la boule de centre y et de rayon R.
 
@@ -182,7 +184,9 @@ Introduisons dès à présent quelques définitions qui nous seront utiles par la su
  \end{Rq}
 
  \newpage
- \section{Propriété abélienne}\label{abel}
+
+ \section{Propriété abélienne}
+ \label{abel}
  On va prouver ici que le choix d'un ordre prédéfini en \ref{iii} sur $\mathbb{Z}^d$ ne change rien à la suite de la démonstration. Le lemme suivant est issu de \cite{ref4} :
  \begin{Lemme}
  Soit $\Lambda$ une partie finie de $\mathbb{Z}^d$, correspondant à la région déjà explorée, et soient $x,y \in \Lambda$. Soit $\Lambda_{x,y}$ la région obtenue en ayant lancé un explorateur depuis $x$, puis un explorateur depuis $y$.
@@ -257,11 +261,11 @@ Pour estimer l'erreur externe, on va commencer par minorer la probabilité de fab
  \begin{equation*}
   x_n=(\|z\|+n)\frac{z}{\|z\|}
  \end{equation*}
-La suite $x_n$ est une suite de points partant de $z$ et qui arrive sur $\mathbb{B}(0,R)$ perpendiculairement à celle-ci. Pour tout cube unitaire centré en $x_n$, il existe $z_n\in\mathbb{Z}^d$ dans ce cube. Soit $p$ le plus petit entier tel que $\|x_p\|\geqslant R+1$, alors $\|z_p\|\geqslant R$. 
+La suite $x_n$ est une suite de points partant de $z$ et qui arrive sur $\mathbb{B}(0,R)$ perpendiculairement à celle-ci. Pour tout cube unitaire centré en $x_n$, il existe $z_n\in\mathbb{Z}^d$ dans ce cube. Soit $p$ le plus petit entier tel que $\|x_p\|\geqslant R+\sqrt{d}$, alors $\|z_p\|\geqslant R$. 
 On définit alors $(y_1=z,y_2,\dots,y_k=z_p)$ une suite de plus proches voisins dans $\mathbb{Z}^d$, où l'on va chercher à prendre $k$ suffisamment petit. 
 
 On peut trouver une constante $c_1$ qui permet de prendre $k\leqslant c_1p$. Pour cela, on procède de la façon suivante: on appelle $C$ le diamètre de la figure composée de deux cube unitaire partageant une face, de façon à avoir $\|z_n-z_{n-1}\|\leqslant C$. Il est alors possible de relier $z_n$ à $z_{n-1}$ par une suite de plus proches voisins de taille inférieure à $c_1=dC$, ce qui prouve le résulat.
-On alors $k\leqslant c_1(R-\|z\|+2) \leqslant c(R- \|z\|)$ pour $c$ une constante suffisamment grande. Comme $N \geqslant c(R-\|z\|)$, on peut forcer les $k$ premiers explorateurs à s'installer successivement sur $y_1, \dots, y_k$, et la probabilité de cet événement est :
+On alors $k\leqslant c_1(R-\|z\|+\sqrt{d}+1) \leqslant c(R- \|z\|)$ pour $c$ une constante suffisamment grande. Comme $N \geqslant c(R-\|z\|)$, on peut forcer les $k$ premiers explorateurs à s'installer successivement sur $y_1, \dots, y_k$, et la probabilité de cet événement est :
 \begin{equation*}
  (\frac{1}{2d})^{\sum_{n=1}^{k}{n}}\geqslant \exp(-c(R-\|z\|)^2)
 \end{equation*}
@@ -300,9 +304,9 @@ On constate que l'évènement $\delta_O(R_n)\geqslant h(R_n)$ est lié à $\{\mathrm
  \nonumber\\&\geqslant P(\bigcup_{z\in\Sigma}\mathrm{cov}(z))
 \end{align}
 
-Il nous faut désormais estimer $P(\bigcup_{z\in\Sigma}\mathrm{cov}(z))$. Pour cela, il serait intéressant d'avoir indépendance entre les $\mathrm{cov}(z)$ sous certaines hypothèses, ce qu'on va obtenir en prenant pour $X_n$ une variable de Poisson. En effet, les variables de Poisson ont la propriété de découpage \ref{indé}, qui laisse penser que les $N_z$ seront indépendantes et de loi connue.
+Il nous faut désormais estimer $P(\bigcup_{z\in\Sigma}\mathrm{cov}(z))$. Pour cela, il serait intéressant d'avoir indépendance entre les $\mathrm{cov}(z)$ et ce qui se passe avant sous certaines hypothèses, ce qu'on va obtenir en prenant pour $X_n$ une variable de Poisson. En effet, les variables de Poisson ont la propriété de découpage \ref{indé}, qui laisse penser que les $N_z$ seront indépendantes et de loi connue.
 
-Cette propriété ne permet pas pour autant d'affirmer que les $N_z$ sont des variables de Poisson pour $z \in \Sigma$, mais cela sera vrai lorsque $\delta_I(n) < L(n)$. On définit donc pour tout $z\in\Sigma$
+Cette propriété ne permet pas pour autant d'affirmer que les $N_z$ sont indépendantes de ce qui se passe avant pour $z \in \Sigma$, mais cela sera vrai lorsque $\delta_I(n) < L(n)$. On définit en effet pour tout $z\in\Sigma$
 \begin{equation}
  \mathrm{cov_2}(z)=\{A(\Delta_n,\zeta_z^{N'_z})\not\subset\mathbb{B}(0,R_n+h(R_n))\}
 \end{equation}
@@ -470,7 +474,7 @@ On va s'appuyer sur ce $Z_k$ pour construire un évènement $I_k$ qui pourra s'int
 \begin{Def}
 \begin{enumerate}[i)]
  \item
- Soit $n$ un entier et $R > 0$, on définit la variable aléatoire $N_z (n, R)$ comme le nombre de marches aléatoires parmi $n$ marches partant de $0$ visitent $z$ avant de sortir de $\mathbb{B} (0, \| z \| + R)$ :
+ Soit $n$ un entier et $R > 0$, on définit la variable aléatoire $N_z (n, R)$ comme le nombre de marches aléatoires parmi $n$ marches partant de $0$ qui visitent $z$ avant de sortir de $\mathbb{B} (0, \| z \| + R)$ :
 \begin{equation}
  N_z (n, R) = \mathrm{Card} \{ i \leqslant n \ \mid \ H(z) < H( \mathbb{B}^c (O, \| z \| + R )) \}
 \end{equation}
@@ -483,7 +487,7 @@ On va s'appuyer sur ce $Z_k$ pour construire un évènement $I_k$ qui pourra s'int
 
 Si $I_k$ est réalisé, on aimerait pouvoir dire que dans le cas où $Z_k$ n'est pas visité (un trou apparaît) on a $\delta_I (R_k) \geqslant h(R_k)$ et que dans le cas contraire (un long tentacule apparaît) on a $\delta_O (R_k) \geqslant L(R_k)$. Pour cela, il faut montrer que sous certaines conditions sur $X_k$ on a $R_k - \| Z_k \| \geqslant h(R_k)$ et $\| Z_k \| - R_k + 7 L(R_{k-1}) \geqslant L(R_k)$.
 
-Cela sera assuré pour $X_k$ dans un bon intervalle, donné par le lemme suivant, qui induira du coup le choix des paramètres $\lambda_k$ :
+Cela sera assuré pour $X_k$ dans un bon intervalle, donné par le lemme suivant, qui induira du coup le choix du paramètre $\lambda_k$ :
 \begin{Lemme}
 Pour $k$ suffisamment grand, si $\mu_k = b(R_{k-1} + 2 h(R_{k-1})) - b(R_{k-1})$,
 \begin{eqnarray*} \frac{2}{3} \mu_k \leqslant X_k \leqslant 2 \mu_k & \Rightarrow & (i) \ R_k - \| Z_k \| \geqslant h(R_k)
@@ -622,15 +626,15 @@ ce qui achève la preuve.
 
 En appliquant le lemme \ref{rec} à \ref{cups}, avec $N=F(n)$, on trouve :
 \begin{equation} \label{fin}
- P\left( \bigcup_{k \leqslant F(n)} A_k \right) \geqslant 1 - \sum_{k \geqslant F(n)} \left( P(B_k) + P(C_k^c) \right) - (1 - \exp ( - \kappa h(R_{F(n)}) L(R_{F(n)}) ) ) ^{F(n)}
+ P\left( \bigcup_{k \leqslant F(n)} A_k \right) \geqslant 1 - \sum_{k \leqslant F(n)} \left( P(B_k) + P(C_k^c) \right) - (1 - \exp ( - \kappa h(R_{F(n)}) L(R_{F(n)}) ) ) ^{F(n)}
 \end{equation}
 
 On va alors choisir $F(n) = \lfloor \frac{n}{h(n)} \rfloor$, en effet, pour ce choix on a :
 \begin{itemize}
- \item $P(B_k)$ décroît plus vite que toute puissance de $n$ pour $\gamma$ suffisamment grand d'après un résultat de \cite{ref} donc $\sum_{k \geqslant F(n)} P(B_k) \to_{n \to \infty} 0$.
+ \item $P(B_k)$ décroît plus vite que toute puissance de $n$ pour $\gamma$ suffisamment grand d'après un résultat de \cite{ref} donc $\sum_{k \leqslant F(n)} P(B_k) \to_{n \to \infty} 0$.
  \item $P(C_k^c) \leqslant \frac{C}{\lambda_k}$ d'après les résultats annexes \ref{deuxmoy} et \ref{23moy}. Comme $\lambda_k \geqslant \lambda_n \sim h(n) n^{d-1}$ on a :
  \begin{equation*}
- \sum_{k \geqslant F(n)} P(C_k^c) \leqslant \frac{n}{h(n)} \frac{C}{h(n)n^{d-1}} \underset{n\to+\infty}{\longrightarrow} 0
+ \sum_{k \leqslant F(n)} P(C_k^c) \leqslant \frac{n}{h(n)} \frac{C}{h(n)n^{d-1}} \underset{n\to+\infty}{\longrightarrow} 0
  \end{equation*}
  \item $R_{F(n)}$ est d'ordre $n$ donc
   \begin{equation*}

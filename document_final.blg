@@ -2,44 +2,44 @@ This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: document_final.aux
 The style file: unsrt-fr.bst
 Database file #1: document_final.bib
-You've used 8 entries,
+You've used 9 entries,
             1878 wiz_defined-function locations,
-            520 strings with 4927 characters,
-and the built_in function-call counts, 1583 in all, are:
-= -- 132
-> -- 56
+            528 strings with 5321 characters,
+and the built_in function-call counts, 1806 in all, are:
+= -- 156
+> -- 66
 < -- 0
-+ -- 24
-- -- 16
-* -- 105
-:= -- 278
-add.period$ -- 16
-call.type$ -- 8
-change.case$ -- 7
++ -- 28
+- -- 19
+* -- 113
+:= -- 322
+add.period$ -- 24
+call.type$ -- 9
+change.case$ -- 8
 chr.to.int$ -- 0
-cite$ -- 8
-duplicate$ -- 70
-empty$ -- 167
-format.name$ -- 16
-if$ -- 360
+cite$ -- 9
+duplicate$ -- 78
+empty$ -- 182
+format.name$ -- 19
+if$ -- 414
 int.to.chr$ -- 0
-int.to.str$ -- 8
-missing$ -- 9
-newline$ -- 46
-num.names$ -- 8
-pop$ -- 20
+int.to.str$ -- 9
+missing$ -- 10
+newline$ -- 57
+num.names$ -- 9
+pop$ -- 17
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 23
+skip$ -- 26
 stack$ -- 0
 substring$ -- 87
-swap$ -- 8
+swap$ -- 9
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 12
-width$ -- 9
-write$ -- 89
+while$ -- 13
+width$ -- 10
+write$ -- 111
