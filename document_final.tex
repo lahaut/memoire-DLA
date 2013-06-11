@@ -653,7 +653,33 @@ Avec ce choix, \ref{fin} implique alors que
 ce qui achève la preuve du théorème \ref{int}.
 \newpage
 
-\appendix
+\section{Autres questions}
+On expose ici des variantes du problème, pour lesquelles la forme de la région explorée n'est pas encore connue.
+
+\subsection{Plusieurs sources}
+On peut décider que les explorateurs partent de deux points sources, espacés d'une distance de l'ordre du rayon théorique de la boule.
+
+\subsection{Décalage vers la droite}
+Choisissons de ne plus faire voyager nos $n$ explorateurs selon des marches aléatoires symétriques, mais des marches déséquilibrées vers un côté. Par exemple, sur $\mathbb{Z}^2$, construisons une marche en suivant les probabilités
+\[P(\mathrm{haut}) = 1/2, P(\mathrm{bas}) = 1/2, P(\mathrm{gauche}) = 1/2 - \epsilon, P(\mathrm{droite}) = 1/2 + \epsilon , \]
+où $\epsilon > 0$.
+
+Voici un exemple de région obtenue :
+\begin{figure}[H]
+ \centering
+   \includegraphics[scale=0.8]{drift.jpg}
+   \caption{Région obtenue pour des marches déséquilibrées}
+\end{figure}
+
+Il semble que la déviation à droite dans ce cas soit de l'ordre de $n^{2/3}$, comme le suggère la courbe suivante où l'on trace l'évolution du logarithme de cette déviation et une courbe référence de pente $2/3$ :
+\begin{figure}[H]
+ \centering
+   \includegraphics[scale=0.5]{log.jpg}
+   \caption{Log de la distance maximale à l'origine (en noir) et droite de pente 2/3 (en bleu)}
+\end{figure}
+
+De plus, on peut avancer l'argument suivant : 
+\appendix 
 
 \section{Propriétés annexes}
 \subsection{Découpage d'une variable de Poisson}
