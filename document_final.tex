@@ -26,7 +26,7 @@
 \theoremstyle{remark}
 \newtheorem*{Rq}{Remarque}
 
-\title{Un modèle de croissance aléatoire : le monde découvert par N explorateurs}
+\title{Un modèle de croissance aléatoire : le monde découvert par $N$ explorateurs}
 \author{Paul MELOTTI et Alexis PRÉVOST \\ sous la direction de Pierre BERTIN}
 \date{\today}
 \makeatletter
@@ -37,9 +37,12 @@
 \begin{document}
 \maketitle
 \section*{Introduction}
-Nous allons étudier dans ce mémoire l'évolution du monde découvert par des explorateurs dans le cas discret. Le résultat principal est celui de \cite{ref} qui montre qu'asymptotiquement celui-ci est une boule. Le modèle est le suivant : on lance N explorateurs sur $\mathbb{Z}^d$ les uns après les autres. On définit la région explorée récursivement de la façon suivante: on lance le $k^{\mathrm{\grave{e}me}}$ explorateur qui effectue une marche aléatoire symétrique et s'arrête dès qu'il tombe sur une case non explorée (on dit qu'il s'installe). La région explorée à l'instant $k$ est alors la région explorée à l'instant $k-1$ plus la position du $k^{\mathrm{\grave{e}me}}$ explorateur installé. A. Asselah et A. Gaudillière ont montré dans \cite{ref} que la région explorée tendait vers une boule, avec une erreur inférieure à $\alpha\sqrt{\log(n)}$ en dimension 3 ou plus et $\alpha \log(n)$ en dimension 2.
+Nous allons étudier dans ce mémoire l'évolution du monde découvert par des explorateurs dans le cas discret. Le modèle est le suivant : on lance $N$ explorateurs sur $\mathbb{Z}^d$ les uns après les autres. On définit la région explorée récursivement de la façon suivante: on lance le $k^{\mathrm{\grave{e}me}}$ explorateur qui effectue une marche aléatoire symétrique et s'arrête dès qu'il tombe sur une case non explorée (on dit qu'il s'installe). La région explorée à l'instant $k$ est alors la région explorée à l'instant $k-1$ plus la position du $k^{\mathrm{\grave{e}me}}$ explorateur installé. 
 
-Nous allons travailler ici sur l'article \cite{ref2} d'A. Gaudillière et A. Asselah qui essaie d'établir l'optimalité des majorations précédentes. Il montre en particulier que $\sqrt{ \log (n)}$ est optimal en dimension supérieure à 3 pour l'erreur interne, mais ne conclut pas pour la dimension 2. En ce qui concerne l'erreur externe, ils prouvent un résultat qui permet de penser que $\sqrt{ \log (n)}$ est optimal en dimension supérieure à 3 sans tout à fait permettre de conclure.
+
+Le résultat principal est celui de \cite{ref} qui montre qu'asymptotiquement la région explorée est une boule. On s'interessera ici aux fluctuations autour de cette boule. A.~Asselah et A.~Gaudillière ont montré que celles-ci sont de l'ordre de $\sqrt{\log(n)}$ en dimension 3 ou plus et $\log(n)$ en dimension 2.
+
+Nous allons travailler ici sur l'article \cite{ref2} d'A.~Gaudillière et A.~Asselah qui essaie d'établir l'optimalité des majorations précédentes. Il montre en particulier que $\sqrt{ \log (n)}$ est optimal en dimension supérieure à 3 pour l'erreur interne, mais ne conclut pas pour la dimension 2. En ce qui concerne l'erreur externe, ils prouvent un résultat qui permet de penser que $\sqrt{ \log (n)}$ est optimal en dimension supérieure à $3$ sans tout à fait permettre de conclure.
 
 \begin{center}
  \includegraphics[scale=0.4]{100000.png}
@@ -65,11 +68,12 @@ on appelle $\mathbb{B}(y,R)=\{x \in \mathbb{Z}^d, \|x-y\| <R\}$ la boule dans $\
  pour tout $n$ assez grand.
 \end{The}
 
-Puis, le problème de l'ordre des fluctuations autour de la boule a été étudié par G. Lawler qui montre en 1995 \cite{ref6} que les fluctuations sont presque sûrement majorées par $n^{1/3} \log ^4 (n)$ en dimension $2$ ou plus. Toutefois, des simulations suggèrent que l'ordre des fluctuations est plutôt logarithmique. Aucune amélioration notable de ces résultats n'est publiée, jusqu'en 2010, lorsque A. Asselah et A. Gaudillière montrent dans \cite{ref} que l'erreur est presque sûrement inférieure à $\alpha\sqrt{\log(n)}$ en dimension 3 ou plus et $\alpha \log(n)$ en dimension 2. En parallèle, D.Jerison, L. Levine et S.Sheffield prouvent ce résultat dans \cite{ref8} et \cite{ref7}. Ils publient un second article \cite{ref2} auquel nous nous intéressons ici, qui établit l'optimalité de ce résultat, du moins pour ce qui est de l'erreur interne.
+Puis, le problème de l'ordre des fluctuations autour de la boule a été étudié par G. Lawler qui montre en 1995 \cite{ref6} que les fluctuations sont presque sûrement majorées par $n^{1/3} \log ^4 (n)$ en dimension $2$ ou plus. Toutefois, des simulations suggèrent que l'ordre des fluctuations est plutôt logarithmique. Aucune amélioration notable de ces résultats n'est publiée, jusqu'en 2010, lorsque A. Asselah et A. Gaudillière montrent dans \cite{ref} que l'erreur est inférieure à $\alpha\sqrt{\log(n)}$ en dimension 3 ou plus et $\alpha \log(n)$ en dimension 2. En parallèle, D.Jerison, L. Levine et S.Sheffield prouvent ce résultat dans \cite{ref8} et \cite{ref7}. Ils publient un second article \cite{ref2} auquel nous nous intéressons ici, qui établit l'optimalité de ce résultat, du moins pour ce qui est de l'erreur interne.
 
 \newpage
-\section{Premières Propriétés}
-Commençons par définir ce qu'est la région explorée par N explorateurs :
+\section{Résultats}
+\subsection{Définitions}
+Commençons par définir ce qu'est la région explorée par $N$ explorateurs :
 \begin{Def}
  On appelle explorateur une marche aléatoire symétrique de $\mathbb{Z}^d$ partant d'un point $z$. Tous les explorateurs seront pris indépendants.
  Soit $\Lambda$ la région de $\mathbb{Z}^d$ préalablement explorée et $\xi^n=(\xi_1,\dots,\xi_n)$ les positions de départs des explorateurs qui suivent des marches aléatoires indépendantes $(S_1,\dots,S_n)$ symétriques sur $\mathbb{Z}^d$. 
@@ -83,7 +87,7 @@ Commençons par définir ce qu'est la région explorée par N explorateurs :
  On notera par la suite $A(\xi^n)=A(\emptyset,\xi^n)$ et $A_R(\Lambda,\xi^n)=A(\Lambda,\xi^n)\cap\mathbb{B}(0,R)$. On notera aussi plus simplement $A(n)=A( (0,\dots,0) )$ où le vecteur est de taille $n$.
  \end{Def}
  
- On va désormais essayer d'estimer la forme asymptotique de cette région explorée pour des explorateurs partant de l'origine, et notamment la différence entre celle-ci et une boule correspondante, c'est à dire la boule de volume le nombre d'explorateurs lancés. On va définir pour cela les notions d'erreur interne et externe.
+ On va désormais essayer d'estimer la forme asymptotique de cette région explorée pour des explorateurs partant de l'origine, et notamment la différence entre celle-ci et une boule de volume correspondant. On va définir pour cela les notions d'erreur interne et externe.
  
  L'erreur externe, notée $\delta_O$, est la différence entre le tentacule le plus long et le rayon du cercle limite:
  \begin{equation}
@@ -94,16 +98,17 @@ L'erreur interne, notée $\delta_I$, est la différence entre le rayon du cercle l
  \begin{equation}
   n-\delta_I(n)=\sup \{p\geqslant0\ |\ \mathbb{B}(0,p)\subset A(b(n))\}
  \end{equation}
- \begin{figure}[H]
+ Il est important ici de constater que ces deux notions, illustrées sur la figure \ref{ex}, ne sont définies que lorsqu'on lance un nombre d'explorateur de la forme $b(k)$ car il est difficile dans le cas général de connaitre le rayon de la boule asymptotiquement atteinte.
+
+ \subsection{Résultats admis}
+  \begin{figure}[H]
  \centering
    \includegraphics{erreur_interne_et_externe.png}
    \caption{Exemple de région explorée par $b(13)$ explorateurs}
    \label{ex}
  \end{figure}
- Il est important ici de constater que ces deux notions, illustrées sur la figure \ref{ex}, ne sont définies que lorsqu'on lance un nombre d'explorateur de la forme $b(k)$ car il est difficile dans le cas général de connaitre le rayon de la boule asymptotiquement atteinte.
-
- Le premier résultat concernant les erreurs internes et externes, prouvé par A. Gaudillière et A. Asselah dans \cite{ref}, assure que la région explorée ressemble bien asymptotiquement à une boule.
- \begin{The}
+ Le premier résultat concernant les erreurs internes et externes, assure que la région explorée ressemble bien asymptotiquement à une boule.
+ \begin{The}[Asselah, Gaudillière]
  \label{limsup}
   En dimension $d \geqslant 3$, $\exists\beta_d>0$ tel que
   \begin{equation}
@@ -117,7 +122,7 @@ L'erreur interne, notée $\delta_I$, est la différence entre le rayon du cercle l
   \end{equation}
  \end{The}
  
- Pour illustrer ce résultat, voici un exemple d'évolution de $\frac{\delta_I(n)}{\log(n)}$ et $\frac{\delta_O(n)}{\log(n)}$ en dimension 2:
+ Pour illustrer ce résultat, voici une réalisation de $\frac{\delta_I(n)}{\log(n)}$ et $\frac{\delta_O(n)}{\log(n)}$ en dimension 2:
  \begin{figure}[H]
   \begin{minipage}[c]{.46\linewidth}
     \includegraphics{erreurinterne.png}
@@ -130,7 +135,8 @@ L'erreur interne, notée $\delta_I$, est la différence entre le rayon du cercle l
  \end{minipage}
  \end{figure}
 
- On peut naturellement s'interroger sur l'optimalité de cet ordre de fluctuations en $\sqrt{\log(n)}$ pour $d\geqslant3$ et $\log(n)$ pour $d=2$. On va prouver ici deux théorèmes dont la démonstation initiale est dans \cite{ref2} pour étudier cette question.
+ \subsection{Résultats étudiés}
+ On peut naturellement s'interroger sur l'optimalité de cet ordre de fluctuations en $\sqrt{\log(n)}$ pour $d\geqslant3$ et $\log(n)$ pour $d=2$. Dans ce mémoire, nous allons nous interroger sur les deux théorèmes suivants :
  \begin{The}
  \label{ext}
   En dimension $d \geqslant 3$, $\exists\alpha_d$>0 tel que
@@ -147,9 +153,28 @@ L'erreur interne, notée $\delta_I$, est la différence entre le rayon du cercle l
   \end{equation}
   où $h(n)=\alpha_2\sqrt{\log(n)\log(\log(n))}$
  \end{Rq}
-Autrement dit, si les trous ne sont pas trop grand, alors de longs tentacules apparaissent. Ce théorème montre que l'erreur externe croît comme on s'y attendait sous l'hypothèse d'une erreur interne faible, mais il ne permet malheureusement pas de conclure. 
-\pagebreak[1]
+Il n'est pas clair \emph{a priori} que ce théorème nous donne vraiment une indication sur l'optimalité de $h(n)$ pour l'erreur externe, mais on peut voir qu'il implique le résultat intéressant suivant :
+\begin{Cor}
+ \begin{equation} \label{io}
+   P(\limsup\limits_{n\to\infty}\{\delta_I(n)\geqslant L(n)\}\cup\{\delta_O(n)\geqslant h(n)\})=1
+  \end{equation}
+\begin{proof}
+On a :
+ \begin{align*}
+   &P(\exists k\geqslant n,\delta_I(k)\geqslant L(k)\ \normalfont{ou}\ \delta_O(k)\geqslant h(k))
+   \\&\geqslant P(\delta_I(n)\geqslant L(n)\ \normalfont{ou}\ \exists k\geqslant n,\delta_0(k)\geqslant h(k))
+   \\&= P(\delta_I(n)\geqslant L(n))+P(\exists k\geqslant n,\delta_0(k)\geqslant h(k)\normalfont\ {|}\ \delta_I(n)<L(n))P(\delta_I(n)<L(n))
+   \\&= 1-P(\delta_I(n)<L(n))\big(1-P(\exists k\geqslant n,\delta_0(k)\geqslant h(k)\ \normalfont{|}\delta_I(n)<L(n))\big)
+ \end{align*}
+ et donc :
+ \begin{equation*}
+ \lim_{n\to\infty}P(\exists k\geqslant n,\delta_I(k)\geqslant L(k)\ \normalfont{ou}\ \delta_O(k)\geqslant h(k))=1
+ \end{equation*}
+ \end{proof}
+\end{Cor}
+Autrement dit, pour une infinité de termes, l'erreur interne ou l'erreur externe est d'ordre $\sqrt{\log n}$, donc le théorème \ref{limsup} est d'une certaine façon optimal.
 
+\medskip
 Le cas de l'erreur interne est quand à lui complètement déterminé en dimension supérieure à 3 grâce au résultat suivant, qui dit que presque sûrement de grands trous apparaissent une infinité de fois :
  \begin{The} \label{int}
   En dimension $d \geqslant 3$, $\exists\alpha_d>0$ tel que
@@ -158,30 +183,6 @@ Le cas de l'erreur interne est quand à lui complètement déterminé en dimension s
   \end{equation}
   où $h(n)=\alpha_d\sqrt{\log(n)}$
  \end{The}
- 
-Introduisons dès à présent quelques définitions qui nous seront utiles par la suite.
-\begin{Def}Soit $\Lambda$ une partie de $\mathbb{Z}^d$, S une marche aléatoire discrète, y un point de $\mathbb{Z}^d$ et $\gamma$ et $R$ des réels positifs.
-\begin{enumerate}[i)]
-  \item  $\partial \mathbb{B}(y,R)=\{x \notin \mathbb{B}(y,R) \ | \ \exists z \in \mathbb{B}(y,R), \ \| x-z\| <1\}$ est le bord de la boule de centre y et de rayon R.
-
-  \item $\rho(\gamma)=\sup\{n\geqslant 0,\ b(n)\leqslant \gamma\}$ est le rayon de la plus grande boule de volume inférieur à $\gamma$.
-  
-  \item $H(S;\Lambda)=\inf\{n\geqslant0,\ S(n)\in\Lambda\}$ (ou $H(\Lambda)$ en l'absence d'ambiguïté sur $S$) est le premier instant pour lequel la marche aléatoire $S$ atteint $\Lambda$.
-  
-  \item \label{iii}Si $\eta:\mathbb{Z}^d\to\mathbb{N}$ est telle que $\eta(z)$ est le nombre d'explorateurs partis de $z$, la région explorée en partant de $\eta$ sera la région définie en faisant partir les explorateurs dans un ordre prédéfini sur $\mathbb{Z}^d$. 
-  
-  \item $W_R(\Lambda;\eta, z)$ est le nombre d'explorateurs, partant de la configuration $\eta$ et de la région explorée $\Lambda$, qui passent par $z\in\mathbb{B}(0,R)$ avant de sortir de $\mathbb{B}(0,R)$.
- 
-  \item $W_R(\Lambda;\eta, z)$ est le nombre d'explorateurs, partant de la configuration $\eta$ et de la région explorée $\Lambda$, qui passent par $z\in\partial\mathbb{B}(0,R)$ au moment où ils sortent de $\mathbb{B}(0,R)$.
-
-  \item Pour $z \in \mathbb{Z}^d \setminus \{ 0 \}$ on note $\Sigma (z) = \partial \mathbb{B} (0, \| z \| )$. Remarquons que $z \in \Sigma (z)$.
-  
-  \item $\zeta_z^N$ est le vecteur $(z,\dots,z)$ de taille $N$.
-\end{enumerate}
- \end{Def}
- \begin{Rq}
-  Si $\mathbb{B}(0,R)\subset\Lambda$, $W_R(\mathbb{B}(0,R);\eta,z)=W_R(\Lambda;\eta,z)$. On appelle alors cette quantité $M_R(\eta,z)$.
- \end{Rq}
 
  \newpage
 
@@ -220,6 +221,12 @@ Soit n un entier naturel, $\Lambda$ une partie de $\mathbb{Z}^d$, $\xi=(\xi_1,\d
 \end{equation*}
 \end{The}
 
+\pagebreak[2]
+\begin{Def}
+Pour $y\in\mathbb{Z}^d$ et R>0, on définit le bord de la boule de centre y et de rayon R par :
+ \[\partial \mathbb{B}(y,R)=\{x \notin \mathbb{B}(y,R) \ | \ \exists z \in \mathbb{B}(y,R), \ \| x-z\| <1\}\]
+\end{Def}
+
 Illustrons ce théorème avec l'exemple de l'exploration par vague qui nous servira par la suite. On va réaliser la région explorée $A(n+m)$ en $3$ vagues. La première vague consiste à faire partir $n$ explorateurs de l'origine et à considérer la région explorée correspondante $A_1=A(n)$ (en bleu sur la figure \ref{vague}). 
 
 Pour la deuxième vague, on fait partir $m$ explorateurs de l'origine avec pour région préalablement explorée $A_1$ et on les arrête sur $\mathbb{B}(0,R)$ (en vert sur \ref{vague}). On note $A_2$ la région explorée après les deux vagues et $\Delta_R$ la configuration des explorateurs de la deuxième vague arrêtés sur $\partial\mathbb{B}(0,R)$ :
@@ -241,10 +248,32 @@ Pour la troisième vague on relance les explorateurs arrêtés $\Delta_R$ avec pour
  \newpage
  
  \section{L'erreur externe}
+ \label{eext}
  On va prouver ici le théorème \ref{ext} : en dimension supérieure ou égale à 3,
 \begin{equation*}
    \lim_{n\to\infty}P(\exists k\geqslant n,\ \delta_0(k)\geqslant h(k)\ \normalfont{|}\ \delta_I(n)<L(n))=1
 \end{equation*}
+
+Introduisons dès à présent quelques définitions qui nous seront utiles par la suite.
+\begin{Def}Soit $\Lambda$ une partie de $\mathbb{Z}^d$, S une marche aléatoire discrète, y un point de $\mathbb{Z}^d$ et $\gamma$ et $R$ des réels positifs.
+\begin{enumerate}[i)]
+
+  \item $\rho(\gamma)=\sup\{n\geqslant 0,\ b(n)\leqslant \gamma\}$ est le rayon de la plus grande boule de volume inférieur à $\gamma$.
+  
+  \item $H(S;\Lambda)=\inf\{n\geqslant0,\ S(n)\in\Lambda\}$ (ou $H(\Lambda)$ en l'absence d'ambiguïté sur $S$) est le premier instant pour lequel la marche aléatoire $S$ atteint $\Lambda$.
+  
+  \item \label{iii}Si $\eta:\mathbb{Z}^d\to\mathbb{N}$ est telle que $\eta(z)$ est le nombre d'explorateurs partis de $z$, la région explorée en partant de $\eta$ sera la région définie en faisant partir les explorateurs dans un ordre prédéfini sur $\mathbb{Z}^d$. 
+  
+  \item $W_R(\Lambda;\eta, z)$ est le nombre d'explorateurs, partant de la configuration $\eta$ et de la région explorée $\Lambda$, qui passent par $z\in\mathbb{B}(0,R)$ (resp $z\in\partial\mathbb{B}(0,R)$) avant de sortir de $\mathbb{B}(0,R)$ (resp au moment où ils sortent de $\mathbb{B}(0,R)$).
+ 
+  \item Pour $z \in \mathbb{Z}^d \setminus \{ 0 \}$ on note $\Sigma (z) = \partial \mathbb{B} (0, \| z \| )$. Remarquons que $z \in \Sigma (z)$.
+  
+  \item $\zeta_z^N$ est le vecteur $(z,\dots,z)$ de taille $N$.
+\end{enumerate}
+ \end{Def}
+ \begin{Rq}
+  Si $\mathbb{B}(0,R)\subset\Lambda$, $W_R(\mathbb{B}(0,R);\eta,z)=W_R(\Lambda;\eta,z)$. On appelle alors cette quantité $M_R(\eta,z)$.
+ \end{Rq}
 \subsection{Conditions d'apparition d'un tentacule}
  On pose $h(n)=\alpha\sqrt{\log(n)}$ et $L(n)=\gamma\sqrt{\log(n)}$ où $\alpha$ et $\gamma$ sont des constantes à choisir par la suite. $h$ représente ici l'erreur externe et $L$ l'erreur interne, et il est important de conserver cette distinction à l'esprit même si on prendra $\alpha=\gamma$ par la suite.
 
@@ -409,29 +438,9 @@ Il suffit maintenant de fixer $\alpha$ suffisamment petit pour que $d-1-\alpha^2
 \medskip
 \pagebreak[1] %n'efface pas cette commande elle permet de «suggérer» à Latex de sauter une page ici, sans l'obliger, pour avoir un meilleur rendu.
 
-Il n'est pas clair \emph{a priori} que ce théorème nous donne vraiment une indication sur l'optimalité de $h(n)$ pour l'erreur externe, mais on peut voir qu'il implique le résultat intéressant suivant :
-\begin{Cor}
- \begin{equation} \label{io}
-   P(\limsup\limits_{n\to\infty}\{\delta_I(n)\geqslant L(n)\}\cup\{\delta_O(n)\geqslant h(n)\})=1
-  \end{equation}
-\begin{proof}
-On a :
- \begin{align*}
-   &P(\exists k\geqslant n,\delta_I(k)\geqslant L(k)\ \normalfont{ou}\ \delta_O(k)\geqslant h(k))
-   \\&\geqslant P(\delta_I(n)\geqslant L(n)\ \normalfont{ou}\ \exists k\geqslant n,\delta_0(k)\geqslant h(k))
-   \\&= P(\delta_I(n)\geqslant L(n))+P(\exists k\geqslant n,\delta_0(k)\geqslant h(k)\normalfont\ {|}\ \delta_I(n)<L(n))P(\delta_I(n)<L(n))
-   \\&= 1-P(\delta_I(n)<L(n))\big(1-P(\exists k\geqslant n,\delta_0(k)\geqslant h(k)\ \normalfont{|}\delta_I(n)<L(n))\big)
- \end{align*}
-Et donc,
-\begin{align*}
- &P(\limsup\limits_{n\to\infty}\{\delta_I(n)\geqslant L(n)\}\cup\{\delta_O(n)\geqslant h(n)\})\\&=\lim_{n\to\infty}P(\exists k\geqslant n,\delta_I(k)\geqslant L(k)\ \normalfont{ou}\ \delta_O(k)\geqslant h(k))\\&=1
-\end{align*}
-\end{proof}
-
-\end{Cor}
-Autrement dit, pour une infinité de termes, l'erreur interne ou l'erreur externe est d'ordre $\sqrt{\log n}$, donc le théorème \ref{limsup} est d'une certaine façon optimal. On verra dans la partie \ref{interne} que \ref{io} est en fait vraie pour l'erreur interne seule.
-
 \section{L'erreur interne}
+On reprend dans cette partie les définitions introduites au début de la partie \ref{eext}.
+
 \label{interne}
 Pour établir le Théorème \ref{int}, nous allons procéder de façon similaire. Nous lançons cette fois-ci non pas une vague d'explorateurs à partir de $A(b(n))$, mais un grand nombre $F(n)$ de vagues successives. Pour $k \leqslant F(n)$, la $k^{\mathrm{\grave{e}me}}$ vague consistera en un lancer de $X_k$ explorateurs depuis l'origine, où $X_k$ sera une varible de Poisson de paramètre $\lambda_k$ à déterminer plus tard.
 
