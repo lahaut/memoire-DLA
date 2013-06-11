@@ -113,12 +113,12 @@ L'erreur interne, notée $\delta_I$, est la différence entre le rayon du cercle l
   En dimension $d \geqslant 3$, $\exists\beta_d>0$ tel que
   \begin{equation}
 \limsup\limits_{n\to\infty}\frac{\delta_I(n)}{\sqrt{\log(n)}}\leqslant\beta_d
-\ et\ \limsup\limits_{n\to\infty}\frac{\delta_O(n)}{\sqrt{\log(n)}}\leqslant\beta_d   
+\ \mathrm{et}\ \limsup\limits_{n\to\infty}\frac{\delta_O(n)}{\sqrt{\log(n)}}\leqslant\beta_d .  
   \end{equation}
   En dimension 2, $\exists\beta_2>0$ tel que
    \begin{equation}
 \limsup\limits_{n\to\infty}\frac{\delta_I(n)}{\log(n)}\leqslant\beta_2
-\ et\ \limsup\limits_{n\to\infty}\frac{\delta_O(n)}{\log(n)}\leqslant\beta_2  
+\ \mathrm{et}\ \limsup\limits_{n\to\infty}\frac{\delta_O(n)}{\log(n)}\leqslant\beta_2 . 
   \end{equation}
  \end{The}
  
@@ -290,7 +290,7 @@ On définit alors $(y_1=z,y_2,\dots,y_k=z_p)$ une suite de plus proches voisins d
 On peut trouver une constante $c_1$ qui permet de prendre $k\leqslant c_1p$. Pour cela, on procède de la façon suivante: on appelle $C$ le diamètre de la figure composée de deux cube unitaire partageant une face, de façon à avoir $\|z_n-z_{n-1}\|\leqslant C$. Il est alors possible de relier $z_n$ à $z_{n-1}$ par une suite de plus proches voisins de taille inférieure à $c_1=dC$, ce qui prouve le résulat.
 On alors $k\leqslant c_1(R-\|z\|+\sqrt{d}+1) \leqslant c(R- \|z\|)$ pour $c$ une constante suffisamment grande. Comme $N \geqslant c(R-\|z\|)$, on peut forcer les $k$ premiers explorateurs à s'installer successivement sur $y_1, \dots, y_k$, et la probabilité de cet événement est :
 \begin{equation*}
- (\frac{1}{2d})^{1+2+\dots+k}\geqslant \exp(-c(R-\|z\|)^2)
+ \left( \frac{1}{2d} \right) ^{1+2+\dots+k}\geqslant \exp(-c(R-\|z\|)^2)
 \end{equation*}
 quitte à augmenter la constante $c$. La présence d'un tel tentacule impliquant que les explorateurs sortent de $\mathbb{B}(0,R)$, on a bien le résultat voulu.
 \end{proof}
@@ -323,8 +323,8 @@ On constate que \{$\delta_O(R_n)\geqslant h(R_n)$\} est lié à $\{\mathrm{cov}(z)
 \begin{align}
 \nonumber P(\delta_O(R_n)\geqslant h(R_n))&\geqslant P(A(b(R_n))\not\subset\mathbb{B}(0,R_n+h(R_n)))
  \nonumber\\&\geqslant P(A(b(n)+X_n)\not\subset\mathbb{B}(0,R_n+h(R_n)))
- \nonumber\\&\geqslant P(A(\Lambda_n,\sum_{z\in\Sigma}\zeta_z^{N_z})\not\subset\mathbb{B}(0,R_n+h(R_n)))
- \nonumber\\&\geqslant P(\bigcup_{z\in\Sigma}\mathrm{cov}(z))
+ \nonumber\\&\geqslant P\left( A\left( \Lambda_n,\sum_{z\in\Sigma}\zeta_z^{N_z} \right) \not\subset\mathbb{B}(0,R_n+h(R_n)) \right)
+ \nonumber\\&\geqslant P\left(\bigcup_{z\in\Sigma}\mathrm{cov}(z)\right)
 \end{align}
 
 Il nous faut désormais estimer $P(\bigcup_{z\in\Sigma}\mathrm{cov}(z))$. Pour cela, il serait intéressant d'avoir indépendance entre les $\mathrm{cov}(z)$ sous certaines hypothèses, ce qu'on va obtenir en prenant pour $X_n$ une variable de Poisson. En effet, les variables de Poisson ont la propriété de découpage \ref{indé}, qui laisse penser que les $N_z$ seront indépendantes et de loi de Poisson. Les lois de Poisson sont les seules parmi les lois usuelles à pouvoir se décomposer ainsi.
@@ -454,7 +454,7 @@ Et donc,
 \end{proof}
 
 \end{Cor}
-Autrement dit, pour une infinité de termes, l'erreur interne ou l'erreur externe est d'ordre $\sqrt{\log n}$, donc le théorème \ref{limsup} est d'une certaine façon optimal. On verra dans la partie \ref{interne} que \ref{io} est en fait vraie pour l'erreur interne seule.
+Autrement dit, pour une infinité de termes, l'erreur interne ou l'erreur externe est d'ordre $\sqrt{\log n}$, donc le théorème \ref{limsup} est d'une certaine façon optimal. On verra dans la partie \ref{interne} que (\ref{io2}) est en fait vraie pour l'erreur interne seule.
 \pagebreak[1] %n'efface pas cette commande elle permet de «suggérer» à Latex de sauter une page ici, sans l'obliger, pour avoir un meilleur rendu.
 
 \section{L'erreur interne}
@@ -654,7 +654,6 @@ où on a utilisé l'inclusion $A_{N}^c \cap A_{N+1}^c \cap C_{N+1} \subset I_{N+1}
  \nonumber \\ & \leqslant & \sum _{k \leqslant N+1} P(B_k) - \left( 1 - \exp (\alpha (n) ) \right) ^{N+1}
  \nonumber
 \end{eqnarray}
-ce qui achève la preuve.
 \end{proof}
 
 En appliquant le lemme \ref{rec} à (\ref{cups}), avec $N=F(n)$, on trouve :
