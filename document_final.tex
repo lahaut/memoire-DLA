@@ -42,7 +42,7 @@ Nous allons étudier dans ce mémoire l'évolution du monde découvert par des explo
 
 Le résultat principal est celui de \cite{ref} qui montre qu'asymptotiquement la région explorée est une boule. On s'interessera ici aux fluctuations autour de cette boule. A.~Asselah et A.~Gaudillière ont montré que celles-ci sont de l'ordre de $\sqrt{\log(n)}$ en dimension 3 ou plus et $\log(n)$ en dimension 2.
 
-Nous allons travailler ici sur l'article \cite{ref2} d'A.~Gaudillière et A.~Asselah qui essaie d'établir l'optimalité des majorations précédentes. Il montre en particulier que $\sqrt{ \log (n)}$ est optimal en dimension supérieure à 3 pour l'erreur interne, mais ne conclut pas pour la dimension 2. En ce qui concerne l'erreur externe, ils prouvent un résultat qui permet de penser que $\sqrt{ \log (n)}$ est optimal en dimension supérieure à $3$ sans tout à fait permettre de conclure. Les illustrations accompagnant ce document ont été obtenues à l'aide de caml et python.
+Nous allons travailler ici sur l'article \cite{ref2} d'A.~Gaudillière et A.~Asselah qui essaie d'établir l'optimalité des majorations précédentes. Il montre en particulier que $\sqrt{ \log (n)}$ est optimal en dimension supérieure à 3 pour l'erreur interne, mais ne conclut pas pour la dimension 2. En ce qui concerne l'erreur externe, ils prouvent un résultat qui permet de penser que $\sqrt{ \log (n)}$ est optimal en dimension supérieure à $3$ sans tout à fait permettre de conclure. Les illustrations accompagnant ce document proviennent de simulation réalisées en OCaml et Python.
 
 \begin{center}
  \includegraphics[scale=0.35]{100000.png}
@@ -515,7 +515,7 @@ On va s'appuyer sur ce $Z_k$ pour construire un évènement $I_k$ qui pourra s'int
  \begin{figure}[H]
  \centering
    \includegraphics{Ik.jpg}
-   \caption{Exemple de réalisation de Ik}
+   \caption{Exemple de réalisation de $I_k$}
    \label{ex}
  \end{figure}
 Si $I_k$ est réalisé, on aimerait pouvoir dire que dans le cas où $Z_k$ n'est pas visité (un trou apparaît) on a $\delta_I (R_k) \geqslant h(R_k)$ et que dans le cas contraire (un long tentacule apparaît) on a $\delta_O (R_k) \geqslant L(R_k)$. Pour cela, il faut montrer que sous certaines conditions sur $X_k$ on a $R_k - \| Z_k \| \geqslant h(R_k)$ et $\| Z_k \| - R_k + 7 L(R_{k-1}) \geqslant L(R_k)$.
@@ -692,8 +692,17 @@ On expose ici des variantes du problème, pour lesquelles la forme de la région e
 \subsection{Plusieurs sources}
 On peut décider que les explorateurs partent de deux points sources, espacés d'une distance de l'ordre du rayon théorique de la boule.
 
+\begin{figure}[H]
+ \centering
+   \includegraphics[scale=0.7]{cacahuete.jpg}
+   \caption{Région obtenue pour deux sources}
+\end{figure}
+Dans cette illustration, on a choisi de séparer les deux sources de $4/5$ fois le rayon théorique $\rho (N)$, et de lancer $N$ explorateurs depuis chaque source.
+
+Il est ici important de noter que la propriété abélienne énoncée en \ref{abel} permet d'affirmer que la loi finale de la région ne dépend pas de l'ordre de lancer des explorateurs.
+
 \subsection{Décalage vers la droite}
-Choisissons de ne plus faire voyager nos $N$ explorateurs selon des marches aléatoires symétriques, mais des marches déséquilibrées vers un côté. Par exemple, sur $\mathbb{Z}^2$, construisons une marche en suivant les probabilités
+Choisissons de faire voyager nos $N$ explorateurs non plus selon des marches aléatoires symétriques, mais selon des marches déséquilibrées vers un côté. Par exemple, sur $\mathbb{Z}^2$, construisons une marche en suivant les probabilités
 \[P(\mathrm{haut}) = 1/4,\  P(\mathrm{bas}) = 1/4, \  P(\mathrm{gauche}) = 1/4 - \epsilon, \ P(\mathrm{droite}) = 1/4 + \epsilon , \]
 où $\epsilon > 0$.
 
@@ -702,15 +711,25 @@ où $\epsilon > 0$.
    \includegraphics[scale=0.8]{drift.jpg}
    \caption{Région obtenue pour des marches déséquilibrées}
 \end{figure}
-
 Il semble que la déviation à droite dans ce cas soit de l'ordre de $N^{2/3}$, comme le suggère la courbe suivante où l'on trace l'évolution du logarithme de cette déviation et une courbe référence de pente $2/3$ :
 \begin{figure}[H]
  \centering
-   \includegraphics[scale=0.5]{log.jpg}
+   \includegraphics[scale=0.6]{log.jpg}
    \caption{Log de la distance maximale à l'origine (en noir) et pente 2/3 (en bleu)}
 \end{figure}
 
 Ceci ne semble pas étonnant, à cause de l'argument suivant : une telle marche déséquilibrée a tendance, en projection sur l'horizontale, à s'écarter vers la droite linéairement avec le temps $t$. En projection verticale, elle dévie comme $\sqrt{t}$ (marche symétrique unidimensionnelle). La région obtenue doit d'une certaine façon respecter ces ordres de grandeur, donc son étendue horizontale doit varier comme le carré de son étendue verticale. Comme le produit des deux vaut $N$, il faut avoir une étendue horizontale en $N^{2/3}$ et verticale en $N^{1/3}$.
+
+\subsection{Cavaliers explorateurs}
+On peut aussi choisir de faire des marches aléatoires différentes, en s'autorisant plus de pas. Il pourrait être intéressant de se placer dans un cadre plus général de matrice de transition pour la marche aléatoire.
+
+Par exemple, on peut explorer en se déplaçant comme un cavalier aux échecs, aléatoirement. La région explorée est assez semblable à celle du cas du IDLA, l'avantage principal étant qu'elle est plus rapide à simuler car les cavaliers aléatoires s'éloignent plus vite de l'origine que les marcheurs aléatoires.
+\begin{figure}[H]
+ \centering
+   \includegraphics[scale=0.3]{cavaliers.jpg}
+   \caption{Région explorée par des cavaliers ($300000$ cavaliers)}
+\end{figure}
+
 \appendix 
 \newpage
 \section{Propriétés annexes}
