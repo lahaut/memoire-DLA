@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.5.2)  11 JUN 2013 11:59
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.5.2)  11 JUN 2013 12:20
 entering extended mode
  %&-line parsing enabled.
 **document_final.tex
@@ -314,11 +314,7 @@ Package: geometry 2008/12/21 v4.2 Page Geometry
 )
 \c@The=\count114
 
-(./document_final.aux
-
-LaTeX Warning: Label `abel' multiply defined.
-
-)
+(./document_final.aux)
 \openout1 = `document_final.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
@@ -433,7 +429,7 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 39.
 (/usr/share/texmf-texlive/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-<100000.png, id=66, 411.5375pt x 411.5375pt>
+<100000.png, id=62, 411.5375pt x 411.5375pt>
 File: 100000.png Graphic file (type png)
  <use 100000.png> [1
 
@@ -443,7 +439,7 @@ _final.toc)
 \openout4 = `document_final.toc'.
 
 
-[2] [3] <erreur_interne_et_externe.png, id=131, 149.5989pt x 158.994pt>
+[2] [3] <erreur_interne_et_externe.png, id=126, 149.5989pt x 158.994pt>
 File: erreur_interne_et_externe.png Graphic file (type png)
 
 <use erreur_interne_et_externe.png> [4pdfTeX warning (ext4): destination with t
@@ -453,14 +449,14 @@ he same identifier (name{figure.1}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.104 
        <./erreur_interne_et_externe.png>]
-<erreurinterne.png, id=145, 196.5744pt x 160.4394pt>
+<erreurinterne.png, id=140, 196.5744pt x 160.4394pt>
 File: erreurinterne.png Graphic file (type png)
  <use erreurinterne.png>
 Overfull \hbox (4.17442pt too wide) in paragraph at lines 123--124
 [][]
  []
 
-<erreurexterne.png, id=146, 196.5744pt x 160.4394pt>
+<erreurexterne.png, id=141, 196.5744pt x 160.4394pt>
 File: erreurexterne.png Graphic file (type png)
  <use erreurexterne.png>
 Overfull \hbox (4.17442pt too wide) in paragraph at lines 128--129
@@ -480,15 +476,15 @@ l.152
                                                   \fi \fi 
 l.152 
        <./erreurinterne.png> <./erreurexterne.png>] [6] [7]
-<vague.jpg, id=191, 417.7206pt x 163.3302pt>
+<vague.jpg, id=186, 417.7206pt x 163.3302pt>
 File: vague.jpg Graphic file (type jpg)
  <use vague.jpg> [8pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.245  \newpage
-                <./vague.jpg>] [9] <cov.png, id=207, 388.0899pt x 160.4394pt>
+l.241  \newpage
+                <./vague.jpg>] [9] <cov.png, id=202, 388.0899pt x 160.4394pt>
 File: cov.png Graphic file (type png)
 
 <use cov.png> [10pdfTeX warning (ext4): destination with the same identifier (n
@@ -496,8 +492,8 @@ ame{figure.5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.309 \end{align}
-                  <./cov.png>] <cov2.png, id=216, 393.1488pt x 158.2713pt>
+l.305 \end{align}
+                  <./cov.png>] <cov2.png, id=211, 393.1488pt x 158.2713pt>
 File: cov2.png Graphic file (type png)
 
 <use cov2.png> [11pdfTeX warning (ext4): destination with the same identifier (
@@ -505,98 +501,94 @@ name{figure.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.332 \end{equation*}
+l.328 \end{equation*}
                       <./cov2.png>] [12] [13] [14]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 471.
+(hyperref)                removing `math shift' on input line 467.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 471.
+(hyperref)                removing `superscript' on input line 467.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 471.
+(hyperref)                removing `subscript' on input line 467.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 471.
+(hyperref)                removing `math shift' on input line 467.
 
 [15]
 
 Package hyperref Warning: Empty destination name,
-(hyperref)                using `UNDEFINED' on input line 516.
+(hyperref)                using `UNDEFINED' on input line 512.
 
 
 Package hyperref Warning: Empty destination name,
-(hyperref)                using `UNDEFINED' on input line 517.
+(hyperref)                using `UNDEFINED' on input line 513.
 
 
 Package hyperref Warning: Empty destination name,
-(hyperref)                using `UNDEFINED' on input line 525.
+(hyperref)                using `UNDEFINED' on input line 521.
 
 
 Package hyperref Warning: Empty destination name,
-(hyperref)                using `UNDEFINED' on input line 526.
+(hyperref)                using `UNDEFINED' on input line 522.
 
 [16] [17]pdfTeX warning (ext4): destination with the same identifier (name{equa
-tion.6.6}) has been already used, duplicate ignored
+tion.5.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.570  \begin{eqnarray}
+l.566  \begin{eqnarray}
                        pdfTeX warning (ext4): destination with the same identif
-ier (name{equation.6.6}) has been already used, duplicate ignored
+ier (name{equation.5.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.582 \begin{eqnarray}
+l.578 \begin{eqnarray}
                        [18pdfTeX warning (ext4): destination with the same iden
-tifier (name{equation.6.6}) has been already used, duplicate ignored
+tifier (name{equation.5.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.595 
+l.591 
       ] [19pdfTeX warning (ext4): destination with the same identifier (name{eq
-uation.6.9}) has been already used, duplicate ignored
+uation.5.9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.634 \end{equation}
+l.630 \end{equation}
                     ] [20pdfTeX warning (ext4): destination with the same ident
-ifier (name{equation.6.9}) has been already used, duplicate ignored
+ifier (name{equation.5.9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.658 \newpage
+l.654 \newpage
               ] [21]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 724.
+(hyperref)                removing `math shift' on input line 720.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 724.
+(hyperref)                removing `math shift' on input line 720.
 
 [22] [23] (./document_final.bbl
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 11.
 
 (/usr/share/texmf-texlive/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)) [24] (./document_final.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+)) [24] (./document_final.aux) ) 
 Here is how much of TeX's memory you used:
- 6689 strings out of 495028
- 91970 string characters out of 1181230
+ 6687 strings out of 495028
+ 91950 string characters out of 1181230
  180646 words of memory out of 3000000
- 9609 multiletter control sequences out of 15000+50000
+ 9608 multiletter control sequences out of 15000+50000
  17574 words of font info for 52 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  38i,15n,39p,953b,572s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{UNDEFINED} has been referenced but does not exist
-, replaced by a fixed one
+pdfTeX warning (dest): name{UNDEFINED} has been
+ referenced but does not exist, replaced by a fixed one
 
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-te
 xlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts
@@ -620,9 +612,9 @@ ublic/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1
 200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/
 texmf/fonts/type1/public/cm-super/sfti1095.pfb></usr/share/texmf/fonts/type1/pu
 blic/cm-super/sftt1095.pfb>
-Output written on document_final.pdf (24 pages, 773842 bytes).
+Output written on document_final.pdf (24 pages, 771549 bytes).
 PDF statistics:
- 472 PDF objects out of 1000 (max. 8388607)
- 120 named destinations out of 1000 (max. 500000)
- 156 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 467 PDF objects out of 1000 (max. 8388607)
+ 119 named destinations out of 1000 (max. 500000)
+ 148 words of extra memory for PDF output out of 10000 (max. 10000000)
 
