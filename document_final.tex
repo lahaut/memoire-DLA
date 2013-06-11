@@ -478,7 +478,7 @@ On va s'appuyer sur ce $Z_k$ pour construire un évènement $I_k$ qui pourra s'int
 \begin{Def}
 \begin{enumerate}[i)]
  \item
- Soit $n$ un entier et $R > 0$, on définit la variable aléatoire $N_z (n, R)$ comme le nombre de marches aléatoires parmi $n$ marches partant de $0$ visitent $z$ avant de sortir de $\mathbb{B} (0, \| z \| + R)$ :
+ Soit $n$ un entier et $R > 0$, on définit la variable aléatoire $N_z (n, R)$ comme le nombre de marches aléatoires parmi $n$ marches partant de $0$ qui visitent $z$ avant de sortir de $\mathbb{B} (0, \| z \| + R)$ :
 \begin{equation}
  N_z (n, R) = \mathrm{Card} \{ i \leqslant n \ \mid \ H(z) < H( \mathbb{B}^c (O, \| z \| + R )) \}
 \end{equation}
@@ -491,7 +491,7 @@ On va s'appuyer sur ce $Z_k$ pour construire un évènement $I_k$ qui pourra s'int
 
 Si $I_k$ est réalisé, on aimerait pouvoir dire que dans le cas où $Z_k$ n'est pas visité (un trou apparaît) on a $\delta_I (R_k) \geqslant h(R_k)$ et que dans le cas contraire (un long tentacule apparaît) on a $\delta_O (R_k) \geqslant L(R_k)$. Pour cela, il faut montrer que sous certaines conditions sur $X_k$ on a $R_k - \| Z_k \| \geqslant h(R_k)$ et $\| Z_k \| - R_k + 7 L(R_{k-1}) \geqslant L(R_k)$.
 
-Cela sera assuré pour $X_k$ dans un bon intervalle, donné par le lemme suivant, qui induira du coup le choix des paramètres $\lambda_k$ :
+Cela sera assuré pour $X_k$ dans un bon intervalle, donné par le lemme suivant, qui induira du coup le choix du paramètre $\lambda_k$ :
 \begin{Lemme}
 Pour $k$ suffisamment grand, si $\mu_k = b(R_{k-1} + 2 h(R_{k-1})) - b(R_{k-1})$,
 \begin{eqnarray*} \frac{2}{3} \mu_k \leqslant X_k \leqslant 2 \mu_k & \Rightarrow & (i) \ R_k - \| Z_k \| \geqslant h(R_k)
@@ -630,15 +630,15 @@ ce qui achève la preuve.
 
 En appliquant le lemme \ref{rec} à \ref{cups}, avec $N=F(n)$, on trouve :
 \begin{equation} \label{fin}
- P\left( \bigcup_{k \leqslant F(n)} A_k \right) \geqslant 1 - \sum_{k \geqslant F(n)} \left( P(B_k) + P(C_k^c) \right) - (1 - \exp ( - \kappa h(R_{F(n)}) L(R_{F(n)}) ) ) ^{F(n)}
+ P\left( \bigcup_{k \leqslant F(n)} A_k \right) \geqslant 1 - \sum_{k \leqslant F(n)} \left( P(B_k) + P(C_k^c) \right) - (1 - \exp ( - \kappa h(R_{F(n)}) L(R_{F(n)}) ) ) ^{F(n)}
 \end{equation}
 
 On va alors choisir $F(n) = \lfloor \frac{n}{h(n)} \rfloor$, en effet, pour ce choix on a :
 \begin{itemize}
- \item $P(B_k)$ décroît plus vite que toute puissance de $n$ pour $\gamma$ suffisamment grand d'après un résultat de \cite{ref} donc $\sum_{k \geqslant F(n)} P(B_k) \to_{n \to \infty} 0$.
+ \item $P(B_k)$ décroît plus vite que toute puissance de $n$ pour $\gamma$ suffisamment grand d'après un résultat de \cite{ref} donc $\sum_{k \leqslant F(n)} P(B_k) \to_{n \to \infty} 0$.
  \item $P(C_k^c) \leqslant \frac{C}{\lambda_k}$ d'après les résultats annexes \ref{deuxmoy} et \ref{23moy}. Comme $\lambda_k \geqslant \lambda_n \sim h(n) n^{d-1}$ on a :
  \begin{equation*}
- \sum_{k \geqslant F(n)} P(C_k^c) \leqslant \frac{n}{h(n)} \frac{C}{h(n)n^{d-1}} \underset{n\to+\infty}{\longrightarrow} 0
+ \sum_{k \leqslant F(n)} P(C_k^c) \leqslant \frac{n}{h(n)} \frac{C}{h(n)n^{d-1}} \underset{n\to+\infty}{\longrightarrow} 0
  \end{equation*}
  \item $R_{F(n)}$ est d'ordre $n$ donc
   \begin{equation*}
