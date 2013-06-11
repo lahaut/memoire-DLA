@@ -2,14 +2,14 @@
 \contentsline {section}{\numberline {1}Historique}{3}
 \contentsline {section}{\numberline {2}Premi\`eres Propri\'et\'es}{4}
 \contentsline {section}{\numberline {3}Propri\'et\'e ab\'elienne}{7}
-\contentsline {section}{\numberline {4}L'erreur externe}{8}
-\contentsline {subsection}{\numberline {4.1}Conditions d'apparition d'un tentacule}{8}
-\contentsline {subsection}{\numberline {4.2}Construction d'un tentacule}{9}
-\contentsline {subsection}{\numberline {4.3}Estimation de l'erreur externe}{11}
-\contentsline {section}{\numberline {5}L'erreur interne}{14}
-\contentsline {subsection}{\numberline {5.1}Lorsque $A^c_{k-1}$ est r\'ealis\'e}{14}
-\contentsline {subsection}{\numberline {5.2}Minorations}{18}
-\contentsline {section}{\numberline {A}Propri\'et\'es annexes}{20}
-\contentsline {subsection}{\numberline {A.1}D\'ecoupage d'une variable de Poisson}{20}
-\contentsline {subsection}{\numberline {A.2}Estimations sur une variable de Poisson}{21}
-\contentsline {subsection}{\numberline {A.3}Estimation de $b(n)$}{21}
+\contentsline {section}{\numberline {4}L'erreur externe}{9}
+\contentsline {subsection}{\numberline {4.1}Conditions d'apparition d'un tentacule}{9}
+\contentsline {subsection}{\numberline {4.2}Construction d'un tentacule}{10}
+\contentsline {subsection}{\numberline {4.3}Estimation de l'erreur externe}{12}
+\contentsline {section}{\numberline {5}L'erreur interne}{15}
+\contentsline {subsection}{\numberline {5.1}Lorsque $A^c_{k-1}$ est r\'ealis\'e}{15}
+\contentsline {subsection}{\numberline {5.2}Minorations}{19}
+\contentsline {section}{\numberline {A}Propri\'et\'es annexes}{21}
+\contentsline {subsection}{\numberline {A.1}D\'ecoupage d'une variable de Poisson}{21}
+\contentsline {subsection}{\numberline {A.2}Estimations sur une variable de Poisson}{22}
+\contentsline {subsection}{\numberline {A.3}Estimation de $b(n)$}{22}
