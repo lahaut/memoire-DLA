@@ -425,7 +425,7 @@ Il ne reste donc plus qu'à minorer $P(N'_z\geqslant c(3h(n)+L(n)))$:
  \end{proof}
 \end{Lemme}
 
-En prenant $h(n)=L(n)$ et en utilisant \ref{16}, \ref{17}, \ref{18}, \ref{11} et que $1-x\leqslant e^{-x}$, on a finalement :
+En prenant $h(n)=L(n)$ et en utilisant (\ref{16}), (\ref{17}), (\ref{18}), (\ref{11}) et que $1-x\leqslant e^{-x}$, on a finalement :
 \begin{align}
  \nonumber&P(\exists k\geqslant n,\ \delta_0(k)\geqslant h(k)\normalfont\ {|}\ \delta_I(n)<L(n))
  \nonumber\\&\geqslant P(X_n\leqslant\lambda_n)\big(1-\prod_{z\in\Sigma}\big(1-\exp(-c(4h(n))^2-Ch(n))\big)\big)
@@ -474,7 +474,7 @@ Une propriété simple nous sera utile par la suite :
 \end{Rq}
 
 \subsection{Lorsque $A^c_{k-1}$ est réalisé}
-On suppose dans cette partie que l'évènement $A^c_{k-1}$ est réalisé, pour $1 \leqslant k \leqslant F(n)-1$. Utilisons alors l'ensemble non vide donné par \ref{nonvide} au rang $k-1$ : il existe un $Z_k$ non encore visité, tel que $\|Z_k\| \leqslant R_{k-1}+1$. Comme $A^c_{k-1}$ est réalisé et que $Z_k\in A(b(R_{k-1}))^c$, nécessairement, 
+On suppose dans cette partie que l'évènement $A^c_{k-1}$ est réalisé, pour $1 \leqslant k \leqslant F(n)-1$. Utilisons alors l'ensemble non vide donné par (\ref{nonvide}) au rang $k-1$ : il existe un $Z_k$ non encore visité, tel que $\|Z_k\| \leqslant R_{k-1}+1$. Comme $A^c_{k-1}$ est réalisé et que $Z_k\in A(b(R_{k-1}))^c$, nécessairement, 
 \begin{equation} \label{zk}
  R_{k-1} - h(R_{k-1}) \leqslant \|Z_k\| \leqslant R_{k-1} + 1.
 \end{equation}
@@ -613,7 +613,7 @@ Pour tout $N \in \mathbb{N}$, on a
 \begin{equation*} \label{rec}
 P\left( \bigcup_{k \leqslant N} A_k^c \cap C_k \right) \leqslant \sum _{k \leqslant N} P(B_k) - \left( 1 - \exp (\alpha (n) ) \right) ^N
 \end{equation*}
-où $\alpha(n) = -\kappa h(R_{F(n)})L(R_{F(n)})$ obtenu dans \ref{pik}.
+où $\alpha(n) = -\kappa h(R_{F(n)})L(R_{F(n)})$ obtenu dans (\ref{pik}).
 \end{Lemme}
 \begin{proof}
 On procède par récurrence sur $N \in \mathbb{N}$ :
@@ -623,7 +623,7 @@ la propriété est vraie en $N=0$, et si elle est vraie pour $N < F(n)$ alors :
  \nonumber \\ & \leqslant & E[1_{\bigcup_{k \leqslant N} A_k^c \cap C_k} \left(  P(B_{N+1} \mid \mathcal{G}_{N} ) + 1-P(I_{N+1} \mid \mathcal{G}_{N}) \right) ]
  \nonumber
 \end{eqnarray}
-où on a utilisé l'inclusion $A_{N}^c \cap A_{N+1}^c \cap C_{N+1} \subset I_{N+1}^c \cup B_{N+1}$, qui découle de l'inclusion fondamentale \ref{incl} au rang $N+1$.
+où on a utilisé l'inclusion $A_{N}^c \cap A_{N+1}^c \cap C_{N+1} \subset I_{N+1}^c \cup B_{N+1}$, qui découle de l'inclusion fondamentale (\ref{incl}) au rang $N+1$.
 \begin{eqnarray}
  P\left( \bigcup_{k \leqslant N+1} A_k^c \cap C_k \right) & \leqslant & P(B_{N+1}) + (1-\exp (\alpha (n) ) ) P\left( \bigcup_{k \leqslant N} A_k^c \cap C_k \right)
  \nonumber \\ & \leqslant & P(B_{N+1}) +  \sum _{k \leqslant N} P(B_k) - (1-\exp (\alpha (n) ) )\left( 1 - \exp (\alpha (n) ) \right) ^N
@@ -633,7 +633,7 @@ où on a utilisé l'inclusion $A_{N}^c \cap A_{N+1}^c \cap C_{N+1} \subset I_{N+1}
 ce qui achève la preuve.
 \end{proof}
 
-En appliquant le lemme \ref{rec} à \ref{cups}, avec $N=F(n)$, on trouve :
+En appliquant le lemme \ref{rec} à (\ref{cups}), avec $N=F(n)$, on trouve :
 \begin{equation} \label{fin}
  P\left( \bigcup_{k \leqslant F(n)} A_k \right) \geqslant 1 - \sum_{k \leqslant F(n)} \left( P(B_k) + P(C_k^c) \right) - (1 - \exp ( - \kappa h(R_{F(n)}) L(R_{F(n)}) ) ) ^{F(n)}
 \end{equation}
@@ -656,7 +656,7 @@ On va alors choisir $F(n) = \lfloor \frac{n}{h(n)} \rfloor$, en effet, pour ce c
   pourvu qu'on ait pris $\alpha$ assez petit ($\alpha < \frac{1}{\gamma\kappa'^2}$).
 \end{itemize}
 
-Avec ce choix, \ref{fin} implique alors que 
+Avec ce choix, (\ref{fin}) implique alors que 
 \begin{equation*} P\left( \bigcup_{k \leqslant F(n)} A_k \right) \underset{n\to+\infty}{\longrightarrow} 1
 \end{equation*}
 ce qui achève la preuve du théorème \ref{int}.
