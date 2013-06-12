@@ -68,7 +68,7 @@ on appelle $\mathbb{B}(y,R)=\{x \in \mathbb{Z}^d, \|x-y\| <R\}$ la boule dans $\
  pour tout $n$ assez grand.
 \end{The}
 
-Puis, le problème de l'ordre des fluctuations autour de la boule a été étudié par G. Lawler qui montre en 1995 \cite{ref6} que les fluctuations sont presque sûrement majorées par $n^{1/3} \log ^4 (n)$ en dimension $2$ ou plus. Toutefois, des simulations suggèrent que l'ordre des fluctuations est plutôt logarithmique. Aucune amélioration notable de ces résultats n'est publiée, jusqu'en 2010, lorsque A. Asselah et A. Gaudillière montrent dans \cite{ref} que l'erreur est inférieure à $\alpha\sqrt{\log(n)}$ en dimension 3 ou plus et $\alpha \log(n)$ en dimension 2. En parallèle, D.Jerison, L. Levine et S.Sheffield prouvent ce résultat dans \cite{ref8} et \cite{ref7}. Ils publient un second article \cite{ref2} auquel nous nous intéressons ici, qui établit l'optimalité de ce résultat, du moins pour ce qui est de l'erreur interne.
+Puis, le problème de l'ordre des fluctuations autour de la boule a été étudié par G. Lawler qui montre en 1995 \cite{ref6} que les fluctuations sont presque sûrement majorées par $n^{1/3} \log ^4 (n)$ en dimension $2$ ou plus. Toutefois, des simulations suggèrent que l'ordre des fluctuations est plutôt logarithmique. Aucune amélioration notable de ces résultats n'est publiée, jusqu'en 2010, lorsque A. Asselah et A. Gaudillière montrent dans \cite{ref} que l'erreur est inférieure à $\alpha\sqrt{\log(n)}$ en dimension 3 ou plus et $\alpha \log(n)$ en dimension 2, et D. Jerison, L. Levine et S.Sheffield prouvent indépendamment ce résultat dans \cite{ref8} et \cite{ref7}. A. Asselah et A. Gaudillière publient un second article \cite{ref2} auquel nous nous intéressons ici, qui établit l'optimalité de ce résultat, du moins pour ce qui est de l'erreur interne.
 
 \newpage
 \section{Résultats}
@@ -151,12 +151,12 @@ L'erreur interne, notée $\delta_I$, est la différence entre le rayon du cercle l
   \begin{equation}
    \lim_{n\to\infty}P(\exists k\geqslant n,\ \delta_0(k)\geqslant h(k)\ \normalfont{|}\ \delta_I(n)<h(n))=1
   \end{equation}
-  où $h(n)=\alpha_2\sqrt{\log(n)\log(\log(n))}$
+  où $h(n)=\alpha_2\sqrt{\log(n)\log(\log(n))}$.
  \end{Rq}
 Autrement dit, si les trous ne sont pas trop grand, alors de longs tentacules apparaissent. Ce théorème montre que l'erreur externe croît comme on s'y attendait sous l'hypothèse d'une erreur interne faible, mais il ne permet malheureusement pas de conclure. Ce résultat est tout de même intéressant comme le montre le corollaire suivant :
 \begin{Cor}
  \begin{equation} \label{io}
-   P(\limsup\limits_{n\to\infty}\{\delta_I(n)\geqslant L(n)\}\cup\{\delta_O(n)\geqslant h(n)\})=1
+   P(\limsup\limits_{n\to\infty}\{\delta_I(n)\geqslant L(n)\}\cup\{\delta_O(n)\geqslant h(n)\})=1.
   \end{equation}
 \end{Cor}
 Ainsi, pour une infinté de terme, soit l'erreur externe, soit l'erreur interne est supérieure à $\sqrt{log(n)}$.
@@ -192,8 +192,7 @@ Le cas de l'erreur interne est quand à lui complètement déterminé en dimension s
  \[p(y,\Lambda\cup \{w\},z) = p(y,\Lambda,z) + p(y,\Lambda,w)p(w,\Lambda\cup \{w\},z). \]
  Donc la probabilité d'obtenir $\Lambda \cup \{w,z \}$ est
  \begin{align*}
-  &p(x,\Lambda,w) (p(y,\Lambda,z) + p(y,\Lambda,w)p(w,\Lambda\cup \{w\},z)) \\+& p(x,\Lambda,z) (p(y,\Lambda,w) + p(y,\Lambda,z)p(z,\Lambda\cup \{z\},w))
-  \\=&p(x,\Lambda,w)p(y,\Lambda,z)(2+p(w,\Lambda\cup \{w\},z)+p(z,\Lambda\cup \{z\},w)).
+  &p(x,\Lambda,w) (p(y,\Lambda,z) + p(y,\Lambda,w)p(w,\Lambda\cup \{w\},z)) \\+& p(x,\Lambda,z) (p(y,\Lambda,w) + p(y,\Lambda,z)p(z,\Lambda\cup \{z\},w)),
  \end{align*}
  qui est symétrique en $x$ et $y$, donc est indépendante de l'ordre des deux marches.
  
@@ -218,7 +217,7 @@ Illustrons ce théorème avec l'exemple de l'exploration par vague qui nous servir
 
 Pour la deuxième vague, on fait partir $m$ explorateurs de l'origine avec pour région préalablement explorée $A_1$ et on les arrête sur $\mathbb{B}(0,R)$ (en vert sur \ref{vague}). On note $A_2$ la région explorée après les deux vagues et $\Delta_R$ la configuration des explorateurs de la deuxième vague arrêtés sur $\partial\mathbb{B}(0,R)$ :
 \begin{equation*}
- A_2=A_1\cup A_R(A_1,\zeta_0^N) 
+ A_2=A_1\cup A_R(A_1,\zeta_0^N), 
  \qquad\Delta_R=\{\zeta_z^{W_R(A_1;\zeta_0^m,z)},z\in\partial\mathbb{B}(0,R)\}.
 \end{equation*}
 
@@ -319,12 +318,12 @@ où $N_z=W_{r_n}(A_1;\zeta_0^{X_n},z)$ est le nombre d'explorateurs arrétés en $z
 \medskip
 \pagebreak[2]
 
-On constate que \{$\delta_O(R_n)\geqslant h(R_n)$\} est lié à $\{\mathrm{cov}(z), z\in\Sigma\}$ de la façon suivante :
+On constate que \{$\delta_O(R_n)\geqslant h(R_n)$\} est lié à $\{\mathrm{cov}(z), z\in\Sigma\}$, car si un $\mathrm{cov}(z)$ est réalisé alors $\delta_O(R_n)\geqslant h(R_n)$, en effet :
 \begin{align}
 \nonumber P(\delta_O(R_n)\geqslant h(R_n))&\geqslant P(A(b(R_n))\not\subset\mathbb{B}(0,R_n+h(R_n)))
  \nonumber\\&\geqslant P(A(b(n)+X_n)\not\subset\mathbb{B}(0,R_n+h(R_n)))
  \nonumber\\&\geqslant P\left( A\left( \Lambda_n,\sum_{z\in\Sigma}\zeta_z^{N_z} \right) \not\subset\mathbb{B}(0,R_n+h(R_n)) \right)
- \nonumber\\&\geqslant P\left(\bigcup_{z\in\Sigma}\mathrm{cov}(z)\right)
+ \nonumber\\&\geqslant P\left(\bigcup_{z\in\Sigma}\mathrm{cov}(z)\right).
 \end{align}
 
 Il nous faut désormais estimer $P(\bigcup_{z\in\Sigma}\mathrm{cov}(z))$. Pour cela, il serait intéressant d'avoir indépendance entre les $\mathrm{cov}(z)$ sous certaines hypothèses, ce qu'on va obtenir en prenant pour $X_n$ une variable de Poisson. En effet, les variables de Poisson ont la propriété de découpage \ref{indé}, qui laisse penser que les $N_z$ seront indépendantes et de loi de Poisson. Les lois de Poisson sont les seules parmi les lois usuelles à pouvoir se décomposer ainsi.
@@ -348,7 +347,7 @@ et donc $N'_z=N_z$ et $\mathrm{cov_2}(z) \subset \mathrm{cov}(z)$.
 Soit $U$ la variable aléatoire à valeur dans $\Sigma$ calculée en regardant en quel point une marche aléatoire symétrique atteint $\Sigma$. On alors :
 \begin{equation}
 \label{nprime}
- N'_z=\sum_{p\leqslant X_n}{1_{U_p=z}}
+ N'_z=\sum_{p\leqslant X_n}{1_{U_p=z}} \ .
 \end{equation}
 D'après la proposition \ref{indé} les $N'_z$ sont alors des variables de Poisson indépendantes, et donc les $\mathrm{cov_2}(z)$ sont indépendants. Ils sont de plus indépendants de $\delta_I(n)$ puisque celui-ci ne dépend que de la première vague alors que $\mathrm{cov_2}$ en est indépendant. Résumons ce qu'on a fait jusqu'à présent :
 
@@ -357,7 +356,7 @@ D'après la proposition \ref{indé} les $N'_z$ sont alors des variables de Poisson
 \nonumber P(\exists k\geqslant n,\ \delta_0(k)\geqslant h(k)\ \normalfont{|}\ \delta_I(n)<L(n))&\geqslant P(\delta_0(R_n)\geqslant h(R_n)\ \normalfont{|}\ \delta_I(n)<L(n))
  \nonumber\\&\geqslant P(\bigcup_{z\in\Sigma}\mathrm{cov}(z)\ \normalfont{|}\ \delta_I(n)<L(n))
  \nonumber\\&\geqslant P(\bigcup_{z\in\Sigma}\mathrm{cov_2}(z)\ \normalfont{|}\ \delta_I(n)<L(n))
- \nonumber\\&=P(\bigcup_{z\in\Sigma}\mathrm{cov_2}(z))
+ \nonumber\\&=P(\bigcup_{z\in\Sigma}\mathrm{cov_2}(z)).
 \end{align}
  \subsection{Estimation de l'erreur externe}
 Il faut maintenant trouver $\lambda_n$, le paramètre de la loi de Poisson $X_n$, pour que tout ceci tende vers $1$.
@@ -387,7 +386,7 @@ En utilisant le lemme \ref{pois}, on a donc :
 \label{17}
 \nonumber P(\bigcup_{z\in\Sigma}\mathrm{cov_2}(z))&\geqslant P(\bigcup_{z\in\Sigma}\mathrm{cov_2}(z)\cap\{X_n\leqslant\lambda_n\})
 \nonumber\\&\geqslant P(\bigcup_{z\in\Sigma}\{A(\Lambda_n,\zeta_z^{N'_z})\not\subset\mathbb{B}(0,n+3h(n))\})P(X_n\leqslant\lambda_n)
-\nonumber\\&=P(X_n\leqslant\lambda_n)\big(1-\prod_{z\in\Sigma}\big(1-P(A(\Lambda_n,\zeta_z^{N'_z})\not\subset\mathbb{B}(0,n+3h(n)))\big)\big)
+\nonumber\\&=P(X_n\leqslant\lambda_n)\big(1-\prod_{z\in\Sigma}\big(1-P(A(\Lambda_n,\zeta_z^{N'_z})\not\subset\mathbb{B}(0,n+3h(n)))\big)\big).
 \end{align}
 Or, d'après la proposition \ref{step2},
 \begin{align}
@@ -407,7 +406,7 @@ Il ne reste donc plus qu'à minorer $P(N'_z\geqslant c(3h(n)+L(n)))$:
  \begin{proof}
   D'après la proposition \ref{indé}, $N'_z$ est une variable de poisson de paramètre $\mu=\lambda_n P(S(H(\Sigma))=z)$ où S est une marche aléatoire symétrique sur $\mathbb{Z}^d$ partant de $0$. En utilisant le lemme 1.7.4 de \cite{ref3}, on a des constantes $c_2$ et $c_3$ telles que :
   \begin{equation*}
-   \frac{c_2}{(n-L(n)+1)^{d-1}}\leqslant\frac{c_2}{\|z\|^{d-1}}\leqslant P(S(H(\Sigma))=z)\leqslant\frac{c_3}{\|z\|^{d-1}}\leqslant\frac{c_3}{(n-L(n))^{d-1}}
+   \frac{c_2}{(n-L(n)+1)^{d-1}}\leqslant\frac{c_2}{\|z\|^{d-1}}\leqslant P(S(H(\Sigma))=z)\leqslant\frac{c_3}{\|z\|^{d-1}}\leqslant\frac{c_3}{(n-L(n))^{d-1}}.
   \end{equation*}
  De plus, d'après le lemme \ref{b(n)}, $c_4h(n)n^{d-1}\leqslant\lambda_n\leqslant c_5h(n)n^{d-1}$, donc \newline$c_6 h(n) \leqslant\mu\leqslant c_7 h(n)$. 
  
@@ -417,7 +416,7 @@ Il ne reste donc plus qu'à minorer $P(N'_z\geqslant c(3h(n)+L(n)))$:
   \\&\geqslant e^{-c_7h(n)}\frac{(c_6h(n))^{c_1h(n)}}{a!}
   \\&\sim e^{-c_7h(n)}\frac{(c_6h(n))^{c_1h(n)}}{\sqrt{2\pi a}}\Big(\frac{e}{c1h(n)}\Big)^{[c_1h(n)]+1}
   \\&\geqslant  e^{(-c_7+c_1(1-ln(c_1)+ln(c_6)))h(n)+2}\frac{1}{h(n)^2\sqrt{2\pi a}}
-  \\&\geqslant \exp(-Ch(n))
+  \\&\geqslant \exp(-Ch(n)).
  \end{align*}
  \end{proof}
 \end{Lemme}
@@ -428,7 +427,7 @@ En prenant $h(n)=L(n)$ et en utilisant (\ref{16}), (\ref{17}), (\ref{18}), (\ref
  \nonumber\\\geqslant& P(X_n\leqslant\lambda_n)\big(1-\prod_{z\in\Sigma}\big(1-\exp(-c(4h(n))^2-Ch(n))\big)\big)
  \nonumber\\\geqslant& P(X_n\leqslant\lambda_n)(1-\exp(-\kappa n^{d-1}\exp(-Ch(n)-c'h(n)^2)))
  \nonumber\\\geqslant& P(X_n\leqslant\lambda_n)(1-\exp(-\kappa n^{d-1}\exp(-c''h(n)^2)))
- \nonumber\\=&P(X_n\leqslant\lambda_n)(1-\exp(-\kappa n^{d-1-\alpha^2c''}))
+ \nonumber\\=&P(X_n\leqslant\lambda_n)(1-\exp(-\kappa n^{d-1-\alpha^2c''})).
 \end{align}
 
 Il suffit maintenant de fixer $\alpha$ suffisamment petit pour que $d-1-\alpha^2 c''$ soit positif pour terminer la preuve du théorème \ref{ext}.
@@ -445,9 +444,9 @@ On a :
    &P(\exists k\geqslant n,\delta_I(k)\geqslant L(k)\ \normalfont{ou}\ \delta_O(k)\geqslant h(k))
    \\\geqslant& P(\delta_I(n)\geqslant L(n)\ \normalfont{ou}\ \exists k\geqslant n,\delta_0(k)\geqslant h(k))
    \\=& P(\delta_I(n)\geqslant L(n))+P(\exists k\geqslant n,\delta_0(k)\geqslant h(k)\normalfont\ {|}\ \delta_I(n)<L(n))P(\delta_I(n)<L(n))
-   \\=& 1-P(\delta_I(n)<L(n))\big(1-P(\exists k\geqslant n,\delta_0(k)\geqslant h(k)\ \normalfont{|}\delta_I(n)<L(n))\big)
+   \\=& 1-P(\delta_I(n)<L(n))\big(1-P(\exists k\geqslant n,\delta_0(k)\geqslant h(k)\ \normalfont{|}\delta_I(n)<L(n))\big),
  \end{align*}
-Et donc,
+et donc,
 \begin{align*}
  &P(\limsup\limits_{n\to\infty}\{\delta_I(n)\geqslant L(n)\}\cup\{\delta_O(n)\geqslant h(n)\})\\=&\lim_{n\to\infty}P(\exists k\geqslant n,\delta_I(k)\geqslant L(k)\ \normalfont{ou}\ \delta_O(k)\geqslant h(k))\\=&1.
 \end{align*}
@@ -465,17 +464,17 @@ Pour établir le Théorème \ref{int}, nous allons procéder de façon similaire. Nou
 
 On note $R_k$ le rayon théorique après la $k^{\mathrm{\grave{e}me}}$ vague :
 \begin{equation*}
- R_k = \rho (b(n) + X_1 + \dots + X_k)
+ R_k = \rho (b(n) + X_1 + \dots + X_k).
 \end{equation*}
 
 Et $A_k$ l'évènement qui nous intéresse :
 \begin{equation*}
- A_k = \{ \delta_I (R_k) > h(R_k) \} 
+ A_k = \{ \delta_I (R_k) > h(R_k) \} .
 \end{equation*}
 
 On note aussi $B_k$ son analogue pour l'erreur externe :
 \begin{equation*}
- B_k = \{ \delta_O (R_k) > L(R_k) \} 
+ B_k = \{ \delta_O (R_k) > L(R_k) \} .
 \end{equation*}
 
 Le but sera de montrer que 
@@ -487,7 +486,7 @@ Une propriété simple nous sera utile par la suite :
 \begin{Rq}
  Quel que soit $k \leqslant F(n)$, on a toujours :
  \begin{equation} \label{nonvide}
-  A(b(R_k))^c \cap (\mathbb{B} (0, R_k)\cup\partial\mathbb{B} (0, R_k)) \neq \emptyset
+  A(b(R_k))^c \cap (\mathbb{B} (0, R_k)\cup\partial\mathbb{B} (0, R_k)) \neq \emptyset .
  \end{equation}
  En effet, le cas échéant, on aurait $(\mathbb{B} (0, R_k)\cup\partial\mathbb{B} (0, R_k)) \subset A(b(R_k))$ et donc strictement plus de $b(R_k)$ sites seraient occupés par les explorateurs, alors qu'on n'a lancé que $b(R_k)$ explorateurs.
 \end{Rq}
@@ -504,11 +503,11 @@ On va s'appuyer sur ce $Z_k$ pour construire un évènement $I_k$ qui pourra s'int
  \item
  Soit $n$ un entier et $R > 0$, on définit la variable aléatoire $N_z (n, R)$ comme le nombre de marches aléatoires parmi $n$ marches partant de $0$ qui visitent $z$ avant de sortir de $\mathbb{B} (0, \| z \| + R)$ :
 \begin{equation}
- N_z (n, R) = \mathrm{Card} \{ i \leqslant n \ \mid \ H(z) < H( \mathbb{B}^c (O, \| z \| + R )) \}
+ N_z (n, R) = \mathrm{Card} \{ i \leqslant n \ \mid \ H(z) < H( \mathbb{B}^c (O, \| z \| + R )) \}.
 \end{equation}
-\item On définit alors $I_k$ par :
+\item On définit $I_k$ par :
 \begin{equation}
-  I_k = \{ N_{Z_k} (X_k, 7 L(R_{k-1})) = 0 \}
+  I_k = \{ N_{Z_k} (X_k, 7 L(R_{k-1})) = 0 \}.
  \end{equation}
 \end{enumerate}
 \end{Def}
@@ -567,12 +566,12 @@ Enfin, on a besoin de s'assurer que la probabilité de $I_k$ est assez grande, ce
 \end{Lemme}
 \begin{proof}
  Notons $\Lambda = \mathbb{B} (z, R) \cap \Sigma (z)$ et $\Lambda ' = \Sigma (z) \setminus \Lambda$. Notons aussi :
- \[ N_z (n, \Lambda, R) = \mathrm{Card} \{ i \leqslant n \ \mid \ S_i (H(\Sigma (z))) \in \Lambda, \ H(z) < H( \mathbb{B}^c (O, \| z \| + R )) \} \]
+ \[ N_z (n, \Lambda, R) = \mathrm{Card} \{ i \leqslant n \ \mid \ S_i (H(\Sigma (z))) \in \Lambda, \ H(z) < H( \mathbb{B}^c (O, \| z \| + R )) \}, \]
  c'est-à-dire le nombre de marches aléatoires parmi les $N_z (n, R)$ qui atteignent $\Sigma (z)$ en un point de $\Lambda$.
  
  D'après la proposition \ref{indé}, $N_z (X, \Lambda, \infty )$ et $N_z (X, \Lambda ', R)$ sont des variables de Poisson indépendantes. Ainsi :
 \begin{eqnarray*} P(N_z(X,R) = 0) & \leqslant & P(N_z (X, \Lambda, \infty ) = 0, N_z (X, \Lambda ', R) = 0) 
-\\ & = & \exp \left( - E[N_z (X, \Lambda, \infty )] - E[N_z (X, \Lambda ', R)] \right)
+\\ & = & \exp \left( - E[N_z (X, \Lambda, \infty )] - E[N_z (X, \Lambda ', R)] \right).
 \end{eqnarray*}
 
 On va montrer que chacune de ces espérances est majorée par un terme du type $c \frac{\lambda R}{\| z \| ^{d-1} }$.
@@ -585,14 +584,14 @@ On va montrer que chacune de ces espérances est majorée par un terme du type $c 
  \\ & & + \lambda \sum _{y \in \Lambda \setminus \{z\} } P_0 (S(H(\Sigma (z))) = y, \ H(z) < \infty )
  \\& = & \lambda \ P_0 (S(H(\Sigma (z))) = z)
  \\ & & + \lambda \sum _{y \in \Lambda \setminus \{z\} } P_0 (S(H(\Sigma (z))) = y) \ P_y (H(z) < \infty )
-\\& \leqslant & \lambda \frac{c_1} {\| z \| ^ {d-1}} \left( 1 + \sum _{y \in \Lambda \setminus \{z\} } \frac{c_2}{1+\| y-z \| ^{d-2}} \right) \nonumber
+\\& \leqslant & \lambda \frac{c_1} {\| z \| ^ {d-1}} \left( 1 + \sum _{y \in \Lambda \setminus \{z\} } \frac{c_2}{1+\| y-z \| ^{d-2}} \right). \nonumber
  \end{eqnarray*}
  \pagebreak[1]
  
  En arrangeant plutôt la somme selon $k = \lfloor \| y-z \| \rfloor$, et en observant que pour un $k$ fixé on a moins de $c_3 k^{d-2}$ positions de $y$ correspondants, on obtient :
  \begin{eqnarray*}
  E[N_z (X, \Lambda, \infty )] & \leqslant & c_4 \frac{\lambda} {\| z \| ^ {d-1}} \left( 1 + \sum _{k=1} ^{R} \frac{k^{d-2}}{1+k^{d-2}} \right)
- \\& \leqslant & c_5 \frac{\lambda R} {\| z \| ^ {d-1}} \nonumber
+ \\& \leqslant & c_5 \frac{\lambda R} {\| z \| ^ {d-1}}. \nonumber
  \end{eqnarray*}
  
  \item Pour la seconde espérance, on utilise le résultat du Lemme 5(b) de \cite{ref7} qui assure que $P_y ( H(z) < H( \mathbb{B}^c (0, \| z \| + h )) ) \leqslant \frac{c_6 R^2}{\| z-y \| ^d}$, et on utilise la même transformation sur la somme :
@@ -601,7 +600,7 @@ On va montrer que chacune de ces espérances est majorée par un terme du type $c 
  \\& = & \lambda \sum _{y \in \Lambda '} P_0 (S(H(\Sigma (z))) = y) \ P_y (H(z) < H( \mathbb{B}^c (0, \| z \| + h )) )
  \\& \leqslant & \lambda \sum _{y \in \Lambda '} \frac{c_1} {\| z \| ^ {d-1}} \ \frac{c_6 R^2}{\| z-y \| ^d}
  \\& \leqslant & c_7 \frac{\lambda R^2} {\| z \| ^ {d-1}} \sum _{k=R} ^{2\|z\|+2} \frac{k^{d-2}}{k^{d}}
- \\& \leqslant & c_8 \frac{\lambda R} {\| z \| ^ {d-1}} \nonumber
+ \\& \leqslant & c_8 \frac{\lambda R} {\| z \| ^ {d-1}}, \nonumber
  \end{eqnarray*}
  où la dernière inégalité provient d'une comparaison série-intégrale sur la somme.
 \end{itemize}
@@ -612,7 +611,7 @@ En appliquant ce lemme à $X_k$, $Z_k$ et $L(R_{k-1})$, on obtient :
  \nonumber\\& \geqslant & \exp \left( - C' \frac{\lambda_k L(R_{k-1}) }{(R_{k-1} - h(R_{k-1}))^{d-1} } \right)
  \nonumber\\& \geqslant & \exp \left( - C' \frac{c_1 R_{k-1}^{d-1}h(R_{k-1})L(R_{k-1}) }{(R_{k-1} - h(R_{k-1}))^{d-1} } \right)
  \nonumber\\& \geqslant & \exp \left( - \kappa h(R_{k-1}) L(R_{k-1}) \right)
- \nonumber\\& \geqslant & \exp \left( - \kappa h(R_{F(n)}) L(R_{F(n)}) \right)
+ \nonumber\\& \geqslant & \exp \left( - \kappa h(R_{F(n)}) L(R_{F(n)}) \right),
  \label{pik}
 \end{eqnarray}
 car $\lambda_k$ est de l'ordre de $R_{k-1}^{d-1}h(R_{k-1})$ d'après le lemme \ref{b(n)} et $R_{k-1} - h(R_{k-1})$ est de l'ordre de $R_{k-1}$.
@@ -623,18 +622,18 @@ Résumons ce qu'on a fait jusqu'à présent : on a montré qu'il existait un évèneme
 
 On note $\mathcal{G}_k$ la filtration associée à l'exploration par vagues. On note $C_k$ l'évènement $\{ \frac{2}{3} \lambda_k \leqslant X_k \leqslant 2 \lambda_k \}$. On a donc :
 \begin{equation} \label{incl}
-C_k \cap A_{k-1}^c \cap I_k \subset A_k \cup B_k
+C_k \cap A_{k-1}^c \cap I_k \subset A_k \cup B_k.
 \end{equation}
 
 Remarquons maintenant que $\bigcap_{k \leqslant N} C_k \subset \bigcup_{k \leqslant N} A_k \cup \bigcup_{k \leqslant N} A_k^c \cap C_k$, ce qui donne :
 \begin{equation} \label{cups}
- P\left( \bigcup_{k \leqslant N} A_k \right) \geqslant P\left(\bigcap_{k \leqslant N} C_k \right) - P\left( \bigcup_{k \leqslant N} A_k^c \cap C_k \right)
+ P\left( \bigcup_{k \leqslant N} A_k \right) \geqslant P\left(\bigcap_{k \leqslant N} C_k \right) - P\left( \bigcup_{k \leqslant N} A_k^c \cap C_k \right).
 \end{equation}
 
 \begin{Lemme} \label{ref}
 Pour tout $N \in \mathbb{N}$, on a
 \begin{equation*} \label{rec}
-P\left( \bigcup_{k \leqslant N} A_k^c \cap C_k \right) \leqslant \sum _{k \leqslant N} P(B_k) - \left( 1 - \exp (\alpha (n) ) \right) ^N.
+P\left( \bigcup_{k \leqslant N} A_k^c \cap C_k \right) \leqslant \sum _{k \leqslant N} P(B_k) - \left( 1 - \exp (\alpha (n) ) \right) ^N,
 \end{equation*}
 où $\alpha(n) = -\kappa h(R_{F(n)})L(R_{F(n)})$ obtenu dans (\ref{pik}).
 \end{Lemme}
@@ -651,14 +650,14 @@ où on a utilisé l'inclusion $A_{N}^c \cap A_{N+1}^c \cap C_{N+1} \subset I_{N+1}
 \begin{eqnarray}
  P\left( \bigcup_{k \leqslant N+1} A_k^c \cap C_k \right) & \leqslant & P(B_{N+1}) + (1-\exp (\alpha (n) ) ) P\left( \bigcup_{k \leqslant N} A_k^c \cap C_k \right)
  \nonumber \\ & \leqslant & P(B_{N+1}) +  \sum _{k \leqslant N} P(B_k) - (1-\exp (\alpha (n) ) )\left( 1 - \exp (\alpha (n) ) \right) ^N
- \nonumber \\ & \leqslant & \sum _{k \leqslant N+1} P(B_k) - \left( 1 - \exp (\alpha (n) ) \right) ^{N+1}
+ \nonumber \\ & \leqslant & \sum _{k \leqslant N+1} P(B_k) - \left( 1 - \exp (\alpha (n) ) \right) ^{N+1}.
  \nonumber
 \end{eqnarray}
 \end{proof}
 
 En appliquant le lemme \ref{rec} à (\ref{cups}), avec $N=F(n)$, on trouve :
 \begin{equation} \label{fin}
- P\left( \bigcup_{k \leqslant F(n)} A_k \right) \geqslant 1 - \sum_{k \leqslant F(n)} \left( P(B_k) + P(C_k^c) \right) - (1 - \exp ( - \kappa h(R_{F(n)}) L(R_{F(n)}) ) ) ^{F(n)}
+ P\left( \bigcup_{k \leqslant F(n)} A_k \right) \geqslant 1 - \sum_{k \leqslant F(n)} \left( P(B_k) + P(C_k^c) \right) - (1 - \exp ( - \kappa h(R_{F(n)}) L(R_{F(n)}) ) ) ^{F(n)}.
 \end{equation}
 
 On va alors choisir $F(n) = \lfloor \frac{n}{h(n)} \rfloor$, en effet, pour ce choix on a :
@@ -666,7 +665,7 @@ On va alors choisir $F(n) = \lfloor \frac{n}{h(n)} \rfloor$, en effet, pour ce c
  \item $P(B_k)$ décroît plus vite que toute puissance de $n$ pour $\gamma$ suffisamment grand d'après un résultat de \cite{ref} donc $\sum_{k \leqslant F(n)} P(B_k) \to_{n \to \infty} 0$.
  \item $P(C_k^c) \leqslant \frac{C}{\lambda_k}$ d'après les résultats annexes \ref{deuxmoy} et \ref{23moy}. Comme $\lambda_k \geqslant \lambda_n \sim h(n) n^{d-1}$ on a :
  \begin{equation*}
- \sum_{k \leqslant F(n)} P(C_k^c) \leqslant \frac{n}{h(n)} \frac{C}{h(n)n^{d-1}} \underset{n\to+\infty}{\longrightarrow} 0
+ \sum_{k \leqslant F(n)} P(C_k^c) \leqslant \frac{n}{h(n)} \frac{C}{h(n)n^{d-1}} \underset{n\to+\infty}{\longrightarrow} 0.
  \end{equation*}
  \item $R_{F(n)}$ est d'ordre $n$ donc
   \begin{equation*}
@@ -674,7 +673,7 @@ On va alors choisir $F(n) = \lfloor \frac{n}{h(n)} \rfloor$, en effet, pour ce c
   \end{equation*}
   Or, comme $h(n) =\sqrt{\alpha \log (n) }$ et $L(n)=\sqrt{\gamma \log (n) }$,
   \begin{equation*}
-  \frac{n}{h(n)} \exp (- \kappa ' h(n) L(n) ) = \frac{n^{1-\kappa ' \sqrt{\alpha\gamma}}}{\sqrt{\alpha \log (n) }} \underset{n\to+\infty}{\longrightarrow} +\infty
+  \frac{n}{h(n)} \exp (- \kappa ' h(n) L(n) ) = \frac{n^{1-\kappa ' \sqrt{\alpha\gamma}}}{\sqrt{\alpha \log (n) }} \underset{n\to+\infty}{\longrightarrow} +\infty,
   \end{equation*}
   pourvu qu'on ait pris $\alpha$ assez petit ($\alpha < \frac{1}{\gamma\kappa'^2}$).
 \end{itemize}
@@ -696,9 +695,9 @@ On peut décider que les explorateurs partent de deux points sources, espacés d'u
    \includegraphics[scale=0.65]{cacahuete.jpg}
    \caption{Région obtenue pour deux sources}
 \end{figure}
-Dans cette illustration, on a choisi de séparer les deux sources de $4/5$ fois le rayon théorique $\rho (N)$, et de lancer $N$ explorateurs depuis chaque source.
+Dans cette simulation, on a choisi de séparer les deux sources de $4/5$ fois le rayon théorique $\rho (N)$, et de lancer $N$ explorateurs depuis chaque source.
 
-Il est ici important de noter que la propriété abélienne énoncée en \ref{abel} permet d'affirmer que la loi finale de la région ne dépend pas de l'ordre de lancer des explorateurs.
+Ici, la propriété abélienne du paragraphe \ref{abel} est importante. Elle permet d'affirmer que la loi finale de la région ne dépend pas de l'ordre de lancer des explorateurs.
 
 \subsection{Décalage vers la droite}
 Choisissons de faire voyager nos $N$ explorateurs non plus selon des marches aléatoires symétriques, mais selon des marches déséquilibrées vers un côté. Par exemple, sur $\mathbb{Z}^2$, construisons une marche en suivant les probabilités
@@ -719,7 +718,7 @@ Il semble que la déviation à droite dans ce cas soit de l'ordre de $N^{2/3}$, co
 Ceci ne semble pas étonnant, à cause de l'argument suivant : une telle marche déséquilibrée a tendance, en projection sur l'horizontale, à s'écarter vers la droite linéairement avec le temps $t$. En projection verticale, elle dévie comme $\sqrt{t}$ (marche symétrique unidimensionnelle). La région obtenue doit respecter ces ordres de grandeur, donc son étendue horizontale varie comme le carré de son étendue verticale. Comme le produit des deux vaut $N$, il faut avoir une étendue horizontale en $N^{2/3}$ et verticale en $N^{1/3}$.
 
 \subsection{Cavaliers explorateurs}
-On peut aussi choisir de faire des marches aléatoires différentes, en s'autorisant plus de pas. Il pourrait être intéressant de se placer dans un cadre plus général de matrice de transition pour la marche aléatoire.
+On peut aussi choisir de faire des marches aléatoires différentes, en s'autorisant plus de pas. Il pourrait être intéressant de se placer dans un cadre général en considérant des matrice de transition quelconqes pour la marche aléatoire.
 
 Par exemple, on peut explorer en se déplaçant comme un cavalier aux échecs, aléatoirement. La région explorée est assez semblable à celle du cas du IDLA, l'avantage principal étant qu'elle est plus rapide à simuler car les cavaliers aléatoires s'éloignent plus vite de l'origine que les marcheurs aléatoires.
 \begin{figure}[H]
@@ -748,7 +747,7 @@ Ce sont des variables de Poisson :
 \\&=\sum_{p=k}^{\infty}{\mathbb{P}(1_{X=p}\sum_{n\leqslant p}{1_{U_n \in E_i}=k}})
 \\&=\sum_{p=k}^{\infty}{\binom{p}{k}\mathbb{P}(X=p)\mathbb{P}(U_1\in E_i)...\mathbb{P}(U_k\in E_i)\mathbb{P}(U_{k+1}\notin E_i)...\mathbb{P}(U_{p}\notin E_i)}
 \\&=\frac{e^{-\lambda}}{k!}\mathbb{P}(U\in E_i)^k\sum_{p=k}^{\infty}{\frac{(1-\mathbb{P}(U\in E_i))^{p-k}\lambda^{p}}{(p-k)!}}
-\\&=\frac{(\lambda\mathbb{P}(U\in E_i))^k}{k!}e^{-\lambda\mathbb{P}(U\in E_i)}
+\\&=\frac{(\lambda\mathbb{P}(U\in E_i))^k}{k!}e^{-\lambda\mathbb{P}(U\in E_i)}.
 \end{align*}
 
 Elles sont indépendantes :
@@ -757,7 +756,7 @@ Elles sont indépendantes :
 \\=&\mathbb{P}(\sum_{n\leqslant X}{\bigcap_{i\in I}1_{U_n\in E_i}}=k_i)
 \\=&\sum_{p=\sum_{i\in I}k_i}^{\infty}{\prod_{i\in I}\binom{p-\sum_{j\in I,j<i}k_j}{k_i}\mathbb{P}(X=p)\big(\prod_{i\in I}\mathbb{P}(U\in E_i)^{k_i}\big)\mathbb{P}(U\notin\bigcup_{i\in I} E_i)^{p-\sum_{i\in I}k_i}}
 \\=&\frac{e^{-\lambda}}{\prod_{i\in I}(k_i!)}\big(\prod_{i\in I}\mathbb{P}(U\in E_i)^{k_i}\big)\sum_{p=\sum_{i\in I}k_i}^{\infty}{\frac{\lambda^p}{(p-\sum_{i\in I}k_i)!}\mathbb{P}(U\notin\bigcup_{i\in I} E_i)^{p-\sum_{i\in I}k_i}}
-\\=&\prod_{i\in I}\mathbb{P}(X_i=k_i)
+\\=&\prod_{i\in I}\mathbb{P}(X_i=k_i).
 \end{align*}
 \end{proof}
 
@@ -766,18 +765,18 @@ Elles sont indépendantes :
  \label{deuxmoy}
  Soit $X_\lambda$ une variable de Poisson de paramètre $\lambda$. On a :
  \begin{equation*}
-  P(X_\lambda>2\lambda)=O_{\lambda \to \infty}(\frac1\lambda)
+  P(X_\lambda>2\lambda)=O_{\lambda \to \infty}(\frac1\lambda).
  \end{equation*}
 \end{Prop}
 \begin{proof}
  On a $E[X_\lambda] = \lambda$ et $V(X_\lambda) = \lambda$. Ainsi,
  \begin{equation*}
-  P(X_\lambda> 2 \lambda) \leqslant P(|X_\lambda - E[X_\lambda] | > \lambda)
+  P(X_\lambda> 2 \lambda) \leqslant P(|X_\lambda - E[X_\lambda] | > \lambda),
  \end{equation*}
  et on peut appliquer l'inégalité de Bienaymé-Tchebicheff :
  \begin{eqnarray*}
   P(X_\lambda>2 \lambda) &\leqslant& \frac1{\lambda ^2} V(X_\lambda)
-  \\ &\leqslant& \frac1\lambda
+  \\ &\leqslant& \frac1\lambda.
  \end{eqnarray*}
 \end{proof}
 
@@ -785,7 +784,7 @@ Elles sont indépendantes :
  \label{23moy}
  Soit $X_\lambda$ une variable de Poisson de paramètre $\lambda$. On a :
  \begin{equation*}
-  P(X_\lambda<\frac23 \lambda)=O_{\lambda \to \infty}(\frac1\lambda)
+  P(X_\lambda<\frac23 \lambda)=O_{\lambda \to \infty}(\frac1\lambda).
  \end{equation*}
 \end{Prop}
 \begin{proof}
@@ -798,41 +797,41 @@ Elles sont indépendantes :
 \begin{enumerate}[i)]
 \item Soit $\omega_d$ le volume de la boule unité de $\mathbb{Z}^d$, on a :
  \begin{equation*}
-  b(n)\sim\omega_dn^d
+  b(n)\sim\omega_dn^d .
  \end{equation*}
 \item Soit $a_n$ une suite telle que $a_n\to\infty$ et $a_n=o(n)$, on a :
  \begin{equation*}
-   b(n+a_n)-b(n)\sim\omega_da_nn^{d-1}
+   b(n+a_n)-b(n)\sim\omega_da_nn^{d-1} .
  \end{equation*}
 \end{enumerate}
  \begin{proof}
  \begin{enumerate}[i)]
  \item On note $\lambda$ la mesure de Lebesgue dans $\mathbb{R}^d$. Notons $V(n)=\omega_dn^d$ le volume de la boule de rayon $n$ et $\alpha_d=\sqrt d$ le diamètre d'un cube unité. On peut paver $\mathbb{R}^d$ par des cubes unités dont les centres appartiennent à $\mathbb{Z}^d$. On note $c_z$ un tel cube, avec $z$ son centre. On pose alors :
  \begin{equation*}
-  A(n)=\bigcup_{c_z\cap B(0,n)\neq\emptyset}{c_z}
+  A(n)=\bigcup_{c_z\cap B(0,n)\neq\emptyset}{c_z} .
  \end{equation*}
 On remarque que $c(n):=\lambda (A(n))= \mathrm{Card} \{z \ \mid \ c_z\cap B(0,n)\neq\emptyset\}$ vérifie :
 \begin{align*}
  | c(n)-V(n) | = c(n)-V(n)&\leqslant\lambda(\bigcup_{z \ \mid \ c_z\cap B(0,n)\neq\emptyset,c_z\not\subset B(0,n)}{c_z})
  \\&\leqslant\lambda(B(0,n+\alpha_d))-\lambda(B(0,n-\alpha_d))
  \\&=((n+\alpha_d)^d-(n-\alpha_d)^d)\omega_d
- \\&\sim2\alpha_dn^{d-1}\omega_d
+ \\&\sim2\alpha_dn^{d-1}\omega_d .
 \end{align*}
 De même :
 \begin{align*}
  | c(n)-b(n) |=c(n)-b(n)&\leqslant \mathrm{Card}(\{z \ \mid \ c_z\cap B(0,n)\neq\emptyset,c_z\not\subset B(0,n)\})
- \\&\sim2\alpha_dn^{d-1}\omega_d
+ \\&\sim2\alpha_dn^{d-1}\omega_d .
 \end{align*}
 Et on a donc :
 \begin{equation*}
- | \frac{b(n)}{V(n)}-1 | \leqslant\frac{1}{V(n)}(\normalfont{|}c(n)-b(n)\normalfont{|}+\normalfont{|}c(n)-V(n)\normalfont{|})=O(\frac{1}{n})
+ | \frac{b(n)}{V(n)}-1 | \leqslant\frac{1}{V(n)}(\normalfont{|}c(n)-b(n)\normalfont{|}+\normalfont{|}c(n)-V(n)\normalfont{|})=O(\frac{1}{n}) .
 \end{equation*}
 
 \item Posons :
  \begin{equation*}
-  A'(n)=\bigcup_{c_z\subset B(0,n)}{c_z}
+  A'(n)=\bigcup_{c_z\subset B(0,n)}{c_z},
  \end{equation*}
- et $c'(n)=\lambda (A'(n))$
+ et $c'(n)=\lambda (A'(n))$. Alors
  \begin{align*}
   &b(n+a_n)-b(n)
   \\=&(b(n+a_n)-c(n+a_n))+(c(n+a_n)-c'(n))+(c'(n)-b(n))
@@ -840,7 +839,7 @@ Et on a donc :
   \\\leqslant &c(n+a_n)-V(n+a_n+\alpha_d)+V(n+a_n+\alpha_d)-V(n-\alpha_d)+V(n-\alpha_d)-c'(n)
   \\\leqslant &V(n+a_n+\alpha_d)-V(n-\alpha_d)
   \\=&\omega_d((n+a_n+\alpha_d)^d-(n-\alpha_d)^d)
-  \\=&\omega_da_nn^{d-1}+o(\omega_da_nn^{d-1})
+  \\=&\omega_da_nn^{d-1}+o(\omega_da_nn^{d-1}).
  \end{align*}
 De même :
  \begin{align*}
@@ -850,11 +849,11 @@ De même :
   \\\geqslant& c'(n+a_n)-V(n+a_n-\alpha_d)+V(n+a_n-\alpha_d)-V(n+\alpha_d)+V(n+\alpha_d)-c(n)
   \\\geqslant& V(n+a_n-\alpha_d)-V(n+\alpha_d)
   \\=&\omega_d((n+a_n-\alpha_d)^d-(n+\alpha_d)^d)
-  \\=&\omega_da_nn^{d-1}+o(\omega_da_nn^{d-1})
+  \\=&\omega_da_nn^{d-1}+o(\omega_da_nn^{d-1}).
  \end{align*}
  D'où
  \begin{equation*}
-   b(n+a_n)-b(n)\sim\omega_da_nn^{d-1}
+   b(n+a_n)-b(n)\sim\omega_da_nn^{d-1}.
  \end{equation*}
  \end{enumerate}
 \end{proof}

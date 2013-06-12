@@ -15,16 +15,8 @@
 \contentsline {section}{\numberline {6}Autres questions}{22}{section.6}
 \contentsline {subsection}{\numberline {6.1}Plusieurs sources}{22}{subsection.6.1}
 \contentsline {subsection}{\numberline {6.2}D\'ecalage vers la droite}{22}{subsection.6.2}
-<<<<<<< HEAD
-\contentsline {subsection}{\numberline {6.3}Cavaliers explorateurs}{24}{subsection.6.3}
-\contentsline {section}{\numberline {A}Propri\'et\'es annexes}{25}{appendix.A}
-\contentsline {subsection}{\numberline {A.1}D\'ecoupage d'une variable de Poisson}{25}{subsection.A.1}
-\contentsline {subsection}{\numberline {A.2}Estimations sur une variable de Poisson}{26}{subsection.A.2}
-\contentsline {subsection}{\numberline {A.3}Estimation de $b(n)$}{26}{subsection.A.3}
-=======
 \contentsline {subsection}{\numberline {6.3}Cavaliers explorateurs}{23}{subsection.6.3}
 \contentsline {section}{\numberline {A}Propri\'et\'es annexes}{24}{appendix.A}
 \contentsline {subsection}{\numberline {A.1}D\'ecoupage d'une variable de Poisson}{24}{subsection.A.1}
 \contentsline {subsection}{\numberline {A.2}Estimations sur une variable de Poisson}{25}{subsection.A.2}
 \contentsline {subsection}{\numberline {A.3}Estimation de $b(n)$}{25}{subsection.A.3}
->>>>>>> 1297bc8144efb417b91ef8724a2e7a2da9e5887d
