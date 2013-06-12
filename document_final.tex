@@ -42,10 +42,12 @@ Nous allons étudier dans ce mémoire l'évolution du monde découvert par des explo
 
 Le résultat principal est celui de \cite{ref} qui montre qu'asymptotiquement la région explorée est une boule. On s'interessera ici aux fluctuations autour de cette boule. A.~Asselah et A.~Gaudillière ont montré que celles-ci sont de l'ordre de $\sqrt{\log(n)}$ en dimension 3 ou plus et $\log(n)$ en dimension 2.
 
-Nous allons travailler ici sur l'article \cite{ref2} d'A.~Gaudillière et A.~Asselah qui essaie d'établir l'optimalité des majorations précédentes. Il montre en particulier que $\sqrt{ \log (n)}$ est optimal en dimension supérieure à 3 pour l'erreur interne, mais ne conclut pas pour la dimension 2. En ce qui concerne l'erreur externe, ils prouvent un résultat qui permet de penser que $\sqrt{ \log (n)}$ est optimal en dimension supérieure à $3$ sans tout à fait permettre de conclure. Les illustrations accompagnant ce document proviennent de simulation réalisées en OCaml et Python.
+Nous allons travailler ici sur l'article \cite{ref2} d'A.~Gaudillière et A.~Asselah qui essaie d'établir l'optimalité des majorations précédentes. Il montre en particulier que $\sqrt{ \log (n)}$ est optimal en dimension supérieure à 3 pour l'erreur interne, mais ne conclut pas pour la dimension 2. En ce qui concerne l'erreur externe, ils prouvent un résultat qui permet de penser que $\sqrt{ \log (n)}$ est optimal en dimension supérieure à $3$ sans tout à fait permettre de conclure.
+
+Les illustrations accompagnant ce document proviennent de simulation réalisées en OCaml et Python.
 
 \begin{center}
- \includegraphics[scale=0.35]{100000.png}
+ \includegraphics[scale=0.33]{100000.png}
 \end{center}
 
 
@@ -68,7 +70,7 @@ on appelle $\mathbb{B}(y,R)=\{x \in \mathbb{Z}^d, \|x-y\| <R\}$ la boule dans $\
  pour tout $n$ assez grand.
 \end{The}
 
-Puis, le problème de l'ordre des fluctuations autour de la boule a été étudié par G. Lawler qui montre en 1995 \cite{ref6} que les fluctuations sont presque sûrement majorées par $n^{1/3} \log ^4 (n)$ en dimension $2$ ou plus. Toutefois, des simulations suggèrent que l'ordre des fluctuations est plutôt logarithmique. Aucune amélioration notable de ces résultats n'est publiée, jusqu'en 2010, lorsque A. Asselah et A. Gaudillière montrent dans \cite{ref} que l'erreur est inférieure à $\alpha\sqrt{\log(n)}$ en dimension 3 ou plus et $\alpha \log(n)$ en dimension 2, et D. Jerison, L. Levine et S.Sheffield prouvent indépendamment ce résultat dans \cite{ref8} et \cite{ref7}. A. Asselah et A. Gaudillière publient un second article \cite{ref2} auquel nous nous intéressons ici, qui établit l'optimalité de ce résultat, du moins pour ce qui est de l'erreur interne.
+Puis, le problème de l'ordre des fluctuations autour de la boule a été étudié par G.~Lawler qui montre en 1995 \cite{ref6} que les fluctuations sont presque sûrement majorées par $n^{1/3} \log ^4 (n)$ en dimension $2$ ou plus. Toutefois, des simulations suggèrent que l'ordre des fluctuations est plutôt logarithmique. Aucune amélioration notable de ces résultats n'est publiée, jusqu'en 2010, lorsque A. Asselah et A. Gaudillière montrent dans \cite{ref} que l'erreur est inférieure à $\alpha\sqrt{\log(n)}$ en dimension 3 ou plus et $\alpha \log(n)$ en dimension 2, et D. Jerison, L. Levine et S.Sheffield prouvent indépendamment ce résultat dans \cite{ref8} et \cite{ref7}. A. Asselah et A. Gaudillière publient un second article \cite{ref2} auquel nous nous intéressons ici, qui établit l'optimalité de ce résultat, du moins pour ce qui est de l'erreur interne.
 
 \newpage
 \section{Résultats}
@@ -147,7 +149,7 @@ L'erreur interne, notée $\delta_I$, est la différence entre le rayon du cercle l
   \end{The}
   
  \begin{Rq}
-  Dans \cite{ref2}, il est également prouvé qu'en dimension $d=2$, $\exists\alpha_2 > 0$ tel que
+  Dans \cite{ref2}, il est également prouvé par des méthodes similaires qu'en dimension $d=2$, $\exists\alpha_2 > 0$ tel que
   \begin{equation}
    \lim_{n\to\infty}P(\exists k\geqslant n,\ \delta_0(k)\geqslant h(k)\ \normalfont{|}\ \delta_I(n)<h(n))=1
   \end{equation}
@@ -162,7 +164,7 @@ Autrement dit, si les trous ne sont pas trop grand, alors de longs tentacules ap
 Ainsi, pour une infinté de terme, soit l'erreur externe, soit l'erreur interne est supérieure à $\sqrt{log(n)}$.
 \medskip
 
-Le cas de l'erreur interne est quand à lui complètement déterminé en dimension supérieure à 3 grâce au résultat suivant, qui dit que presque sûrement de grands trous apparaissent une infinité de fois :
+Le cas de l'erreur interne est quant à lui complètement déterminé en dimension supérieure à 3 grâce au résultat suivant, qui dit que presque sûrement de grands trous apparaissent une infinité de fois :
  \begin{The} \label{int}
   En dimension $d \geqslant 3$, $\exists\alpha_d>0$ tel que
   \begin{equation}
@@ -175,7 +177,7 @@ Le cas de l'erreur interne est quand à lui complètement déterminé en dimension s
 
  \section{Propriété abélienne}
  \label{abel}
- On va prouver ici que le choix d'un ordre prédéfini en \ref{iii} sur $\mathbb{Z}^d$ ne change rien à la suite de la démonstration. Le lemme suivant est issu de \cite{ref4} :
+ On va prouver ici que le choix de l'ordre de lancer des explorateurs ne change rien à la loi de la région explorée. Le lemme suivant est issu de \cite{ref4} :
  \begin{Lemme}
  Soit $\Lambda$ une partie finie de $\mathbb{Z}^d$, correspondant à la région déjà explorée, et soient $x,y \in \Lambda$. Soit $\Lambda_{x,y}$ la région obtenue en ayant lancé un explorateur depuis $x$, puis un explorateur depuis $y$.
  
@@ -186,7 +188,7 @@ Le cas de l'erreur interne est quand à lui complètement déterminé en dimension s
  
  On utilise la notation suivante : si $x \in \Lambda$ et $w \notin \Lambda$, $p(x,\Lambda,w)$ désigne la probabilité qu'une marche aléatoire lancée depuis $x$ quitte $\Lambda$ exactement en $w$.
  
- Si on commence par lancer depuis $x$, on obtient l'ensemble $\Lambda \cup \{w\}$ avec probabilité $p(x,\Lambda,w)$ et l'ensemble $\Lambda \cup \{w\}$ avec probabilité $p(x,\Lambda,z)$. On lance ensuite le second explorateur depuis $y$, et on obtient l'ensemble $\Lambda \cup \{w,z \}$ avec probabilité
+ Si on commence par lancer depuis $x$, on obtient l'ensemble $\Lambda \cup \{w\}$ avec probabilité $p(x,\Lambda,w)$ et l'ensemble $\Lambda \cup \{z\}$ avec probabilité $p(x,\Lambda,z)$. On lance ensuite le second explorateur depuis $y$, et on obtient l'ensemble $\Lambda \cup \{w,z \}$ avec probabilité
  \[ p(x,\Lambda,w) p(y,\Lambda\cup \{w\},z) + p(x,\Lambda,z) p(y,\Lambda\cup \{z\},w). \]
  En distinguant le fait que la marche partant de $y$ passe ou non par $w$, on remarque que
  \[p(y,\Lambda\cup \{w\},z) = p(y,\Lambda,z) + p(y,\Lambda,w)p(w,\Lambda\cup \{w\},z). \]
@@ -213,9 +215,9 @@ Pour $y\in\mathbb{Z}^d$ et R>0, on définit le bord de la boule de centre y et de
  \[\partial \mathbb{B}(y,R)=\{x \notin \mathbb{B}(y,R) \ | \ \exists z \in \mathbb{B}(y,R), \ \| x-z\| <1\}.\]
 \end{Def}
 
-Illustrons ce théorème avec l'exemple de l'exploration par vague qui nous servira par la suite. On va réaliser la région explorée $A(n+m)$ en $3$ vagues. La première vague consiste à faire partir $n$ explorateurs de l'origine et à considérer la région explorée correspondante $A_1=A(n)$ (en bleu sur la figure \ref{vague}). 
+Illustrons la propriété abélienne par l'exemple d'une exploration par vagues, qui nous sera utile par la suite. On va réaliser la région explorée $A(n+m)$ en $3$ vagues. La première vague consiste à faire partir $n$ explorateurs de l'origine et à considérer la région explorée correspondante $A_1=A(n)$ (en bleu sur la figure \ref{vague}). 
 
-Pour la deuxième vague, on fait partir $m$ explorateurs de l'origine avec pour région préalablement explorée $A_1$ et on les arrête sur $\mathbb{B}(0,R)$ (en vert sur \ref{vague}). On note $A_2$ la région explorée après les deux vagues et $\Delta_R$ la configuration des explorateurs de la deuxième vague arrêtés sur $\partial\mathbb{B}(0,R)$ :
+Pour la deuxième vague, on fait partir $m$ explorateurs de l'origine avec pour région préalablement explorée $A_1$ et on les arrête sur $\partial \mathbb{B}(0,R)$ (en vert sur \ref{vague}). On note $A_2$ la région explorée après les deux vagues et $\Delta_R$ la configuration des explorateurs de la deuxième vague arrêtés sur $\partial\mathbb{B}(0,R)$ :
 \begin{equation*}
  A_2=A_1\cup A_R(A_1,\zeta_0^m), 
  \qquad\Delta_R=\{\zeta_z^{W_R(A_1;\zeta_0^m,z)},z\in\partial\mathbb{B}(0,R)\}.
@@ -248,9 +250,9 @@ Introduisons dès à présent quelques définitions qui nous seront utiles par la su
   
   \item $H(S;\Lambda)=\inf\{n\geqslant0,\ S(n)\in\Lambda\}$ (ou $H(\Lambda)$ en l'absence d'ambiguïté sur $S$) est le premier instant pour lequel la marche aléatoire $S$ atteint $\Lambda$.
   
-  \item \label{iii}Si $\eta:\mathbb{Z}^d\to\mathbb{N}$ est telle que $\eta(z)$ est le nombre d'explorateurs partis de $z$, la région explorée en partant de $\eta$ sera la région définie en faisant partir les explorateurs dans un ordre prédéfini sur $\mathbb{Z}^d$. 
+  \item \label{iii}Si $\eta:\mathbb{Z}^d\to\mathbb{N}$ est telle que $\eta(z)$ est le nombre d'explorateurs partis de $z$, la région explorée en partant de $\eta$ sera la région définie en faisant partir les explorateurs. Par propriété abélienne, l'ordre des lancers n'est pas important ; on peut choisir un ordre prédéfini sur $\mathbb{Z}^d$. 
   
-  \item $W_R(\Lambda;\eta, z)$ est le nombre d'explorateurs, partant de la configuration $\eta$ et de la région explorée $\Lambda$, qui passent par $z\in\mathbb{B}(0,R)$ (resp $z\in\partial\mathbb{B}(0,R)$) avant de sortir de $\mathbb{B}(0,R)$ (resp au moment où ils sortent de $\mathbb{B}(0,R)$).
+  \item $W_R(\Lambda;\eta, z)$ est le nombre d'explorateurs, partant de la configuration $\eta$ et de la région explorée $\Lambda$, qui passent par $z\in\mathbb{B}(0,R)$ (resp. $z\in\partial\mathbb{B}(0,R)$) avant de sortir de $\mathbb{B}(0,R)$ (resp. au moment où ils sortent de $\mathbb{B}(0,R)$).
  
   \item Pour $z \in \mathbb{Z}^d \setminus \{ 0 \}$ on note $\Sigma (z) = \partial \mathbb{B} (0, \| z \| )$. Remarquons que $z \in \Sigma (z)$.
   
