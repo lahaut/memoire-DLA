@@ -156,7 +156,7 @@ L'erreur interne, notée $\delta_I$, est la différence entre le rayon du cercle l
   où $h(n)=\alpha_2\sqrt{\log(n)\log(\log(n))}$.
  \end{Rq}
 Autrement dit, si les trous ne sont pas trop grand, alors de longs tentacules apparaissent. Ce théorème montre que l'erreur externe croît comme on s'y attendait sous l'hypothèse d'une erreur interne faible, mais il ne permet malheureusement pas de conclure. Ce résultat est tout de même intéressant comme le montre le corollaire suivant :
-\begin{Cor}
+\begin{Cor} \label{cio}
  \begin{equation} \label{io}
    P(\limsup\limits_{n\to\infty}\{\delta_I(n)\geqslant L(n)\}\cup\{\delta_O(n)\geqslant h(n)\})=1.
   \end{equation}
@@ -262,7 +262,7 @@ Introduisons dès à présent quelques définitions qui nous seront utiles par la su
  \begin{Rq}
   Si $\mathbb{B}(0,R)\subset\Lambda$, $W_R(\mathbb{B}(0,R);\eta,z)=W_R(\Lambda;\eta,z)$. On appelle alors cette quantité $M_R(\eta,z)$.
  \end{Rq}
-Pour démontrer ce théorème, procédons de la façon suivante : on va lancer les explorateurs à l'aide d'un processus par vagues comme expliqué dans la section \ref{abel}. Une fois les explorateurs de la deuxième vague arrêtés, on va estimer la probabilité qu'il existe $z\in\partial\mathbb{B}(0,R)$ tel que les explorateurs arrêtés en z sortent de la boule $\mathbb{B}(0,R+h(R))$, et donc que $\delta_O(R)\geqslant h(R)$.
+Pour démontrer ce théorème, procédons de la façon suivante : on va lancer les explorateurs à l'aide d'un processus par vagues comme expliqué dans la section \ref{abel}. Une fois les explorateurs de la deuxième vague arrêtés, on va estimer la probabilité qu'il existe $z\in\partial\mathbb{B}(0,R)$ tel que les explorateurs arrêtés en $z$ sortent de la boule $\mathbb{B}(0,R+h(R))$, et donc que $\delta_O(R)\geqslant h(R)$.
 \subsection{Conditions d'apparition d'un tentacule}
  On pose $h(n)=\alpha\sqrt{\log(n)}$ et $L(n)=\gamma\sqrt{\log(n)}$ où $\alpha$ et $\gamma$ sont des constantes à choisir par la suite. Ici, $h$ représente l'erreur externe et $L$ l'erreur interne, et il est important de conserver cette distinction à l'esprit même si on prendra $\alpha=\gamma$ par la suite.
 
@@ -298,9 +298,9 @@ quitte à augmenter la constante $c$. La présence d'un tel tentacule impliquant q
  \end{Prop}
  
  \subsection{Construction d'un tentacule}
- On fixe désormais l'entier $n$, et on va essayer d'estimer la probabilité de trouver un entier $k\geqslant n$ pour lequel l'erreur externe dépasse $h(k)$. Pour cela on va utiliser un processus par vague comme décrit dans la section \ref{abel} en lançant les explorateurs de l'origine en trois vagues :
+ On fixe désormais l'entier $n$, et on va essayer d'estimer la probabilité de trouver un entier $k\geqslant n$ pour lequel l'erreur externe dépasse $h(k)$. Pour cela on va utiliser un processus par vagues comme décrit dans la section \ref{abel} en lançant les explorateurs de l'origine en trois vagues.
  
- La première est consituée de $b(n)$ explorateurs partis de l'origine qui explorent $A_1$, la deuxième de $X_n$ explorateurs arrêtés partis de l'origine, où $X_n$ est une variable aléatoire discrète indépendante des marches des explorateurs dont la loi sera fixée par la suite, et la troisième est constituée des explorateurs de la seconde vague relancés. Les explorateurs de la deuxième vague sont arrêtés sur $\Sigma=\partial\mathbb{B}(0,r_n)$ avant de les faire repartir, avec $r_n = n-L(n)$. 
+ La première vague est consituée de $b(n)$ explorateurs partis de l'origine qui explorent $A_1$. La deuxième est constituée $X_n$ explorateurs partis de l'origine, où $X_n$ est une variable aléatoire discrète, indépendante des marches des explorateurs, et dont la loi sera fixée par la suite. Les explorateurs de la deuxième vague sont arrêtés sur $\Sigma=\partial\mathbb{B}(0,r_n)$, avec $r_n = n-L(n)$. La troisième est constituée des explorateurs de la seconde vague relancés.
  
  La propriété abélienne montre alors que la région explorée de cette façon est la même, en loi, que celle explorée en lançant directement $X_n+b(n)$ explorateurs. On cherche à trouver $X_n$ tel que l'évènement $\delta_O(R_n)\geqslant h(R_n)$ où $R_n=\rho(b(n)+X_n)+1$ arrive avec une probabilité tendant vers 1.
 
@@ -309,12 +309,12 @@ Après avoir arrêté la deuxième vague sur $\Sigma$, on considère l'événement : pa
 \begin{equation}
  \mathrm{cov}(z)=\{A(\Lambda_n,\zeta_z^{N_z})\not\subset\mathbb{B}(0,R_n+h(R_n))\}
 \end{equation}
-où $N_z=W_{r_n}(A_1;\zeta_0^{X_n},z)$ est le nombre d'explorateurs arrétés en $z$ et $\Lambda_n$ est la région explorée au moment où on a arrété la deuxième vague. Les cov(z) ne sont pas indépendants pour le moment.
+où $N_z=W_{r_n}(A_1;\zeta_0^{X_n},z)$ est le nombre d'explorateurs arrétés en $z$ et $\Lambda_n$ est la région explorée au moment où on a arrété la deuxième vague. Les $\mathrm{cov}(z)$ ne sont pas indépendants pour le moment.
 \medskip
 
 \begin{figure}[H]
  \centering
-   \includegraphics{cov.png}
+   \includegraphics[scale=1.1]{cov.png}
    \caption{Un exemple où $\mathrm{cov}(z)$ est réalisé}
 \end{figure}
 \medskip
@@ -328,9 +328,9 @@ On constate que \{$\delta_O(R_n)\geqslant h(R_n)$\} est lié à $\{\mathrm{cov}(z)
  \nonumber\\&\geqslant P\left(\bigcup_{z\in\Sigma}\mathrm{cov}(z)\right).
 \end{align}
 
-Il nous faut désormais estimer $P(\bigcup_{z\in\Sigma}\mathrm{cov}(z))$. Pour cela, il serait intéressant d'avoir indépendance entre les $\mathrm{cov}(z)$ sous certaines hypothèses, ce qu'on va obtenir en prenant pour $X_n$ une variable de Poisson. En effet, les variables de Poisson ont la propriété de découpage \ref{indé}, qui laisse penser que les $N_z$ seront indépendantes et de loi de Poisson. Les lois de Poisson sont les seules parmi les lois usuelles à pouvoir se décomposer ainsi.
+Il nous faut désormais estimer $P(\bigcup_{z\in\Sigma}\mathrm{cov}(z))$. Pour cela, il serait intéressant d'avoir indépendance entre les $\mathrm{cov}(z)$ sous certaines hypothèses, ce qu'on va obtenir en prenant pour $X_n$ une variable de Poisson. En effet, les variables de Poisson ont la propriété de découpage \ref{indé}, qui laisse penser que les $N_z$ seront indépendantes et suivront des lois de Poisson.
 
-Cette propriété ne permet pas pour autant d'affirmer que les $N_z$ sont indépendantes de ce qui se passe avant pour $z \in \Sigma$, mais cela sera vrai lorsque $\delta_I(n) < L(n)$. On définit en effet pour tout $z\in\Sigma$
+Cette propriété ne permet pas pour autant d'affirmer que les $N_z$ sont indépendantes de ce qui se passe avant, mais cela sera vrai lorsque $\delta_I(n) < L(n)$. On définit en effet pour tout $z\in\Sigma$
 \begin{equation}
  \mathrm{cov_2}(z)=\{A(\Delta_n,\zeta_z^{N'_z})\not\subset\mathbb{B}(0,R_n+h(R_n))\}
 \end{equation}
@@ -436,8 +436,8 @@ En prenant $h(n)=L(n)$ et en utilisant (\ref{16}), (\ref{17}), (\ref{18}), (\ref
 Il suffit maintenant de fixer $\alpha$ suffisamment petit pour que $d-1-\alpha^2 c''$ soit positif pour terminer la preuve du théorème \ref{ext}.
 \medskip
 
-Il n'est pas clair \emph{a priori} que ce théorème nous donne vraiment une indication sur l'optimalité de $h(n)$ pour l'erreur externe, mais on peut voir qu'il implique le résultat intéressant suivant :
-\begin{Cor}
+Il n'est pas clair \emph{a priori} que ce théorème nous donne vraiment une indication sur l'optimalité de $h(n)$ pour l'erreur externe, mais on peut voir qu'il implique le résultat intéressant suivant (Corollaire \ref{cio}) :
+
  \begin{equation} \label{io2}
    P(\limsup\limits_{n\to\infty}\{\delta_I(n)\geqslant L(n)\}\cup\{\delta_O(n)\geqslant h(n)\})=1
   \end{equation}
@@ -455,9 +455,9 @@ et donc,
 \end{align*}
 \end{proof}
 
-\end{Cor}
 Autrement dit, pour une infinité de termes, l'erreur interne ou l'erreur externe est d'ordre $\sqrt{\log n}$, donc le théorème \ref{limsup} est d'une certaine façon optimal. On verra dans la partie \ref{interne} que (\ref{io2}) est en fait vraie pour l'erreur interne seule.
-\pagebreak[1] %n'efface pas cette commande elle permet de «suggérer» à Latex de sauter une page ici, sans l'obliger, pour avoir un meilleur rendu.
+
+\newpage
 
 \section{L'erreur interne}
 On reprend dans cette partie les définitions introduites au début de la partie \ref{eext}.
