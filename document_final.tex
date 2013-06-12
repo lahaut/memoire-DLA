@@ -217,7 +217,7 @@ Illustrons ce théorème avec l'exemple de l'exploration par vague qui nous servir
 
 Pour la deuxième vague, on fait partir $m$ explorateurs de l'origine avec pour région préalablement explorée $A_1$ et on les arrête sur $\mathbb{B}(0,R)$ (en vert sur \ref{vague}). On note $A_2$ la région explorée après les deux vagues et $\Delta_R$ la configuration des explorateurs de la deuxième vague arrêtés sur $\partial\mathbb{B}(0,R)$ :
 \begin{equation*}
- A_2=A_1\cup A_R(A_1,\zeta_0^N), 
+ A_2=A_1\cup A_R(A_1,\zeta_0^m), 
  \qquad\Delta_R=\{\zeta_z^{W_R(A_1;\zeta_0^m,z)},z\in\partial\mathbb{B}(0,R)\}.
 \end{equation*}
 
@@ -335,7 +335,7 @@ Cette propriété ne permet pas pour autant d'affirmer que les $N_z$ sont indépend
 où $N'_z=W_{r_n}(\Delta_n;\zeta_0^{X_n},z)$ est le nombre d'explorateurs de la deuxième vague qui touchent $\Sigma$ en $z$ lorsque la région explorée initiale est $\Delta_n=\mathbb{B}(0,r_n)$.
 \begin{figure}[H]
  \centering
-   \includegraphics{cov2.png}
+   \includegraphics[scale=0.95]{cov2.png}
    \caption{Un exemple où $\mathrm{cov_2}(z)$ est réalisé}
 \end{figure}
 On remarque que la seule différence entre $\mathrm{cov}(z)$ et $\mathrm{cov_2}(z)$ est la région explorée avant de lancer la deuxième vague. C'est ici qu'il est important de se placer dans le cas $\delta_I(n)<L(n)$, et on restera dans ce cas jusqu'à la fin de cette partie, puisqu'on a alors :
@@ -343,6 +343,7 @@ On remarque que la seule différence entre $\mathrm{cov}(z)$ et $\mathrm{cov_2}(z
  W_{n-L(n)}(A(\zeta_0^{b(n)});X_n1_0,z)=M_{n-L(n)}(X_n1_0,z) ,
 \end{equation*}
 et donc $N'_z=N_z$ et $\mathrm{cov_2}(z) \subset \mathrm{cov}(z)$. 
+\pagebreak[1]
 
 Soit $U$ la variable aléatoire à valeur dans $\Sigma$ calculée en regardant en quel point une marche aléatoire symétrique atteint $\Sigma$. On alors :
 \begin{equation}
@@ -385,14 +386,14 @@ En utilisant le lemme \ref{pois}, on a donc :
 \begin{align}
 \label{17}
 \nonumber P(\bigcup_{z\in\Sigma}\mathrm{cov_2}(z))&\geqslant P(\bigcup_{z\in\Sigma}\mathrm{cov_2}(z)\cap\{X_n\leqslant\lambda_n\})
-\nonumber\\&\geqslant P(\bigcup_{z\in\Sigma}\{A(\Lambda_n,\zeta_z^{N'_z})\not\subset\mathbb{B}(0,n+3h(n))\})P(X_n\leqslant\lambda_n)
-\nonumber\\&=P(X_n\leqslant\lambda_n)\big(1-\prod_{z\in\Sigma}\big(1-P(A(\Lambda_n,\zeta_z^{N'_z})\not\subset\mathbb{B}(0,n+3h(n)))\big)\big).
+\nonumber\\&\geqslant P(\bigcup_{z\in\Sigma}\{A(\Delta_n,\zeta_z^{N'_z})\not\subset\mathbb{B}(0,n+3h(n))\})P(X_n\leqslant\lambda_n)
+\nonumber\\&=P(X_n\leqslant\lambda_n)\big(1-\prod_{z\in\Sigma}\big(1-P(A(\Delta_n,\zeta_z^{N'_z})\not\subset\mathbb{B}(0,n+3h(n)))\big)\big).
 \end{align}
 Or, d'après la proposition \ref{step2},
 \begin{align}
 \label{18}
-\nonumber &P(A(\Lambda_n,\zeta_z^{N'_z})\not\subset\mathbb{B}(0,n+3h(n)))
-\nonumber\\&=P(A(\Lambda_n,\zeta_z^{N'_z})\not\subset\mathbb{B}(0,n+3h(n))\ \normalfont{|}\ N'_z\geqslant c(3h(n)+L(n)))P(N'_z\geqslant c(3h(n)+L(n)))
+\nonumber &P(A(\Delta_n,\zeta_z^{N'_z})\not\subset\mathbb{B}(0,n+3h(n)))
+\nonumber\\&\geqslant P(A(\Delta_n,\zeta_z^{N'_z})\not\subset\mathbb{B}(0,n+3h(n))\ \normalfont{|}\ N'_z\geqslant c(3h(n)+L(n)))P(N'_z\geqslant c(3h(n)+L(n)))
 \nonumber\\&\geqslant \exp(-c(3h(n)+L(n))^2)P(N'_z\geqslant c(3h(n)+L(n))).
 \end{align}
 
