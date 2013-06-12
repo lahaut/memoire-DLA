@@ -714,11 +714,11 @@ Choisissons de faire voyager nos $N$ explorateurs non plus selon des marches alé
 Il semble que la déviation à droite dans ce cas soit de l'ordre de $N^{2/3}$, comme le suggère la courbe suivante où l'on trace l'évolution du logarithme de cette déviation et une courbe référence de pente $2/3$ :
 \begin{figure}[H]
  \centering
-   \includegraphics[scale=0.33]{log.jpg}
+   \includegraphics[scale=0.3]{log.jpg}
    \caption{Log de la distance maximale à l'origine (en noir) et pente 2/3 (en bleu)}
 \end{figure}
 
-Ceci ne semble pas étonnant, à cause de l'argument suivant : une telle marche déséquilibrée a tendance, en projection sur l'horizontale, à s'écarter vers la droite linéairement avec le temps $t$. En projection verticale, elle dévie comme $\sqrt{t}$ (marche symétrique unidimensionnelle). La région obtenue doit respecter ces ordres de grandeur, donc son étendue horizontale varie comme le carré de son étendue verticale. Comme le produit des deux vaut $N$, il faut avoir une étendue horizontale en $N^{2/3}$ et verticale en $N^{1/3}$.
+Ceci ne semble pas étonnant, à cause de l'argument suivant : une telle marche déséquilibrée a tendance, en projection sur l'horizontale, à s'écarter vers la droite linéairement avec le temps $t$. En projection verticale, elle dévie comme $\sqrt{t}$ (marche symétrique unidimensionnelle). On s'attend à ce que la région obtenue respecte ces ordres de grandeur, donc son étendue horizontale devrait varier comme le carré de son étendue verticale. Le produit des deux vaut $N$, donc on s'attend à $N^{2/3}$ horizontalement et $N^{1/3}$ verticalement.
 
 \subsection{Cavaliers explorateurs}
 On peut aussi choisir de faire des marches aléatoires différentes, en s'autorisant plus de pas. Il pourrait être intéressant de se placer dans un cadre général en considérant des matrice de transition quelconqes pour la marche aléatoire.
@@ -726,7 +726,7 @@ On peut aussi choisir de faire des marches aléatoires différentes, en s'autorisa
 Par exemple, on peut explorer en se déplaçant comme un cavalier aux échecs, aléatoirement. La région explorée est assez semblable à celle du cas du IDLA, l'avantage principal étant qu'elle est plus rapide à simuler car les cavaliers aléatoires s'éloignent plus vite de l'origine que les marcheurs aléatoires.
 \begin{figure}[H]
  \centering
-   \includegraphics[scale=0.2]{cavaliers.jpg}
+   \includegraphics[scale=0.21]{cavaliers.jpg}
    \caption{Région explorée par des cavaliers ($300000$ cavaliers)}
 \end{figure}
 
@@ -798,7 +798,7 @@ Elles sont indépendantes :
 \begin{Lemme}
 \label{b(n)}
 \begin{enumerate}[i)]
-\item Soit $\omega_d$ le volume de la boule unité de $\mathbb{Z}^d$, on a :
+\item Soit $\omega_d$ le volume de la boule unité de $\mathbb{R}^d$, on a :
  \begin{equation*}
   b(n)\sim\omega_dn^d .
  \end{equation*}
