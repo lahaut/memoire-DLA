@@ -387,9 +387,9 @@ On prend alors $\lambda_n=\frac{b(n+h(n))-b(n)}{2}$ pour pouvoir se placer dans 
 En utilisant le lemme \ref{pois}, on a donc :
 \begin{align}
 \label{17}
-\nonumber P(\bigcup_{z\in\Sigma}\mathrm{cov_2}(z))&\geqslant P(\bigcup_{z\in\Sigma}\mathrm{cov_2}(z)\cap\{X_n\leqslant\lambda_n\})
-\nonumber\\&\geqslant P(\bigcup_{z\in\Sigma}\{A(\Delta_n,\zeta_z^{N'_z})\not\subset\mathbb{B}(0,n+3h(n))\})P(X_n\leqslant\lambda_n)
-\nonumber\\&=P(X_n\leqslant\lambda_n)\big(1-\prod_{z\in\Sigma}\big(1-P(A(\Delta_n,\zeta_z^{N'_z})\not\subset\mathbb{B}(0,n+3h(n)))\big)\big).
+\nonumber P(\bigcup_{z\in\Sigma}\mathrm{cov_2}(z))&\geqslant P(\bigcup_{z\in\Sigma}\mathrm{cov_2}(z)\cap\{X_n\leqslant 2 \lambda_n\})
+\nonumber\\&\geqslant P(\bigcup_{z\in\Sigma}\{A(\Delta_n,\zeta_z^{N'_z})\not\subset\mathbb{B}(0,n+3h(n))\})P(X_n\leqslant 2 \lambda_n)
+\nonumber\\&=P(X_n\leqslant 2\lambda_n)\big(1-\prod_{z\in\Sigma}\big(1-P(A(\Delta_n,\zeta_z^{N'_z})\not\subset\mathbb{B}(0,n+3h(n)))\big)\big).
 \end{align}
 Or, d'après la proposition \ref{step2}\footnote{ce résultat ne découle pas directement de la proposition \ref{step2} à cause de la probabilité conditionnelle, mais la démonstration est exactement la même.},
 \begin{align}
@@ -427,10 +427,10 @@ Il ne reste donc plus qu'à minorer $P(N'_z\geqslant c(3h(n)+L(n)))$:
 En prenant $h(n)=L(n)$ et en utilisant (\ref{16}), (\ref{17}), (\ref{18}), (\ref{11}) et que $1-x\leqslant e^{-x}$, on a finalement :
 \begin{align}
  \nonumber&P(\exists k\geqslant n,\ \delta_0(k)\geqslant h(k)\normalfont\ {|}\ \delta_I(n)<L(n))
- \nonumber\\\geqslant& P(X_n\leqslant\lambda_n)\big(1-\prod_{z\in\Sigma}\big(1-\exp(-c(4h(n))^2-Ch(n))\big)\big)
- \nonumber\\\geqslant& P(X_n\leqslant\lambda_n)(1-\exp(-\kappa n^{d-1}\exp(-Ch(n)-c'h(n)^2)))
- \nonumber\\\geqslant& P(X_n\leqslant\lambda_n)(1-\exp(-\kappa n^{d-1}\exp(-c''h(n)^2)))
- \nonumber\\=&P(X_n\leqslant\lambda_n)(1-\exp(-\kappa n^{d-1-\alpha^2c''})).
+ \nonumber\\\geqslant& P(X_n\leqslant 2\lambda_n)\big(1-\prod_{z\in\Sigma}\big(1-\exp(-c(4h(n))^2-Ch(n))\big)\big)
+ \nonumber\\\geqslant& P(X_n\leqslant 2\lambda_n)(1-\exp(-\kappa n^{d-1}\exp(-Ch(n)-c'h(n)^2)))
+ \nonumber\\\geqslant& P(X_n\leqslant 2\lambda_n)(1-\exp(-\kappa n^{d-1}\exp(-c''h(n)^2)))
+ \nonumber\\=&P(X_n\leqslant 2\lambda_n)(1-\exp(-\kappa n^{d-1-\alpha^2c''})).
 \end{align}
 
 Il suffit maintenant de fixer $\alpha$ suffisamment petit pour que $d-1-\alpha^2 c''$ soit positif pour terminer la preuve du théorème \ref{ext}.
